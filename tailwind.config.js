@@ -3,12 +3,12 @@ module.exports = {
   theme: {
     extend: {
       colors: {
-        pravda_500: '#00ce60',
-        pravda_600: '#00ed70',
-        pravda_700: '#93ffac',
-        uso_500: '#00baff',
-        uso_600: '#81d2ff',
-        uso_700: '#c4e9ff',
+        pravda_500: '#00baff',
+        pravda_600: '#81d2ff',
+        pravda_700: '#c4e9ff',
+        uso_500: '#ee6dff',
+        uso_600: '#f5a4ff',
+        uso_700: '#fbd3ff',
       },
     },
   },
