@@ -13,7 +13,7 @@ export const shareStatus = (guesses: string[][], lost: boolean) => {
       '\n\n' +
       generateEmojiGrid(guesses) +
       '\n\n' +
-      window.location.href.replace(`${window.location.protocol}//`, '')
+      window.location.href.replace(`https://${window.location.protocol}//`, '')
   )
 }
 
