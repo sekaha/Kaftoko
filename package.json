@@ -1,7 +1,7 @@
 {
-    "name": "any-language-word-guessing-game",
+    "name": "Kavikotoba",
     "version": "0.1.0",
-    "homepage": "https://github.com/sekaha/Kavikotoba",
+    "homepage": "https://sekaha.github.io/Kavikotoba",
     "private": true,
     "dependencies": {
         "@bcgov/bc-sans": "^1.0.1",
