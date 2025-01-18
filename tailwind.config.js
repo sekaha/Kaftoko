@@ -3,12 +3,12 @@ module.exports = {
   theme: {
     extend: {
       colors: {
-        viossa_500: '#00baff',
-        viossa_600: '#81d2ff',
-        viossa_700: '#c4e9ff',
-        usoplaas_500: '#c58eff',
-        usoplaas_600: '#c58eff',
-        usoplaas_700: '#c58eff',
+        pravda_500: '#00ce60',
+        pravda_600: '#00ed70',
+        pravda_700: '#93ffac',
+        uso_500: '#00baff',
+        uso_600: '#81d2ff',
+        uso_700: '#c4e9ff',
       },
     },
   },
