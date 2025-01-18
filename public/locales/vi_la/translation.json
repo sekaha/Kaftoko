@@ -148,10 +148,10 @@
     "LETTER_W" : "Ш",
     "LETTER_Y" : "Ы",
     "LETTER_Z" : "З",
-    "aboutAuthorSentence": "This is an open source word guessing game adapted to {{language}} by me (<3>{{author}}</3>).",
+    "aboutAuthorSentence": "This is an open source word guessing game adapted to {{language}} by me (<3>{{author}}</3>). ",
     "aboutCodeSentence": "Check out <1>the original code</1> by <3>Hannah Park</3> or have a look at <5>Aidan Pine's fork</5> and customize it for another language! ",
-    "aboutDataSentence": "I also changed improved the game a bit, didn't just adapt it to viossa :p",
-    "aboutOriginalSentence": "You can also play the original  <1>here</1>",
+    "aboutDataSentence": "I also changed improved the game a bit, didn't just adapt it to viossa :p ",
+    "aboutOriginalSentence": "You can also play the original  <1>here</1> ",
     "languages": {
         "vi_la": "Latinkakutro",
         "vi_cy": "Kirilkakutro"
