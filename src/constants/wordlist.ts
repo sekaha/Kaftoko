@@ -133,7 +133,7 @@ export const WORDS = [
   "TUHAT",
   "HUSKE",
   "FLIRE",
-//  "AHMAN",
+  "AHMAN",
 //  "SPARA",
 //  "SZIRU",
   "DANKI",

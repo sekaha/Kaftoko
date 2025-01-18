@@ -4,11 +4,11 @@ module.exports = {
     extend: {
       colors: {
         pravda_500: '#00baff',
-        pravda_600: '#81d2ff',
-        pravda_700: '#c4e9ff',
-        uso_500: '#ee6dff',
-        uso_600: '#f5a4ff',
-        uso_700: '#fbd3ff',
+        pravda_600: '#60c8ff',
+        pravda_700: '#90d6ff',
+        uso_500: '#e19e00',
+        uso_600: '#f5ac00',
+        uso_700: '#ffc052',
       },
     },
   },
