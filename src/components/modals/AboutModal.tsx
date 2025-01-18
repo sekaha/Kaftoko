@@ -11,8 +11,9 @@ export const AboutModal = ({ isOpen, handleClose }: Props) => {
   const { t } = useTranslation()
   return (
     <BaseModal title={t('about')} isOpen={isOpen} handleClose={handleClose}>
-      <p className="text-sm text-gray-500">
+      <p className="text-sm text-gray-200">
         <Trans
+          className="text-white"
           i18nKey="aboutAuthorSentence"
           values={{ language: CONFIG.language, author: CONFIG.author }}
         >
@@ -22,7 +23,9 @@ export const AboutModal = ({ isOpen, handleClose }: Props) => {
             {CONFIG.author}
           </a>{' '}
         </Trans>
-        <Trans i18nKey="aboutCodeSentence">
+        <Trans
+          className="text-white"
+          i18nKey="aboutCodeSentence">
           Have a look at
           <a
             href="https://github.com/roedoejet/AnyLanguage-Word-Guessing-Game"
@@ -33,6 +36,7 @@ export const AboutModal = ({ isOpen, handleClose }: Props) => {
           and customize it for another language!
         </Trans>
         <Trans
+          className="text-white"
           i18nKey="aboutDataSentence"
           values={{ wordListSource: CONFIG.wordListSource }}
         >
@@ -42,7 +46,8 @@ export const AboutModal = ({ isOpen, handleClose }: Props) => {
           </a>
           .
         </Trans>
-        <Trans i18nKey="aboutOriginalSentence">
+        <Trans
+          className="text-white" i18nKey="aboutOriginalSentence">
           You can also
           <a
             href="https://www.powerlanguage.co.uk/wordle/"
