@@ -4,7 +4,7 @@ module.exports = {
     extend: {
       colors: {
         viossa_blue: '#00baff',
-        wrong_red: '#ff8720',
+        usoplaas: '#c58eff',
       },
     },
   },
