@@ -32,10 +32,9 @@ export const Keyboard = ({ onChar, onDelete, onEnter, guesses }: Props) => {
         onEnter()
       } else if (e.code === 'Backspace') {
         onDelete()
-      }
-      // Take away key event listener for now
-      else {
+      } else {
         const key = e.key.toUpperCase()
+
         if (key.length === 1 && ((key >= 'A' && key <= 'Z') || key==" ")) {
           onChar(key != " " ? key : "_")
         }
