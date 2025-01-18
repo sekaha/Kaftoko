@@ -5,6 +5,10 @@ div {
   font-family: 'BCSans', 'Noto Sans', sans-serif;
 }
 
+body {
+  @apply bg-gray-900 text-white;
+}
+
 .cell-animation {
   animation: revealCharCell linear;
   animation-duration: 0.15s;
