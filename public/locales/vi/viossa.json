@@ -1,6 +1,6 @@
 {
-    "about": "About this game",
-    "gameName": "Word Guessing Game - {{language}}",
+    "about": "Tsui afto spil",
+    "gameName": "Ka afto kotoba ine {{language}} :3",
     "enterKey": "Enter",
     "deleteKey": "Delete",
     "notEnoughLetters": "Kirain nai lagom.",
@@ -13,7 +13,7 @@
     "correctSpotInstructions": "Kirain 'L' jam ine svarkotoba au PRAVDA plaas.",
     "wrongSpotInstructions": "Kirain 'G' jam ine svarkotoba au USO plaas.",
     "notInWordInstructions": "Kirain 'Q' nai jam, baka.",
-    "guessDistribution": "Ahman plaas",
+    "guessDistribution": "Ahman-fjal",
     "statistics": "Statistics",
     "totalTries": "Heel iskat tid",
     "successRate": "Jingatai",
