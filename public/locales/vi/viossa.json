@@ -1,0 +1,135 @@
+{
+    "about": "About this game",
+    "gameName": "Word Guessing Game - {{language}}",
+    "enterKey": "Enter",
+    "deleteKey": "Delete",
+    "notEnoughLetters": "Kirain nai lagom.",
+    "wordNotFound": "Deki nai finna dan kotoba.",
+    "solution": "Svarkotoba: {{solution}}",
+    "gameCopied": "Wakwu spil na clipboard",
+    "howToPlay": "Hur spil",
+    "instructions": "Guess the word in {{tries}} tries. After each guess, the color of the tiles will change to show how close your guess was to the word.",
+    "pickYourLanguage": "Choose a language",
+    "correctSpotInstructions": "Kirain 'L' jam ine svarkotoba au PRAVDA plaas.",
+    "wrongSpotInstructions": "Kirain 'G' jam ine svarkotoba au USO plaas.",
+    "notInWordInstructions": "Kirain 'Q' nai jam, baka.",
+    "guessDistribution": "Ahman plaas",
+    "statistics": "Statistics",
+    "totalTries": "Heel iskat tid",
+    "successRate": "Jingatai",
+    "currentStreak": "Current streak",
+    "bestStreak": "Best streak",
+    "newWordCountdown": "New word in",
+    "share": "Blogeta",
+    "winMessages": [
+        "Maladjets!",
+        "Mangebraa!",
+        "Braadai!",
+        "Mala mala!!",
+        "Du jing!!!",
+        "Oi Blin! Maladjets~",
+        "Maladjets!",
+        "Mangebraa!",
+        "Braadai!",
+        "Mala mala!!",
+        "Du jing!!!",
+        "Oi Blin! Maladjets~",
+        "Maladjets!",
+        "Mangebraa!",
+        "Braadai!",
+        "Mala mala!!",
+        "Du jing!!!",
+        "Oi Blin! Maladjets~",
+        "Maladjets!",
+        "Mangebraa!",
+        "Braadai!",
+        "Mala mala!!",
+        "Du jing!!!",
+        "Oi Blin! Maladjets~",
+        "Maladjets!",
+        "Mangebraa!",
+        "Braadai!",
+        "Mala mala!!",
+        "Du jing!!!",
+        "Oi Blin! Maladjets~",
+        "Maladjets!",
+        "Mangebraa!",
+        "Braadai!",
+        "Mala mala!!",
+        "Du jing!!!",
+        "Oi Blin! Maladjets~",
+        "Blyattttt -Rei",
+        "Da sebja vras.",
+        "Da nam auto."
+    ],
+    "firstExampleWord": [{
+            "letter": "L",
+            "highlight": false
+        },
+        {
+            "letter": "A",
+            "highlight": true
+        },
+        {
+            "letter": "S",
+            "highlight": false
+        },
+        {
+            "letter": "K",
+            "highlight": false
+        },
+        {
+            "letter": "U",
+            "highlight": false
+        }
+    ],
+    "secondExampleWord": [{
+            "letter": "D",
+            "highlight": false
+        },
+        {
+            "letter": "J",
+            "highlight": false
+        },
+        {
+            "letter": "O",
+            "highlight": false
+        },
+        {
+            "letter": "N",
+            "highlight": false
+        },
+        {
+            "letter": "G",
+            "highlight": true
+        }
+    ],
+    "thirdExampleWord": [{
+            "letter": "Q",
+            "highlight": false
+        },
+        {
+            "letter": "Q",
+            "highlight": false
+        },
+        {
+            "letter": "Q",
+            "highlight": false
+        },
+        {
+            "letter": "Q",
+            "highlight": false
+        },
+        {
+            "letter": "Q",
+            "highlight": false
+        }
+    ],
+    "aboutAuthorSentence": "This is an open source word guessing game adapted to {{language}} by <3>{{author}}</3>. ",
+    "aboutCodeSentence": "Check out <1>the original code</1> by <3>Hannah Park</3> or have a look at <5>Aidan Pine's fork</5> and customize it for another language! ",
+    "aboutDataSentence": "The words for this game were sourced from <1>{{wordListSource}}</1>. ",
+    "aboutOriginalSentence": "You can also play the original  <1>here</1>",
+    "languages": {
+        "vi": "Viossa"
+    }
+}
