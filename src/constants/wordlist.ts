@@ -52,7 +52,7 @@ export const WORDS = [
   "KJERE",
   "PITSA",
   "MANGY",
-  "FESTO",
+//  "FESTO",
   "LAGOM",
   "NAMAI",
   "LIKKO",
@@ -262,6 +262,14 @@ export const WORDS = [
   "VINYA",
   "DYELA",
   "DJELA",
+  "ABURA",
+  "FTEDI",
+  "GULAG",
+  "HOTIA",
+  "HATIA",
+  "SVINR",
+  "WONIU",
+  "FARZA"
   // "IDJAO"
 ]
 
