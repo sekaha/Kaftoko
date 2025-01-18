@@ -138,7 +138,7 @@ const App: React.FC<WithTranslation> = ({ t, i18n }) => {
   if (CONFIG.availableLangs.length > 1) {
     translateElement = (
       <TranslateIcon
-        className="h-6 w-6 cursor-pointer"
+        className="h-6 w-6 cursor-pointer text-viossa_500"
         onClick={() => setIsI18nModalOpen(true)}
       />
     )
@@ -152,11 +152,11 @@ const App: React.FC<WithTranslation> = ({ t, i18n }) => {
         </h1>
         {translateElement}
         <InformationCircleIcon
-          className="h-6 w-6 cursor-pointer"
+          className="h-6 w-6 cursor-pointer text-viossa_500"
           onClick={() => setIsInfoModalOpen(true)}
         />
         <ChartBarIcon
-          className="h-6 w-6 cursor-pointer"
+          className="h-6 w-6 cursor-pointer text-viossa_500"
           onClick={() => setIsStatsModalOpen(true)}
         />
       </div>
