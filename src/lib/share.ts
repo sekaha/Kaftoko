@@ -19,16 +19,35 @@ export const shareStatus = (guesses: string[][], lost: boolean) => {
   )
 }
 
-export const generateSpoiler = (guesses: string[][]) => {
-  return "Ahman:\n||\n```\n" + guesses.map(g => g.join('')).join("\n") + "```\n||";
-}
+export const generateSpoiler = (guesses: string[][]): string => {
+  let res = "Ahman:\n||```ansi\n";
+
+  res += guesses.map((guess) => {
+    const status = getGuessStatuses(guess)
+
+    return guess.map((c, i) => {
+      switch (status[i]) {
+        case 'correct':
+          return '[2;33m[2;34m'+c+'[0m[2;33m[0m'
+        case 'present':
+          return '[2;33m'+c+'[0m'
+        default:
+          return c
+      }
+    }).join('')
+  }).join("\n");
+  
+  res += "\n```\n||";
+
+  return res;
+};
 
 export const generateEmojiGrid = (guesses: string[][]) => {
   return guesses
     .map((guess) => {
       const status = getGuessStatuses(guess)
       return guess
-        .map((letter, i) => {
+        .map((c, i) => {
           switch (status[i]) {
             case 'correct':
               return '🟦'
