@@ -53,7 +53,6 @@ export const WORDS = [
   "bitte",
   "lehti",
   "krais",
-  "qigau",
   "kjere",
   "fisto",
   "pitsa",
