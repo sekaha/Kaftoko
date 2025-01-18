@@ -3,7 +3,7 @@ import { CONFIG } from '../constants/config'
 import { ORTHOGRAPHY } from '../constants/orthography'
 
 export const isWordInWordList = (word: string) => {
-  return Array.from(word).every(c => ORTHOGRAPHY.includes(c));
+  return true // Array.from(word).every(c => ORTHOGRAPHY.includes(c));
 }
 
 export const isWinningWord = (word: string) => {
