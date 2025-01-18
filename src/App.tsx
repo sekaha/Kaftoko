@@ -138,7 +138,7 @@ const App: React.FC<WithTranslation> = ({ t, i18n }) => {
   if (CONFIG.availableLangs.length > 1) {
     translateElement = (
       <TranslateIcon
-        className="h-6 w-6 cursor-pointer text-viossa_500"
+        className="h-6 w-6 cursor-pointer text-viossa_500 fill-current"
         onClick={() => setIsI18nModalOpen(true)}
       />
     )
@@ -146,17 +146,17 @@ const App: React.FC<WithTranslation> = ({ t, i18n }) => {
 
   return (
     <div className="py-8 max-w-7xl mx-auto sm:px-6 lg:px-8 bg-gray-900">
-      <div className="flex w-80 mx-auto items-center mb-8 text-color-viossa_500">
+      <div className="flex w-80 mx-auto items-center mb-8 text-viossa_500">
         <h1 className="text-xl grow font-bold">
           {t('gameName', { language: CONFIG.language })}
         </h1>
         {translateElement}
         <InformationCircleIcon
-          className="h-6 w-6 cursor-pointer text-viossa_500"
+          className="h-6 w-6 cursor-pointer"
           onClick={() => setIsInfoModalOpen(true)}
         />
         <ChartBarIcon
-          className="h-6 w-6 cursor-pointer text-viossa_500"
+          className="h-6 w-6 cursor-pointer"
           onClick={() => setIsStatsModalOpen(true)}
         />
       </div>
