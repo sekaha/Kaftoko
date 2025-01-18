@@ -45,7 +45,7 @@ export const StatsModal = ({
       handleClose={handleClose}
     >
       <StatBar gameStats={gameStats} />
-      <h4 className="text-lg leading-6 font-medium text-gray-900">
+      <h4 className="text-lg leading-6 font-medium text-white">
         {t('guessDistribution')}
       </h4>
       <Histogram gameStats={gameStats} />
@@ -54,7 +54,7 @@ export const StatsModal = ({
           <div>
             <h5>{t('newWordCountdown')}</h5>
             <Countdown
-              className="text-lg font-medium text-gray-900"
+              className="text-lg font-medium text-white"
               date={tomorrow}
               daysInHours={true}
             />
