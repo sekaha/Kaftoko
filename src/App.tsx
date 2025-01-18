@@ -153,11 +153,11 @@ const App: React.FC<WithTranslation> = ({ t, i18n }) => {
         </h1>
         {translateElement}
         <InformationCircleIcon
-          className="h-6 w-6 cursor-pointer"
+          className="h-6 w-6 cursor-pointer text-color-pravda_500"
           onClick={() => setIsInfoModalOpen(true)}
         />
         <ChartBarIcon
-          className="h-6 w-6 cursor-pointer"
+          className="h-6 w-6 cursor-pointer text-color-pravda_500"
           onClick={() => setIsStatsModalOpen(true)}
         />
       </div>
