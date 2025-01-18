@@ -3,6 +3,7 @@ import { CONFIG } from './config'
 export const WORDS = [
   "MINUS",
   "HOBIT",
+  "POLVI",
   "KARTA",
   "TATSU",
   "SIMPR",
