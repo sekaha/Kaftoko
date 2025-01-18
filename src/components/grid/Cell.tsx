@@ -12,7 +12,7 @@ export const Cell = ({ value, status }: Props) => {
     {
       'bg-black border-slate-700': !status,
       'border-white': value && !status,
-      'bg-slate-400 text-white border-slate-400': status === 'absent',
+      'bg-slate-700 text-white border-border-slate-700': status === 'absent',
       'bg-pravda_500 text-white border-pravda_500': status === 'correct',
       'bg-uso_500 text-white border-uso_500': status === 'present',
       'cell-animation': !!value,
