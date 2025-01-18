@@ -49,7 +49,6 @@ export const WORDS = [
   "BRUUK",
   "ASOKO",
   "BRACA",
-  "PHSTO",
   "KALAP",
   "MANGA",
   "WARUJ",
