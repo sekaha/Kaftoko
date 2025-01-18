@@ -187,6 +187,7 @@ export const WORDS = [
   "KINYI",
   "KURVI",
   "AKREP",
+  "TERSA",
   "LAPSI",
   "BIDES",
   "NIDEN",
@@ -272,7 +273,8 @@ export const WORDS = [
   "FARZA",
   "MOSZT",
   "HONOO",
-  "PAYEM"
+  "PAYEM",
+  "SIKNU"
   // "IDJAO"
 ]
 
