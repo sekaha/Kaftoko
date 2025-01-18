@@ -10,8 +10,8 @@ export const Cell = ({ value, status }: Props) => {
   const classes = classnames(
     'w-14 h-14 border-solid border-2 flex items-center justify-center mx-0.5 text-lg font-bold rounded',
     {
-      'bg-white border-slate-200': !status,
-      'border-black': value && !status,
+      'bg-black border-slate-700': !status,
+      'border-white': value && !status,
       'bg-slate-400 text-white border-slate-400': status === 'absent',
       'bg-pravda_500 text-white border-pravda_500': status === 'correct',
       'bg-uso_500 text-white border-uso_500': status === 'present',
