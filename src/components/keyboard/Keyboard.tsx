@@ -35,8 +35,8 @@ export const Keyboard = ({ onChar, onDelete, onEnter, guesses }: Props) => {
       } else {
         const key = e.key.toUpperCase()
 
-        if (key.length === 1 && ((key >= 'A' && key <= 'Z') || key==" ")) {
-          onChar(key != " " ? key : "_")
+        if (key.length === 1 && ((key >= 'A' && key <= 'Z') || key === " ")) {
+          onChar(key !== " " ? key : "_")
         }
       }
     }
