@@ -12,9 +12,9 @@ export const shareStatus = (guesses: string[][], lost: boolean) => {
       CONFIG.tries.toString() +
       '\n\n' +
       generateEmojiGrid(guesses) +
-      '\n\n' +
+      '\n' +
       generateSpoiler(guesses) +
-      '\n\n' +
+      '\n' +
       "https://sekaha.github.io/Kavikotoba/" // window.location.href.replace(`https://${window.location.protocol}//`,Viossa367 2/7
   )
 }
