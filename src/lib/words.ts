@@ -1,6 +1,6 @@
 import { WORDS } from '../constants/wordlist'
 import { CONFIG } from '../constants/config'
-import { ORTHOGRAPHY } from '../constants/orthography'
+// import { ORTHOGRAPHY } from '../constants/orthography'
 
 export const isWordInWordList = (word: string) => {
   return true // Array.from(word).every(c => ORTHOGRAPHY.includes(c));
