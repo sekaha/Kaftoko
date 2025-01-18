@@ -1,0 +1,135 @@
+{
+    "about": "Цуи Афто Спил",
+    "gameName": "Ка афтоко? :3",
+    "enterKey": "Энтер",
+    "deleteKey": "Делит",
+    "notEnoughLetters": "Кирейн най лагом.",
+    "wordNotFound": "Деки най финна дан котоба.",
+    "solution": "Сваркотоба: {{solution}}",
+    "gameCopied": "Вакву спил на клипбоард.",
+    "howToPlay": "Хур Спил?",
+    "instructions": "Да ахман правда ко на {{tries}} свар. Ахман за, варье фу кирайндадо кавари пр махсе хур свар фу ду усо ос правда.",
+    "pickYourLanguage": "Сентаку айн какутро",
+    "correctSpotInstructions": "Кирейн 'A' ям ине сваркотоба ау ПРАВДА плас.",
+    "wrongSpotInstructions": "Кирейн 'G' ям ине сваркотоба ау УСО плас.",
+    "notInWordInstructions": "Кирейн 'Q' най ям, бака.",
+    "guessDistribution": "Ахман Фьял",
+    "statistics": "Атаи Тумам",
+    "totalTries": "Хеел Искат Атаи",
+    "successRate": "Джингатай",
+    "currentStreak": "Дахмверм Фу Има",
+    "bestStreak": "Лестебраа Дахмверм",
+    "newWordCountdown": "Неоко Тула Маде",
+    "share": "Блогета",
+    "winMessages": [
+        "Маладец!",
+        "Мангебраа!",
+        "Брадаай!",
+        "Мала мала!!",
+        "Ду джинг!!!",
+        "Ой Блин! Маладец~",
+        "Маладец!",
+        "Мангебраа!",
+        "Брадаай!",
+        "Мала мала!!",
+        "Ду джинг!!!",
+        "Ой Блин! Маладец~",
+        "Маладец!",
+        "Мангебраа!",
+        "Брадаай!",
+        "Мала мала!!",
+        "Ду джинг!!!",
+        "Ой Блин! Маладец~",
+        "Маладец!",
+        "Мангебраа!",
+        "Брадаай!",
+        "Мала мала!!",
+        "Ду джинг!!!",
+        "Ой Блин! Маладец~",
+        "Маладец!",
+        "Мангебраа!",
+        "Брадаай!",
+        "Мала мала!!",
+        "Ду джинг!!!",
+        "Ой Блин! Маладец~",
+        "Маладец!",
+        "Мангебраа!",
+        "Брадаай!",
+        "Мала мала!!",
+        "Ду джинг!!!",
+        "Ой Блин! Маладец~",
+        "Бляттттттт -Рей",
+        "Да себя враш.",
+        "Да нам авто."
+    ],
+        "firstExampleWord": [{
+            "letter": "L",
+            "highlight": false
+        },
+        {
+            "letter": "A",
+            "highlight": true
+        },
+        {
+            "letter": "S",
+            "highlight": false
+        },
+        {
+            "letter": "K",
+            "highlight": false
+        },
+        {
+            "letter": "U",
+            "highlight": false
+        }
+    ],
+    "secondExampleWord": [{
+            "letter": "D",
+            "highlight": false
+        },
+        {
+            "letter": "J",
+            "highlight": false
+        },
+        {
+            "letter": "O",
+            "highlight": false
+        },
+        {
+            "letter": "N",
+            "highlight": false
+        },
+        {
+            "letter": "G",
+            "highlight": true
+        }
+    ],
+    "thirdExampleWord": [{
+            "letter": "Q",
+            "highlight": false
+        },
+        {
+            "letter": "Q",
+            "highlight": false
+        },
+        {
+            "letter": "Q",
+            "highlight": false
+        },
+        {
+            "letter": "Q",
+            "highlight": false
+        },
+        {
+            "letter": "Q",
+            "highlight": false
+        }
+    ],
+    "aboutAuthorSentence": "This is an open source word guessing game adapted to {{language}} by me (<3>{{author}}</3>).",
+    "aboutCodeSentence": "Check out <1>the original code</1> by <3>Hannah Park</3> or have a look at <5>Aidan Pine's fork</5> and customize it for another language! ",
+    "aboutDataSentence": "I also changed improved the game a bit, didn't just adapt it to viossa :p",
+    "aboutOriginalSentence": "You can also play the original  <1>here</1>",
+    "languages": {
+        "ви": "Виосса"
+    }
+}
