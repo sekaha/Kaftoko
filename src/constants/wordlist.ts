@@ -201,6 +201,7 @@ export const WORDS = [
   "ALDAG",
   "BOTTO",
   "VIERI",
+  "VYERI",
   "LIMON",
   "SLUCA",
   "POSTA",
@@ -234,6 +235,7 @@ export const WORDS = [
   "KATAJ",
   "SEBYA",
   "SODJI",
+  "SODZI",
   "MITKO",
   "ZENGA",
   "PIMAN",
@@ -255,7 +257,12 @@ export const WORDS = [
   "LYEVA",
   "GORLA",
   "SISKO",
-  "VJERI"
+  "VJERI",
+  "BRACA",
+  "VINYA",
+  "DYELA",
+  "DJELA",
+  // "IDJAO"
 ]
 
 if (CONFIG.normalization) {
