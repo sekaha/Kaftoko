@@ -2,10 +2,10 @@ export const CONFIG = {
   tries: 7, // This changes how many tries you get to finish the game
   language: 'Viossa', // This changes the display name for your language
   wordLength: 5, // This sets how long each word is based on how many characters (as defined in orthography.ts) are in each word
-  author: 'Freya', // Put your name here so people know who made this game!
+  author: 'Sekaha', // Put your name here so people know who made this game!
   authorWebsite: 'https://github.com/sekaha/Kavikotoba', // Put a link to your website or social media here
   wordListSource: 'Vicoord', // Describe the source material for your words here
-  wordListSourceLink: 'https://discord.gg/7hdbmvwmc9', // Put a link to the source material for your words here
+  wordListSourceLink: 'https://github.com/sekaha/Kavikotoba', // Put a link to the source material for your words here
   //
   // THESE NEXT SETTINGS ARE FOR ADVANCED USERS
   //
