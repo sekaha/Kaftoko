@@ -1,8 +1,8 @@
 {
     "about": "Цуи Афто Спил",
     "gameName": "Ка афтоко? :3",
-    "enterKey": "Энтер",
-    "deleteKey": "Делит",
+    "enterKey": "Enter",
+    "deleteKey": "Delete",
     "notEnoughLetters": "Кирейн най лагом.",
     "wordNotFound": "Деки най финна дан котоба.",
     "solution": "Сваркотоба: {{solution}}",
