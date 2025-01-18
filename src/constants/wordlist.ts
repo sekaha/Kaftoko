@@ -6,7 +6,6 @@ export const WORDS = [
   "KARTA",
   "TATSU",
   "SIMPR",
-  "MINUS",
   "ANDRA",
   "HUMBA",
   "DANKE",
