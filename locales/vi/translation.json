@@ -11,7 +11,6 @@
     "instructions": "Da ahman pravda ko na {{tries}} svar. Ahman za, varje fu kiraindado kawari pr mahse hur svar fu du uso os pravda.",
     "pickYourLanguage": "Sentaku ain kakutro",
     "correctSpotInstructions": "Kirain 'A' jam ine svarkotoba au PRAVDA plaas.",
-    "wrongSpotInstructions": "Kirain 'G' jam ine svarkotoba au USO plaas.",
     "notInWordInstructions": "Kirain 'Q' nai jam, baka.",
     "guessDistribution": "Ahman Fjal",
     "statistics": "Atai Tumam",
@@ -130,6 +129,7 @@
     "aboutDataSentence": "I also changed improved the game a bit, didn't just adapt it to viossa :p",
     "aboutOriginalSentence": "You can also play the original  <1>here</1>",
     "languages": {
-        "vi_la": "Latinkakutro"
+        "vi_la": "Latinkakutro",
+        "vi_cy": "Кирилкакутро"
     }
 }
