@@ -34,12 +34,12 @@ export const Keyboard = ({ onChar, onDelete, onEnter, guesses }: Props) => {
         onDelete()
       }
       // Take away key event listener for now
-      // else {
-      //   const key = e.key.toUpperCase()
-      //   if (key.length === 1 && key >= 'A' && key <= 'Z') {
-      //     onChar(key)
-      //   }
-      // }
+      else {
+        const key = e.key.toUpperCase()
+        if (key.length === 1 && key >= 'A' && key <= 'Z') {
+          onChar(key)
+        }
+      }
     }
     window.addEventListener('keyup', listener)
     return () => {
@@ -50,7 +50,7 @@ export const Keyboard = ({ onChar, onDelete, onEnter, guesses }: Props) => {
   return (
     <div>
       <div className="flex justify-center mb-1">
-        {ORTHOGRAPHY.slice(0, Math.floor(ORTHOGRAPHY.length * 0.4)).map(
+        {ORTHOGRAPHY.slice(0, 9).map( // Math.floor(ORTHOGRAPHY.length * 0.4)
           (char) => (
             <Key
               key={char}
@@ -63,8 +63,8 @@ export const Keyboard = ({ onChar, onDelete, onEnter, guesses }: Props) => {
       </div>
       <div className="flex justify-center mb-1">
         {ORTHOGRAPHY.slice(
-          Math.floor(ORTHOGRAPHY.length * 0.4),
-          Math.floor(ORTHOGRAPHY.length * 0.7)
+          9,//Math.floor(ORTHOGRAPHY.length * 0.4),
+          18//Math.floor(ORTHOGRAPHY.length * 0.7)
         ).map((char) => (
           <Key
             key={char}
@@ -79,7 +79,7 @@ export const Keyboard = ({ onChar, onDelete, onEnter, guesses }: Props) => {
           {t('enterKey')}
         </Key>
         {ORTHOGRAPHY.slice(
-          Math.floor(ORTHOGRAPHY.length * 0.7),
+          18,
           ORTHOGRAPHY.length
         ).map((char) => (
           <Key
