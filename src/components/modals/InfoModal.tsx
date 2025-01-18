@@ -27,7 +27,7 @@ export const InfoModal = ({ isOpen, handleClose }: Props) => {
   })
   return (
     <BaseModal title={t('howToPlay')} isOpen={isOpen} handleClose={handleClose}>
-      <p className="text-sm text-gray-500">
+      <p className="text-sm text-gray-200">
         {t('instructions', { tries: CONFIG.tries })}
       </p>
 
@@ -41,7 +41,7 @@ export const InfoModal = ({ isOpen, handleClose }: Props) => {
             }
           })}
       </div>
-      <p className="text-sm text-gray-500">{t('correctSpotInstructions')}</p>
+      <p className="text-sm text-gray-200">{t('correctSpotInstructions')}</p>
       <div className="flex justify-center mb-1 mt-4">
         {Array.isArray(secondExampleWord) &&
           secondExampleWord.map((el) => {
@@ -52,7 +52,7 @@ export const InfoModal = ({ isOpen, handleClose }: Props) => {
             }
           })}
       </div>
-      <p className="text-sm text-gray-500">{t('wrongSpotInstructions')}</p>
+      <p className="text-sm text-gray-200">{t('wrongSpotInstructions')}</p>
 
       <div className="flex justify-center mb-1 mt-4">
         {Array.isArray(thirdExampleWord) &&
@@ -64,7 +64,7 @@ export const InfoModal = ({ isOpen, handleClose }: Props) => {
             }
           })}
       </div>
-      <p className="text-sm text-gray-500">{t('notInWordInstructions')}</p>
+      <p className="text-sm text-gray-200">{t('notInWordInstructions')}</p>
     </BaseModal>
   )
 }
