@@ -271,7 +271,8 @@ export const WORDS = [
   "WONIU",
   "FARZA",
   "MOSZT",
-  "HONOO"
+  "HONOO",
+  "PAYEM"
   // "IDJAO"
 ]
 
