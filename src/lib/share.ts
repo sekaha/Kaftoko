@@ -20,7 +20,7 @@ export const shareStatus = (guesses: string[][], lost: boolean) => {
 }
 
 export const generateSpoiler = (guesses: string[][]) => {
-  return "||\n```" + guesses.join("\n") + "```\n||"
+  return "Ahman:\n||\n```" + guesses.join("\n") + "```\n||"
 }
 
 export const generateEmojiGrid = (guesses: string[][]) => {
