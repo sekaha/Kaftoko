@@ -278,18 +278,19 @@ if (CONFIG.normalization) {
   WORDS.forEach((val, i) => (WORDS[i] = val.normalize(CONFIG.normalization)))
 }
 
-function shuffle(array: any[]) {
-  for (let i = array.length - 1; i > 0; i--) {
-    const j = Math.floor(Math.random() * (i + 1))
-    ;[array[i], array[j]] = [array[j], array[i]]
+
+// Deterministic random if not on shuffle mode
+if (CONFIG.shuffle) {
+  var seedrandom = require('seedrandom');
+  var rng = seedrandom('viossa');
+
+  for (let i = WORDS.length - 1; i > 0; i--) {
+    const j = Math.floor(rng() * (i + 1));
+    [WORDS[i], WORDS[j]] = [WORDS[j], WORDS[i]];
+  }
+} else {
+  for (let i = WORDS.length - 1; i > 0; i--) {
+    const j = Math.floor(Math.random() * (i + 1));
+    [WORDS[i], WORDS[j]] = [WORDS[j], WORDS[i]];
   }
 }
-
-if (!CONFIG.shuffle) {
-  var seedrandom = require('seedrandom');
-
-  // Shuffle list with random seed so I can't/others can't know the order from the code?
-  seedrandom('viossa', { global: true });
-}
-
-shuffle(WORDS)
