@@ -1,5 +1,4 @@
 import { CONFIG } from './config'
-var seedrandom = require('seedrandom');
 
 export const WORDS = [
   "MINUS",
@@ -275,9 +274,6 @@ export const WORDS = [
   // "IDJAO"
 ]
 
-// Shuffle list with random seed so I can't/others can't know the order from the code?
-var rng = seedrandom('viossa');
-
 if (CONFIG.normalization) {
   WORDS.forEach((val, i) => (WORDS[i] = val.normalize(CONFIG.normalization)))
 }
@@ -289,6 +285,12 @@ function shuffle(array: any[]) {
   }
 }
 
-// if (CONFIG.shuffle) {
+if (!CONFIG.shuffle) {
+  var seedrandom = require('seedrandom');
+
+  // Shuffle list with random seed so I can't/others can't know the order from the code?
+  var rng = seedrandom('viossa');
+}
+
+
 shuffle(WORDS)
-//}
