@@ -271,6 +271,7 @@ export const WORDS = [
   "BYOKI",
   "FLIRE",
   "KARGU",
+  "NAWEL",
   // "IDJAO"
 ]
 
@@ -280,7 +281,7 @@ if (CONFIG.normalization) {
 
 
 // Deterministic random if not on shuffle mode
-if (CONFIG.shuffle) {
+if (!CONFIG.shuffle) {
   var seedrandom = require('seedrandom');
   var rng = seedrandom('viossa');
 
