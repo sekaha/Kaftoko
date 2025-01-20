@@ -1,7 +1,7 @@
 {
-    "name": "Kavikotoba",
+    "name": "Kaftoko",
     "version": "0.1.0",
-    "homepage": "https://sekaha.github.io/Kavikotoba",
+    "homepage": "https://sekaha.github.io/Kaftoko",
     "private": true,
     "dependencies": {
         "@bcgov/bc-sans": "^1.0.1",
@@ -24,6 +24,7 @@
         "react-dom": "^17.0.2",
         "react-ga": "^3.3.0",
         "react-i18next": "^11.15.4",
+        "react-icons": "^5.4.0",
         "react-scripts": "5.0.0",
         "seedrandom": "^3.0.5",
         "shebang-regex": "^4.0.0",

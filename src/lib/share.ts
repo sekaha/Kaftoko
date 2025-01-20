@@ -2,10 +2,17 @@ import { getGuessStatuses } from './statuses'
 import { solutionIndex } from './words'
 import { CONFIG } from '../constants/config'
 
-export const shareStatus = (guesses: string[][], lost: boolean) => {
+export const shareStatus = (guesses: string[][], lost: boolean, random: boolean) => {
+  let header = '#'+CONFIG.language
+
+  if (random) {
+    header += 'Random Mode'
+  } else {
+    header += ' #' + solutionIndex
+  }
+
   navigator.clipboard.writeText(
-    CONFIG.language + ' #' +
-      solutionIndex +
+      header +
       ': ' +
       `${lost ? 'X' : guesses.length}` +
       '/' +
@@ -14,7 +21,7 @@ export const shareStatus = (guesses: string[][], lost: boolean) => {
       generateEmojiGrid(guesses) +
       '\n\n' +
       generateSpoiler(guesses) +
-      "https://sekaha.github.io/Kavikotoba/" // window.location.href.replace(`https://${window.location.protocol}//`,Viossa367 2/7
+      "https://sekaha.github.io/Kaftoko/" // window.location.href.replace(`https://${window.location.protocol}//`,Viossa367 2/7
   )
 }
 

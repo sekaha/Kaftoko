@@ -229,7 +229,6 @@ export const WORDS = [
   "RYOHO",
   "RUFNE",
   "TRELO",
-  "HONOO",
   "TINKO",
   "SHKOI",
   "OTONA",
@@ -271,11 +270,19 @@ export const WORDS = [
   "BYOKI",
   "FLIRE",
   "KARGU",
+  "HONOO",
   "NAWEL",
   "COPMA",
   "NJAVI",
   "IDZAU",
   "JIIIT", // Fuck anyone who gets this, loser
+  "KINJI",
+  "STRIG",
+  "URURA",
+  "KANAK",
+  "INURI",
+  "FERMI",
+  "VEMIE"
 ]
 
 if (CONFIG.normalization) {

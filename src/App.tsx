@@ -1,6 +1,9 @@
 import { InformationCircleIcon } from '@heroicons/react/outline'
 import { ChartBarIcon } from '@heroicons/react/outline'
 import { TranslateIcon } from '@heroicons/react/outline'
+import { CalendarIcon } from '@heroicons/react/outline'
+import { CgDice5 } from "react-icons/cg";
+
 import { useState, useEffect } from 'react'
 import { Alert } from './components/alerts/Alert'
 import { Grid } from './components/grid/Grid'
@@ -11,6 +14,7 @@ import { StatsModal } from './components/modals/StatsModal'
 import { TranslateModal } from './components/modals/TranslateModal'
 import { isWordInWordList, isWinningWord, solution } from './lib/words'
 import { addStatsForCompletedGame, loadStats } from './lib/stats'
+
 import {
   loadGameStateFromLocalStorage,
   saveGameStateToLocalStorage,
@@ -24,9 +28,10 @@ import { withTranslation, WithTranslation } from 'react-i18next'
 
 const ALERT_TIME_MS = 2000
 
-const App: React.FC<WithTranslation> = ({ t, i18n }) => {
+const App : React.FC<WithTranslation> = ({ t, i18n }) => {
   const [currentGuess, setCurrentGuess] = useState<Array<string>>([])
   const [isGameWon, setIsGameWon] = useState(false)
+  const [isRandom, setIsRandom] = useState(false)
   const [isInfoModalOpen, setIsInfoModalOpen] = useState(false)
   const [isAboutModalOpen, setIsAboutModalOpen] = useState(false)
   const [isnaiLagomKirain, setIsnaiLagomKirain] = useState(false)
@@ -135,71 +140,81 @@ const App: React.FC<WithTranslation> = ({ t, i18n }) => {
     }
   }
   let translateElement = <div></div>
+  
   if (CONFIG.availableLangs.length > 1) {
     translateElement = (
       <TranslateIcon
-        className="h-6 w-6 cursor-pointer text-pravda_500"
+        className="h-6 w-6 cursor-pointer"
         onClick={() => setIsI18nModalOpen(true)}
       />
     )
   }
-
-  // text-pravda_500
+// text-pravda_500
   return (
     <div className="py-8 max-w-7xl mx-auto sm:px-6 lg:px-8">
-      <div className="flex w-80 mx-auto items-center mb-8">
-        <h1 className="text-xl grow font-bold">
-          {t('spilNamae', { language: CONFIG.language })}
-        </h1>
-        {translateElement}
-        <InformationCircleIcon
-          className="h-6 w-6 cursor-pointer text-color-pravda_500"
-          onClick={() => setIsInfoModalOpen(true)}
-        />
-        <ChartBarIcon
-          className="h-6 w-6 cursor-pointer text-color-pravda_500"
-          onClick={() => setIsStatsModalOpen(true)}
-        />
-      </div>
-      <Grid guesses={guesses} currentGuess={currentGuess} />
-      <Keyboard
+      <div className="flex w-80 mx-auto items-center mb-8 justify-between">
+        <div id="thisone" className="flex">
+            <CalendarIcon className="h-6 w-6 cursor-pointer"/>
+            <CgDice5 className="h-6 w-6 cursor-pointer text-pravda_500"/>
+            <span className="h-6 w-6"/>
+        </div>
+        
+        <h1 className="text-center text-xl text-bold">{t('spilNamae')}</h1>
+
+        <div className="flex items-center">
+            {translateElement}
+            <ChartBarIcon
+            className="h-6 w-6 cursor-pointer text-color-pravda_500"
+            onClick={() => setIsStatsModalOpen(true)}
+            />
+            <InformationCircleIcon
+            className="h-6 w-6 cursor-pointer text-color-pravda_500"
+            onClick={() => setIsInfoModalOpen(true)}
+            />
+        </div>
+    </div>
+    <Grid guesses={guesses} currentGuess={currentGuess} />
+    <Keyboard
         onChar={onChar}
         onDelete={onDelete}
         onEnter={onEnter}
         guesses={guesses}
-      />
-      <TranslateModal
+    />
+
+    <TranslateModal
         isOpen={isI18nModalOpen}
         handleClose={() => setIsI18nModalOpen(false)}
-      />
-      <InfoModal
-        isOpen={isInfoModalOpen}
-        handleClose={() => setIsInfoModalOpen(false)}
-      />
-      <StatsModal
+    />
+    <StatsModal
         isOpen={isStatsModalOpen}
         handleClose={() => setIsStatsModalOpen(false)}
         guesses={guesses}
         gameStats={stats}
         isGameLost={isGameLost}
         isGameWon={isGameWon}
+        isRandom={isRandom}
         handleShare={() => {
-          setSuccessAlert(t('spilWakwu'))
-          return setTimeout(() => setSuccessAlert(''), ALERT_TIME_MS)
+        setSuccessAlert(t('spilWakwu'))
+        return setTimeout(() => setSuccessAlert(''), ALERT_TIME_MS)
         }}
-      />
-      <AboutModal
+    />
+    <InfoModal
+        isOpen={isInfoModalOpen}
+        handleClose={() => setIsInfoModalOpen(false)}
+    />
+    <AboutModal
         isOpen={isAboutModalOpen}
         handleClose={() => setIsAboutModalOpen(false)}
-      />
+    />
 
-      <button
+    <button
         type="button"
         className="mx-auto mt-8 flex items-center px-2.5 py-1.5 border border-transparent text-xs font-medium rounded text-white bg-pravda_500 hover:bg-pravda_600 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-pravda_700 select-none"
         onClick={() => setIsAboutModalOpen(true)}
-      >
+    >
         {t('tsui')}
-      </button>
+    </button>
+
 
       <Alert message={t('naiLagomKirain')} isOpen={isnaiLagomKirain} />
       <Alert message={t('naiFinnaKo')} isOpen={isnaiFinnaKoAlertOpen} />
