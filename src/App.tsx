@@ -3,7 +3,6 @@ import { ChartBarIcon } from '@heroicons/react/outline'
 import { TranslateIcon } from '@heroicons/react/outline'
 import { CalendarIcon } from '@heroicons/react/outline'
 import { CgDice5 } from "react-icons/cg";
-
 import { useState, useEffect } from 'react'
 import { Alert } from './components/alerts/Alert'
 import { Grid } from './components/grid/Grid'
@@ -31,7 +30,7 @@ const ALERT_TIME_MS = 2000
 const App : React.FC<WithTranslation> = ({ t, i18n }) => {
   const [currentGuess, setCurrentGuess] = useState<Array<string>>([])
   const [isGameWon, setIsGameWon] = useState(false)
-  const [isRandom, setIsRandom] = useState(false)
+  const [isDaily, setIsDaily] = useState(false)
   const [isInfoModalOpen, setIsInfoModalOpen] = useState(false)
   const [isAboutModalOpen, setIsAboutModalOpen] = useState(false)
   const [isnaiLagomKirain, setIsnaiLagomKirain] = useState(false)
@@ -144,7 +143,7 @@ const App : React.FC<WithTranslation> = ({ t, i18n }) => {
   if (CONFIG.availableLangs.length > 1) {
     translateElement = (
       <TranslateIcon
-        className="h-6 w-6 cursor-pointer"
+        className="h-6 w-6 cursor-pointer hover:text-pravda_600 text-white focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-pravda_700"
         onClick={() => setIsI18nModalOpen(true)}
       />
     )
@@ -153,9 +152,15 @@ const App : React.FC<WithTranslation> = ({ t, i18n }) => {
   return (
     <div className="py-8 max-w-7xl mx-auto sm:px-6 lg:px-8">
       <div className="flex w-80 mx-auto items-center mb-8 justify-between">
-        <div id="thisone" className="flex">
-            <CalendarIcon className="h-6 w-6 cursor-pointer"/>
-            <CgDice5 className="h-6 w-6 cursor-pointer text-pravda_500"/>
+        <div className="flex">
+            <CalendarIcon
+            className={`h-6 w-6 cursor-pointer ${ isDaily ? 'text-pravda-500' : 'text-white'} hover:text-pravda_600 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-pravda_700`}
+            onClick={() => setIsDaily(true)}
+            />
+            <CgDice5
+            className={`h-6 w-6 cursor-pointer ${ isDaily ? 'text-white' : 'text-pravda-500' } hover:text-pravda_600 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-pravda_700`}
+            onClick={() => setIsDaily(false)}
+            />
             <span className="h-6 w-6"/>
         </div>
         
@@ -164,11 +169,11 @@ const App : React.FC<WithTranslation> = ({ t, i18n }) => {
         <div className="flex items-center">
             {translateElement}
             <ChartBarIcon
-            className="h-6 w-6 cursor-pointer text-color-pravda_500"
+            className="h-6 w-6 cursor-pointer text-white hover:text-pravda_600 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-pravda_700"
             onClick={() => setIsStatsModalOpen(true)}
             />
             <InformationCircleIcon
-            className="h-6 w-6 cursor-pointer text-color-pravda_500"
+            className="h-6 w-6 cursor-pointer text-white hover:text-pravda_600 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-pravda_700"
             onClick={() => setIsInfoModalOpen(true)}
             />
         </div>
@@ -192,7 +197,7 @@ const App : React.FC<WithTranslation> = ({ t, i18n }) => {
         gameStats={stats}
         isGameLost={isGameLost}
         isGameWon={isGameWon}
-        isRandom={isRandom}
+        isDaily={isDaily}
         handleShare={() => {
         setSuccessAlert(t('spilWakwu'))
         return setTimeout(() => setSuccessAlert(''), ALERT_TIME_MS)

@@ -14,7 +14,7 @@ type Props = {
   gameStats: GameStats
   isGameLost: boolean
   isGameWon: boolean
-  isRandom: boolean
+  isDaily: boolean
   handleShare: () => void
 }
 
@@ -25,7 +25,7 @@ export const StatsModal = ({
   gameStats,
   isGameLost,
   isGameWon,
-  isRandom,
+  isDaily,
   handleShare,
 }: Props) => {
   const { t } = useTranslation()
@@ -65,7 +65,7 @@ export const StatsModal = ({
             type="button"
             className="mt-2 w-full rounded-md border border-transparent shadow-sm px-4 py-2 bg-pravda_600 text-base font-medium text-white hover:bg-pravda_700 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-pravda_500 sm:text-sm"
             onClick={() => {
-              shareStatus(guesses, isGameLost, isRandom)
+              shareStatus(guesses, isGameLost, isDaily)
               handleShare()
             }}
           >
