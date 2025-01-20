@@ -1,11 +1,12 @@
 import { Fragment } from 'react'
 import { Transition } from '@headlessui/react'
 import classNames from 'classnames'
+import { ReactNode } from 'react';
 
 type Props = {
   isOpen: boolean
-  message: string
-  variant?: 'success' | 'warning'
+  message: string | ReactNode
+  variant?: 'success' | 'warning' | 'info'
 }
 
 export const Alert = ({ isOpen, message, variant = 'warning' }: Props) => {
@@ -14,6 +15,7 @@ export const Alert = ({ isOpen, message, variant = 'warning' }: Props) => {
     {
       'bg-humba_500': variant === 'warning',
       'bg-jing_500 z-20': variant === 'success',
+      'bg-pravda_400 z-40': variant === 'info',
     }
   )
 

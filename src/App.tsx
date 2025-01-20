@@ -2,7 +2,7 @@ import { InformationCircleIcon } from '@heroicons/react/outline'
 import { ChartBarIcon } from '@heroicons/react/outline'
 import { TranslateIcon } from '@heroicons/react/outline'
 import { CalendarIcon } from '@heroicons/react/outline'
-import { CgDice5 } from "react-icons/cg";
+import { CgCalendarToday, CgDice5 } from "react-icons/cg";
 import { useState, useEffect } from 'react'
 import { Alert } from './components/alerts/Alert'
 import { Grid } from './components/grid/Grid'
@@ -37,6 +37,8 @@ const App : React.FC<WithTranslation> = ({ t, i18n }) => {
   const [isStatsModalOpen, setIsStatsModalOpen] = useState(false)
   const [isI18nModalOpen, setIsI18nModalOpen] = useState(false)
   const [isnaiFinnaKoAlertOpen, setIsnaiFinnaKoAlertOpen] = useState(false)
+  const [isNeoUdachikoAlertOpen, setIsNeoUdachikoAlertOpen] = useState(false)
+  const [isImadahkoAlertOpen, setIsImadahkoAlertOpen] = useState(false)
   const [isGameLost, setIsGameLost] = useState(false)
   const [successAlert, setSuccessAlert] = useState('')
   const [guesses, setGuesses] = useState<string[][]>(() => {
@@ -84,6 +86,24 @@ const App : React.FC<WithTranslation> = ({ t, i18n }) => {
       }, ALERT_TIME_MS)
     }
   }, [isGameWon, isGameLost]) // , t
+
+  const onClickUdachi = () => {
+      setIsNeoUdachikoAlertOpen(true)
+      setIsImadahkoAlertOpen(false)
+
+      return setTimeout(() => {
+        setIsNeoUdachikoAlertOpen(false)
+      }, ALERT_TIME_MS)
+  }
+
+  const onClickImadah = () => {
+    setIsImadahkoAlertOpen(true)
+    setIsNeoUdachikoAlertOpen(false)
+
+    return setTimeout(() => {
+      setIsImadahkoAlertOpen(false)
+    }, ALERT_TIME_MS)
+}
 
   const onChar = (value: string) => {
     if (
@@ -143,7 +163,7 @@ const App : React.FC<WithTranslation> = ({ t, i18n }) => {
   if (CONFIG.availableLangs.length > 1) {
     translateElement = (
       <TranslateIcon
-        className="h-6 w-6 cursor-pointer hover:text-pravda_600 text-white focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-pravda_700"
+        className="h-6 w-6 cursor-pointer hover:text-pravda_700 text-white focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-pravda_700"
         onClick={() => setIsI18nModalOpen(true)}
       />
     )
@@ -154,12 +174,12 @@ const App : React.FC<WithTranslation> = ({ t, i18n }) => {
       <div className="flex w-80 mx-auto items-center mb-8 justify-between">
         <div className="flex">
             <CalendarIcon
-            className={`h-6 w-6 cursor-pointer ${ isDaily ? 'text-pravda-500' : 'text-white'} hover:text-pravda_600 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-pravda_700`}
-            onClick={() => setIsDaily(true)}
+            className={`h-6 w-6 cursor-pointer ${ isDaily ? 'text-pravda_500' : 'text-white'} hover:text-pravda_700 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-pravda_700`}
+            onClick={() => {setIsDaily(true); onClickImadah()}}
             />
             <CgDice5
-            className={`h-6 w-6 cursor-pointer ${ isDaily ? 'text-white' : 'text-pravda-500' } hover:text-pravda_600 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-pravda_700`}
-            onClick={() => setIsDaily(false)}
+            className={`h-6 w-6 cursor-pointer ${ isDaily ? 'text-white' : 'text-pravda_500' } hover:text-pravda_700 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-pravda_700`}
+            onClick={() => {setIsDaily(false); onClickUdachi()}}
             />
             <span className="h-6 w-6"/>
         </div>
@@ -169,11 +189,11 @@ const App : React.FC<WithTranslation> = ({ t, i18n }) => {
         <div className="flex items-center">
             {translateElement}
             <ChartBarIcon
-            className="h-6 w-6 cursor-pointer text-white hover:text-pravda_600 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-pravda_700"
+            className="h-6 w-6 cursor-pointer text-white hover:text-pravda_700 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-pravda_700"
             onClick={() => setIsStatsModalOpen(true)}
             />
             <InformationCircleIcon
-            className="h-6 w-6 cursor-pointer text-white hover:text-pravda_600 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-pravda_700"
+            className="h-6 w-6 cursor-pointer text-white hover:text-pravda_700 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-pravda_700"
             onClick={() => setIsInfoModalOpen(true)}
             />
         </div>
@@ -220,8 +240,27 @@ const App : React.FC<WithTranslation> = ({ t, i18n }) => {
         {t('tsui')}
     </button>
 
-
       <Alert message={t('naiLagomKirain')} isOpen={isnaiLagomKirain} />
+      <Alert
+        message={(
+          <>
+            <CgDice5 className="h-[1em] w-[1em] inline mb-1 mr-1" />
+            {t('neoUdachiko')}
+          </>
+        )} 
+        isOpen={isNeoUdachikoAlertOpen} 
+        variant="info"       
+      />
+      <Alert
+        message={(
+          <>
+            <CalendarIcon className="h-[1em] w-[1em] inline mb-1 mr-1" />
+            {t('imadahko')}
+          </>
+        )} 
+        isOpen={isImadahkoAlertOpen} 
+        variant="info"
+      />
       <Alert message={t('naiFinnaKo')} isOpen={isnaiFinnaKoAlertOpen} />
       <Alert message={t('svar', { solution })} isOpen={isGameLost} />
       <Alert

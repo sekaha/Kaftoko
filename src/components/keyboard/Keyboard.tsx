@@ -79,8 +79,8 @@ export const Keyboard = ({ onChar, onDelete, onEnter, guesses }: Props) => {
 
       {/* Bottom Row */}
       <div className="flex justify-center mb-1">
-        <Key key="enterKey" width={62} value="ENTER" onClick={onClick}>
-          {t('enterKey')}
+        <Key key="ahmanPresmi" width={62} value="ENTER" onClick={onClick}>
+          {t('ahmanPresmi')}
         </Key>
         {ORTHOGRAPHY.slice(
           18,
@@ -93,8 +93,8 @@ export const Keyboard = ({ onChar, onDelete, onEnter, guesses }: Props) => {
             status={charStatuses[char]}
           />
         ))}
-        <Key key="deleteKey" width={62} value="DELETE" onClick={onClick}>
-          {t('deleteKey')}
+        <Key key="keshitePresmi" width={62} value="DELETE" onClick={onClick}>
+          {t('keshitePresmi')}
         </Key>
       </div>
 
