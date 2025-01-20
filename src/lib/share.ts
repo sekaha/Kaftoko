@@ -14,7 +14,7 @@ export const shareStatus = (guesses: string[][], lost: boolean) => {
       generateEmojiGrid(guesses) +
       '\n\n' +
       generateSpoiler(guesses) +
-      "https://sekaha.github.io/Kavikotoba/" // window.location.href.replace(`https://${window.location.protocol}//`,Viossa367 2/7
+      "https://sekaha.github.io/Kaftoko/" // window.location.href.replace(`https://${window.location.protocol}//`,Viossa367 2/7
   )
 }
 

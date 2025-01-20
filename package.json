@@ -1,7 +1,7 @@
 {
-    "name": "Kavikotoba",
+    "name": "Kaftoko",
     "version": "0.1.0",
-    "homepage": "https://sekaha.github.io/Kavikotoba",
+    "homepage": "https://sekaha.github.io/Kaftoko",
     "private": true,
     "dependencies": {
         "@bcgov/bc-sans": "^1.0.1",
