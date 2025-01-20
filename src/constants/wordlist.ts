@@ -272,13 +272,15 @@ export const WORDS = [
   "FLIRE",
   "KARGU",
   "NAWEL",
-  // "IDJAO"
+  "COPMA",
+  "NJAVI",
+  "IDZAU",
+  "JIIIT", // Fuck anyone who gets this, loser
 ]
 
 if (CONFIG.normalization) {
   WORDS.forEach((val, i) => (WORDS[i] = val.normalize(CONFIG.normalization)))
 }
-
 
 // Deterministic random if not on shuffle mode
 if (!CONFIG.shuffle) {

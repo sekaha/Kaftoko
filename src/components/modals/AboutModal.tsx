@@ -10,7 +10,7 @@ type Props = {
 export const AboutModal = ({ isOpen, handleClose }: Props) => {
   const { t } = useTranslation()
   return (
-    <BaseModal title={t('about')} isOpen={isOpen} handleClose={handleClose}>
+    <BaseModal title={t('tsui')} isOpen={isOpen} handleClose={handleClose}>
       <p className="text-sm text-gray-200">
         <Trans
           className="text-white"

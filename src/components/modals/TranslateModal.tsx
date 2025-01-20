@@ -35,7 +35,7 @@ export const TranslateModal = ({ isOpen, handleClose }: Props) => {
 
   return (
     <BaseModal
-      title={t('pickYourLanguage')}
+      title={t('sentakuGlossa')}
       isOpen={isOpen}
       handleClose={handleClose}
     >

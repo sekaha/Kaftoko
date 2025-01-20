@@ -15,34 +15,34 @@ export const addStatsForCompletedGame = (
   // Count is number of incorrect guesses before end.
   const stats = { ...gameStats }
 
-  stats.totalGames += 1
+  stats.heelSpilAtai += 1
 
   if (count > CONFIG.tries - 1) {
     // A fail situation
-    stats.currentStreak = 0
-    stats.gamesFailed += 1
+    stats.imaDahmwerm = 0
+    stats.humbaSpilAtai += 1
   } else {
-    stats.winDistribution[count] += 1
-    stats.currentStreak += 1
+    stats.jingFjal[count] += 1
+    stats.imaDahmwerm += 1
 
-    if (stats.bestStreak < stats.currentStreak) {
-      stats.bestStreak = stats.currentStreak
+    if (stats.lesteBraaDahmwerm < stats.imaDahmwerm) {
+      stats.lesteBraaDahmwerm = stats.imaDahmwerm
     }
   }
 
-  stats.successRate = getSuccessRate(stats)
+  stats.jingatai = getSuccessRate(stats)
 
   saveStatsToLocalStorage(stats)
   return stats
 }
 
 const defaultStats: GameStats = {
-  winDistribution: [0, 0, 0, 0, 0, 0],
-  gamesFailed: 0,
-  currentStreak: 0,
-  bestStreak: 0,
-  totalGames: 0,
-  successRate: 0,
+  jingFjal: [0, 0, 0, 0, 0, 0],
+  humbaSpilAtai: 0,
+  imaDahmwerm: 0,
+  lesteBraaDahmwerm: 0,
+  heelSpilAtai: 0,
+  jingatai: 0,
 }
 
 export const loadStats = () => {
@@ -50,9 +50,9 @@ export const loadStats = () => {
 }
 
 const getSuccessRate = (gameStats: GameStats) => {
-  const { totalGames, gamesFailed } = gameStats
+  const { heelSpilAtai, humbaSpilAtai } = gameStats
 
   return Math.round(
-    (100 * (totalGames - gamesFailed)) / Math.max(totalGames, 1)
+    (100 * (heelSpilAtai - humbaSpilAtai)) / Math.max(heelSpilAtai, 1)
   )
 }

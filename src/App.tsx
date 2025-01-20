@@ -29,10 +29,10 @@ const App: React.FC<WithTranslation> = ({ t, i18n }) => {
   const [isGameWon, setIsGameWon] = useState(false)
   const [isInfoModalOpen, setIsInfoModalOpen] = useState(false)
   const [isAboutModalOpen, setIsAboutModalOpen] = useState(false)
-  const [isNotEnoughLetters, setIsNotEnoughLetters] = useState(false)
+  const [isnaiLagomKirain, setIsnaiLagomKirain] = useState(false)
   const [isStatsModalOpen, setIsStatsModalOpen] = useState(false)
   const [isI18nModalOpen, setIsI18nModalOpen] = useState(false)
-  const [isWordNotFoundAlertOpen, setIsWordNotFoundAlertOpen] = useState(false)
+  const [isnaiFinnaKoAlertOpen, setIsnaiFinnaKoAlertOpen] = useState(false)
   const [isGameLost, setIsGameLost] = useState(false)
   const [successAlert, setSuccessAlert] = useState('')
   const [guesses, setGuesses] = useState<string[][]>(() => {
@@ -65,7 +65,7 @@ const App: React.FC<WithTranslation> = ({ t, i18n }) => {
 
   useEffect(() => {
     if (isGameWon) {
-      const WIN_MESSAGES = t('winMessages', { returnObjects: true })
+      const WIN_MESSAGES = t('jingKaku', { returnObjects: true })
       setSuccessAlert(
         WIN_MESSAGES[Math.floor(Math.random() * WIN_MESSAGES.length)]
       )
@@ -79,7 +79,7 @@ const App: React.FC<WithTranslation> = ({ t, i18n }) => {
         setIsStatsModalOpen(true)
       }, ALERT_TIME_MS)
     }
-  }, [isGameWon, isGameLost, t])
+  }, [isGameWon, isGameLost]) // , t
 
   const onChar = (value: string) => {
     if (
@@ -101,16 +101,16 @@ const App: React.FC<WithTranslation> = ({ t, i18n }) => {
       return
     }
     if (!(currentGuess.length === CONFIG.wordLength)) {
-      setIsNotEnoughLetters(true)
+      setIsnaiLagomKirain(true)
       return setTimeout(() => {
-        setIsNotEnoughLetters(false)
+        setIsnaiLagomKirain(false)
       }, ALERT_TIME_MS)
     }
 
     if (!isWordInWordList(currentGuess.join(''))) {
-      setIsWordNotFoundAlertOpen(true)
+      setIsnaiFinnaKoAlertOpen(true)
       return setTimeout(() => {
-        setIsWordNotFoundAlertOpen(false)
+        setIsnaiFinnaKoAlertOpen(false)
       }, ALERT_TIME_MS)
     }
     const winningWord = isWinningWord(currentGuess.join(''))
@@ -149,7 +149,7 @@ const App: React.FC<WithTranslation> = ({ t, i18n }) => {
     <div className="py-8 max-w-7xl mx-auto sm:px-6 lg:px-8">
       <div className="flex w-80 mx-auto items-center mb-8">
         <h1 className="text-xl grow font-bold">
-          {t('gameName', { language: CONFIG.language })}
+          {t('spilNamae', { language: CONFIG.language })}
         </h1>
         {translateElement}
         <InformationCircleIcon
@@ -184,7 +184,7 @@ const App: React.FC<WithTranslation> = ({ t, i18n }) => {
         isGameLost={isGameLost}
         isGameWon={isGameWon}
         handleShare={() => {
-          setSuccessAlert(t('gameCopied'))
+          setSuccessAlert(t('spilWakwu'))
           return setTimeout(() => setSuccessAlert(''), ALERT_TIME_MS)
         }}
       />
@@ -198,12 +198,12 @@ const App: React.FC<WithTranslation> = ({ t, i18n }) => {
         className="mx-auto mt-8 flex items-center px-2.5 py-1.5 border border-transparent text-xs font-medium rounded text-white bg-pravda_500 hover:bg-pravda_600 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-pravda_700 select-none"
         onClick={() => setIsAboutModalOpen(true)}
       >
-        {t('about')}
+        {t('tsui')}
       </button>
 
-      <Alert message={t('notEnoughLetters')} isOpen={isNotEnoughLetters} />
-      <Alert message={t('wordNotFound')} isOpen={isWordNotFoundAlertOpen} />
-      <Alert message={t('solution', { solution })} isOpen={isGameLost} />
+      <Alert message={t('naiLagomKirain')} isOpen={isnaiLagomKirain} />
+      <Alert message={t('naiFinnaKo')} isOpen={isnaiFinnaKoAlertOpen} />
+      <Alert message={t('svar', { solution })} isOpen={isGameLost} />
       <Alert
         message={successAlert}
         isOpen={successAlert !== ''}

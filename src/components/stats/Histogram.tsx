@@ -6,12 +6,12 @@ type Props = {
 }
 
 export const Histogram = ({ gameStats }: Props) => {
-  const winDistribution = gameStats.winDistribution
-  const maxValue = Math.max(...winDistribution)
+  const jingFjal = gameStats.jingFjal
+  const maxValue = Math.max(...jingFjal)
 
   return (
     <div className="columns-1 justify-left m-2 text-sm">
-      {winDistribution.map((value, i) => (
+      {jingFjal.map((value, i) => (
         <Progress
           key={i}
           index={i}

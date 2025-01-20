@@ -24,10 +24,10 @@ export const StatBar = ({ gameStats }: Props) => {
   const { t } = useTranslation()
   return (
     <div className="flex justify-center my-2">
-      <StatItem label={t('totalTries')} value={gameStats.totalGames} />
-      <StatItem label={t('successRate')} value={`${gameStats.successRate}%`} />
-      <StatItem label={t('currentStreak')} value={gameStats.currentStreak} />
-      <StatItem label={t('bestStreak')} value={gameStats.bestStreak} />
+      <StatItem label={t('heelIskatAtai')} value={gameStats.heelSpilAtai} />
+      <StatItem label={t('jingatai')} value={`${gameStats.jingatai}%`} />
+      <StatItem label={t('imaDahmwerm')} value={gameStats.imaDahmwerm} />
+      <StatItem label={t('lesteBraaDahmwerm')} value={gameStats.lesteBraaDahmwerm} />
     </div>
   )
 }

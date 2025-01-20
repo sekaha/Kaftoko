@@ -3,6 +3,8 @@ module.exports = {
   theme: {
     extend: {
       colors: {
+        humba_500: '#ff5264',
+        jing_500: '#00b762',
         pravda_500: '#00baff',
         pravda_600: '#60c8ff',
         pravda_700: '#90d6ff',

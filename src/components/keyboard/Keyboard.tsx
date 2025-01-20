@@ -48,6 +48,7 @@ export const Keyboard = ({ onChar, onDelete, onEnter, guesses }: Props) => {
 
   return (
     <div>
+      {/* Top Row */}
       <div className="flex justify-center mb-1">
         {ORTHOGRAPHY.slice(0, 9).map( // Math.floor(ORTHOGRAPHY.length * 0.4)
           (char) => (
@@ -60,6 +61,8 @@ export const Keyboard = ({ onChar, onDelete, onEnter, guesses }: Props) => {
           )
         )}
       </div>
+
+      {/* Home Row */}
       <div className="flex justify-center mb-1">
         {ORTHOGRAPHY.slice(
           9,//Math.floor(ORTHOGRAPHY.length * 0.4),
@@ -73,8 +76,10 @@ export const Keyboard = ({ onChar, onDelete, onEnter, guesses }: Props) => {
           />
         ))}
       </div>
-      <div className="flex justify-center">
-        <Key key="enterKey" width={65.4} value="ENTER" onClick={onClick}>
+
+      {/* Bottom Row */}
+      <div className="flex justify-center mb-1">
+        <Key key="enterKey" width={62} value="ENTER" onClick={onClick}>
           {t('enterKey')}
         </Key>
         {ORTHOGRAPHY.slice(
@@ -88,8 +93,15 @@ export const Keyboard = ({ onChar, onDelete, onEnter, guesses }: Props) => {
             status={charStatuses[char]}
           />
         ))}
-        <Key key="deleteKey" width={65.4} value="DELETE" onClick={onClick}>
+        <Key key="deleteKey" width={62} value="DELETE" onClick={onClick}>
           {t('deleteKey')}
+        </Key>
+      </div>
+
+      {/* Space bar, width={65.4}*/}
+      <div className="flex justify-center">
+        <Key key="spaceKey" width={260.5} value="_" onClick={onClick}>
+          {t('spaceKey')}
         </Key>
       </div>
     </div>

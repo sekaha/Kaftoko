@@ -27,10 +27,10 @@ export const StatsModal = ({
   handleShare,
 }: Props) => {
   const { t } = useTranslation()
-  if (gameStats.totalGames <= 0) {
+  if (gameStats.heelSpilAtai <= 0) {
     return (
       <BaseModal
-        title={t('statistics')}
+        title={t('ataiTumam')}
         isOpen={isOpen}
         handleClose={handleClose}
       >
@@ -40,19 +40,19 @@ export const StatsModal = ({
   }
   return (
     <BaseModal
-      title={t('statistics')}
+      title={t('ataiTumam')}
       isOpen={isOpen}
       handleClose={handleClose}
     >
       <StatBar gameStats={gameStats} />
       <h4 className="text-lg leading-6 font-medium text-white">
-        {t('guessDistribution')}
+        {t('ahmanFjal')}
       </h4>
       <Histogram gameStats={gameStats} />
       {(isGameLost || isGameWon) && (
         <div className="mt-5 sm:mt-6 columns-2">
           <div>
-            <h5>{t('newWordCountdown')}</h5>
+            <h5>{t('neokoMade')}</h5>
             <Countdown
               className="text-lg font-medium text-white"
               date={tomorrow}
@@ -67,7 +67,7 @@ export const StatsModal = ({
               handleShare()
             }}
           >
-            {t('share')}
+            {t('blogeta')}
           </button>
         </div>
       )}
