@@ -1,6 +1,7 @@
 type StoredGameState = {
   guesses: string[][]
   solution: string
+  seed: number
 }
 
 export const saveGameStateToLocalStorage = (

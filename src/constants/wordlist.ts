@@ -285,7 +285,7 @@ export const WORDS = [
   'VEMIE',
   'DRUUG', // Fuck anyone who gets this, loser x2
   'ROFAI',
-  'KANJI',
+  'UPASH',
 ]
 
 if (CONFIG.normalization) {

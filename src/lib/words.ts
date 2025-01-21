@@ -11,9 +11,8 @@ export const isWordInWordList = (word: string) => {
 // }
 
 // seed: number
-export const getRandomWord = () => {
-  const index = Math.floor(Math.random() * (WORDS.length - 1))
-  return { solution: WORDS[index] }
+export const getRandomWord = (seed: number) => {
+  return { solution: WORDS[seed] }
 }
 
 export const getDailyWord = () => {

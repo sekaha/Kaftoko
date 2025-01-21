@@ -33,6 +33,7 @@ import ReactGA from 'react-ga'
 import '@bcgov/bc-sans/css/BCSans.css'
 import './i18n'
 import { withTranslation, WithTranslation } from 'react-i18next'
+import { WORDS } from './constants/wordlist'
 
 const ALERT_TIME_MS = 2000 // Time duration for alerts
 
@@ -40,6 +41,7 @@ const App: React.FC<WithTranslation> = ({ t, i18n }) => {
   // Game state variables
   const [currentGuess, setCurrentGuess] = useState<Array<string>>([]) // Current word being guessed
   const [isGameWon, setIsGameWon] = useState(false) // Tracks if the game is won
+  const [seed, setSeed] = useState(Math.floor(Math.random() * WORDS.length))
   const [gameMode, setGameMode] = useState('daily') // Daily or random mode
   const [solution, setSolution] = useState('')
   const [isInfoModalOpen, setIsInfoModalOpen] = useState(false) // Info modal visibility
@@ -48,8 +50,9 @@ const App: React.FC<WithTranslation> = ({ t, i18n }) => {
   const [isStatsModalOpen, setIsStatsModalOpen] = useState(false) // Stats modal visibility
   const [isI18nModalOpen, setIsI18nModalOpen] = useState(false) // Translation modal visibility
   const [isnaiFinnaKoAlertOpen, setIsnaiFinnaKoAlertOpen] = useState(false) // Alert for invalid word
-  const [isNeoUdachikoAlertOpen, setIsNeoUdachikoAlertOpen] = useState(false) // Alert for game mode switch
+  const [isUdachikoAlertOpen, setIsUdachikoAlertOpen] = useState(false) // Alert for game mode switch
   const [isImadahkoAlertOpen, setIsImadahkoAlertOpen] = useState(false) // Alert for another mode switch
+  const [isRofaiAlertOpen, setIsRofaiAlertOpen] = useState(false) // Alert for another mode switch
   const [isGameLost, setIsGameLost] = useState(false) // Tracks if the game is lost
   const [successAlert, setSuccessAlert] = useState('') // Displays success messages
 
@@ -63,7 +66,7 @@ const App: React.FC<WithTranslation> = ({ t, i18n }) => {
         newSolution = dailySolution
         break
       case 'random':
-        const { solution: randomSolution } = getRandomWord()
+        const { solution: randomSolution } = getRandomWord(seed)
         newSolution = randomSolution
         break
     }
@@ -78,6 +81,7 @@ const App: React.FC<WithTranslation> = ({ t, i18n }) => {
 
     if (loaded) {
       setGuesses(loaded.guesses)
+      setSeed(loaded.seed)
 
       const gameWasWon = loaded.guesses
         .map((guess) => guess.join(''))
@@ -128,7 +132,7 @@ const App: React.FC<WithTranslation> = ({ t, i18n }) => {
 
   // Save game state whenever guesses update
   useEffect(() => {
-    saveGameStateToLocalStorage({ guesses, solution }, gameMode)
+    saveGameStateToLocalStorage({ guesses, solution, seed }, gameMode)
   }, [guesses])
 
   // Handle game end (win or loss)
@@ -154,18 +158,43 @@ const App: React.FC<WithTranslation> = ({ t, i18n }) => {
 
   // Handlers for game modes
   const onClickUdachi = () => {
-    setIsNeoUdachikoAlertOpen(true)
-    setIsImadahkoAlertOpen(false)
+    // Blank slate literally everything lmao
+    if (gameMode == 'random') {
+      setIsUdachikoAlertOpen(true)
+      setIsImadahkoAlertOpen(false)
+      setIsRofaiAlertOpen(false)
+
+      const newSeed = Math.floor(Math.random() * WORDS.length)
+      setSeed(newSeed)
+      setSolution(getRandomWord(newSeed).solution)
+      setGuesses([])
+      setCurrentGuess([])
+      setIsGameWon(false)
+      setIsGameLost(false)
+    }
+
     return setTimeout(() => {
-      setIsNeoUdachikoAlertOpen(false)
+      setIsUdachikoAlertOpen(false)
     }, ALERT_TIME_MS)
   }
 
   const onClickImadah = () => {
     setIsImadahkoAlertOpen(true)
-    setIsNeoUdachikoAlertOpen(false)
+    setIsUdachikoAlertOpen(false)
+    setIsRofaiAlertOpen(false)
+
     return setTimeout(() => {
       setIsImadahkoAlertOpen(false)
+    }, ALERT_TIME_MS)
+  }
+
+  const onClickRofai = () => {
+    setIsRofaiAlertOpen(true)
+    setIsImadahkoAlertOpen(false)
+    setIsUdachikoAlertOpen(false)
+
+    return setTimeout(() => {
+      setIsRofaiAlertOpen(false)
     }, ALERT_TIME_MS)
   }
 
@@ -193,6 +222,7 @@ const App: React.FC<WithTranslation> = ({ t, i18n }) => {
     }
     if (!(currentGuess.length === CONFIG.wordLength)) {
       setIsnaiLagomKirain(true)
+
       return setTimeout(() => {
         setIsnaiLagomKirain(false)
       }, ALERT_TIME_MS)
@@ -256,12 +286,21 @@ const App: React.FC<WithTranslation> = ({ t, i18n }) => {
               gameMode == 'random' ? 'text-pravda_500' : 'text-white'
             } hover:text-pravda_700 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-pravda_700`}
             onClick={() => {
-              setGameMode('random')
               onClickUdachi()
+              if (gameMode != 'random') {
+                setGameMode('random')
+              }
             }}
           />
-
-          {/* <GiDiceFire className={`h-6 w-6 cursor-pointer`} /> */}
+          <GiDiceFire
+            className={`h-6 w-6 cursor-pointer ${
+              gameMode == 'train' ? 'text-uso_500' : 'text-white'
+            } hover:text-uso_700 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-uso_700`}
+            onClick={() => {
+              setGameMode('train')
+              onClickRofai()
+            }}
+          />
         </div>
 
         <h1 className="text-center text-xl text-bold">{t('spilNamae')}</h1>
@@ -305,6 +344,7 @@ const App: React.FC<WithTranslation> = ({ t, i18n }) => {
           return setTimeout(() => setSuccessAlert(''), ALERT_TIME_MS)
         }}
       />
+
       <InfoModal
         isOpen={isInfoModalOpen}
         handleClose={() => setIsInfoModalOpen(false)}
@@ -323,6 +363,7 @@ const App: React.FC<WithTranslation> = ({ t, i18n }) => {
       </button>
 
       <Alert message={t('naiLagomKirain')} isOpen={isnaiLagomKirain} />
+
       <Alert
         message={
           <>
@@ -330,10 +371,11 @@ const App: React.FC<WithTranslation> = ({ t, i18n }) => {
             {t('neoUdachiko')}
           </>
         }
-        isOpen={isNeoUdachikoAlertOpen}
+        isOpen={isUdachikoAlertOpen}
         variant="info"
       />
-      <Alert
+
+      {/* <Alert
         message={
           <>
             <CalendarIcon className="h-[1em] w-[1em] inline mb-1 mr-1" />
@@ -343,6 +385,18 @@ const App: React.FC<WithTranslation> = ({ t, i18n }) => {
         isOpen={isImadahkoAlertOpen}
         variant="info"
       />
+
+      <Alert
+        message={
+          <>
+            <GiDiceFire className="h-[1em] w-[1em] inline mb-1 mr-1" />
+            {t('rofaiko')}
+          </>
+        }
+        isOpen={isRofaiAlertOpen}
+        variant="special"
+      /> */}
+
       <Alert message={t('naiFinnaKo')} isOpen={isnaiFinnaKoAlertOpen} />
       <Alert message={t('svar', { solution })} isOpen={isGameLost} />
       <Alert

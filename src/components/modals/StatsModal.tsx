@@ -32,9 +32,23 @@ export const StatsModal = ({
 }: Props) => {
   const { t } = useTranslation()
   if (gameStats.heelSpilAtai <= 0) {
+    let header = ''
+
+    switch (gameMode) {
+      case 'random':
+        header = t('udachiTro')
+        break
+      case 'daily':
+        header = t('imadahTro')
+        break
+      case 'train':
+        header = t('rofaiTro')
+        break
+    }
+
     return (
       <BaseModal
-        title={t('ataiTumam')}
+        title={header + ' - ' + t('ataiTumam')}
         isOpen={isOpen}
         handleClose={handleClose}
       >
@@ -42,8 +56,27 @@ export const StatsModal = ({
       </BaseModal>
     )
   }
+
+  let header = ''
+
+  switch (gameMode) {
+    case 'random':
+      header = t('udachiTro')
+      break
+    case 'daily':
+      header = t('imadahTro')
+      break
+    case 'train':
+      header = t('rofaiTro')
+      break
+  }
+
   return (
-    <BaseModal title={t('ataiTumam')} isOpen={isOpen} handleClose={handleClose}>
+    <BaseModal
+      title={header + ' - ' + t('ataiTumam')}
+      isOpen={isOpen}
+      handleClose={handleClose}
+    >
       <StatBar gameStats={gameStats} />
       <h4 className="text-lg leading-6 font-medium text-white">
         {t('ahmanFjal')}
