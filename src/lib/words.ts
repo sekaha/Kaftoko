@@ -3,15 +3,21 @@ import { CONFIG } from '../constants/config'
 import { ORTHOGRAPHY } from '../constants/orthography'
 
 export const isWordInWordList = (word: string) => {
-  return Array.from(word).every(c => ORTHOGRAPHY.includes(c));
+  return Array.from(word).every((c) => ORTHOGRAPHY.includes(c))
 }
 
-export const isWinningWord = (word: string) => {
-  return solution === word
+// export const isWinningWord = (word: string) => {
+//   return solution === word
+// }
+
+// seed: number
+export const getRandomWord = () => {
+  const index = Math.floor(Math.random() * (WORDS.length - 1))
+  return { solution: WORDS[index] }
 }
 
-export const getWordOfDay = () => {
-  // January 1, 2022 Game Epoch
+export const getDailyWord = () => {
+  // January 1, 2025 Game Epoch
   const epochMs = new Date(CONFIG.startDate).valueOf()
   const now = Date.now()
   const msInDay = 86400000
@@ -25,4 +31,4 @@ export const getWordOfDay = () => {
   }
 }
 
-export const { solution, solutionIndex, tomorrow } = getWordOfDay()
+// export const { solution, solutionIndex, tomorrow } = getWordOfDay()

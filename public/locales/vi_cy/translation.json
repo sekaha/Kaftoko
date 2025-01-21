@@ -1,163 +1,168 @@
 {
-    "tsui": "Цуи Афто Спил",
-    "spilNamae": "Кафтоко? :3",
-    "ahmanPresmi": "Enter",
-    "keshitePresmi": "Delete",
-    "spaceKey": "Space",
-    "naiLagomKirain": "Кирейн най лагом.",
-    "naiFinnaKo": "Най Деки врyyк афтоко.",
-    "svar": "Сваркотоба: {{solution}}",
-    "spilWakwu": "Вакву спил на клипбоард.",
-    "hurSpilNamae": "Хур Спил?",
-    "spiltropos": "Да ахман правда ко на {{tries}} свар. Ахман за, варье фу кирайндадо кавари пр махсе хур свар фу ду усо ос правда.",
-    "sentakuGlossa": "Сентаку айн какутро",
-    "pravdaplaasSpiltropos": "Кирейн 'A' ям ине сваркотоба ау ПРАВДА плас.",
-    "usoplaasSpiltropos": "Кирейн 'G' ям ине сваркотоба мен УСО плас.",
-    "naiJamSpiltropos": "Кирейн 'Q' най ям, бака.",
-    "ahmanFjal": "Ахман Фьял",
-    "ataiTumam": "Атаи Тумам",
-    "heelIskatAtai": "Хеел Искат Атаи",
-    "jingatai": "Йингатай",
-    "imaDahmwerm": "Дахмверм Фу Има",
-    "lesteBraaDahmwerm": "Лестебраа Дахмверм",
-    "neokoMade": "Неоко Тула Маде",
-    "share": "Блогета",
-    "jingKaku": [
-        "Маладец!",
-        "Мангебраа!",
-        "Брадаай!",
-        "Мала мала!!",
-        "Ду йинг!!!",
-        "Ой Блин! Маладец~",
-        "Маладец!",
-        "Мангебраа!",
-        "Брадаай!",
-        "Мала мала!!",
-        "Ду йинг!!!",
-        "Ой Блин! Маладец~",
-        "Маладец!",
-        "Мангебраа!",
-        "Брадаай!",
-        "Мала мала!!",
-        "Ду йинг!!!",
-        "Ой Блин! Маладец~",
-        "Маладец!",
-        "Мангебраа!",
-        "Брадаай!",
-        "Мала мала!!",
-        "Ду йинг!!!",
-        "Ой Блин! Маладец~",
-        "Маладец!",
-        "Мангебраа!",
-        "Брадаай!",
-        "Мала мала!!",
-        "Ду йинг!!!",
-        "Ой Блин! Маладец~",
-        "Маладец!",
-        "Мангебраа!",
-        "Брадаай!",
-        "Мала мала!!",
-        "Ду йинг!!!",
-        "Ой Блин! Маладец~",
-        "Бляттттттт -Рей",
-        "Да себя враш.",
-        "Да нам авто."
-    ],
-        "firstExampleWord": [{
-            "letter": "L",
-            "highlight": false
-        },
-        {
-            "letter": "A",
-            "highlight": true
-        },
-        {
-            "letter": "S",
-            "highlight": false
-        },
-        {
-            "letter": "K",
-            "highlight": false
-        },
-        {
-            "letter": "U",
-            "highlight": false
-        }
-    ],
-    "secondExampleWord": [{
-            "letter": "D",
-            "highlight": false
-        },
-        {
-            "letter": "J",
-            "highlight": false
-        },
-        {
-            "letter": "O",
-            "highlight": false
-        },
-        {
-            "letter": "N",
-            "highlight": false
-        },
-        {
-            "letter": "G",
-            "highlight": true
-        }
-    ],
-    "thirdExampleWord": [{
-            "letter": "Q",
-            "highlight": false
-        },
-        {
-            "letter": "Q",
-            "highlight": false
-        },
-        {
-            "letter": "Q",
-            "highlight": false
-        },
-        {
-            "letter": "Q",
-            "highlight": false
-        },
-        {
-            "letter": "Q",
-            "highlight": false
-        }
-    ],
-    "LETTER_A" : "A",
-    "LETTER_B" : "B",
-    "LETTER_C" : "C",
-    "LETTER_D" : "D",
-    "LETTER_E" : "E",
-    "LETTER_F" : "F",
-    "LETTER_G" : "G",
-    "LETTER_H" : "H",
-    "LETTER_I" : "I",
-    "LETTER_J" : "J",
-    "LETTER_K" : "K",
-    "LETTER_L" : "L",
-    "LETTER_M" : "M",
-    "LETTER_N" : "N",
-    "LETTER_O" : "O",
-    "LETTER_P" : "P",
-    "LETTER_R" : "R",
-    "LETTER_S" : "S",
-    "LETTER_T" : "T",
-    "LETTER_U" : "U",
-    "LETTER_V" : "V",
-    "LETTER_W" : "W",
-    "LETTER_Y" : "Y",
-    "LETTER_Z" : "Z",
-    "aboutAuthorSentence": "This is an open source word guessing game adapted to {{language}} by me (<3>{{author}}</3>). ",
-    "aboutCodeSentence": "Check out <1>the original code</1> by <3>Hannah Park</3> or have a look at <5>Aidan Pine's fork</5> and customize it for another language! ",
-    "aboutDataSentence": "I also changed improved the game a bit, didn't just adapt it to viossa :p ",
-    "aboutOriginalSentence": "You can also play the original  <1>here</1> ",
-    "languages": {
-        "vi_la": "Латинкакутро",
-        "vi_cy": "Кирилкакутро",
-        "vi_ka": "Катаканакакутро",
-        "vi_kr": "Ханґулкакутро"
+  "tsui": "Цуи Афто Спил",
+  "spilNamae": "Кафтоко? :3",
+  "ahmanPresmi": "Enter",
+  "keshitePresmi": "Delete",
+  "oharePresmi": "Space",
+  "naiLagomKirain": "Кирейн най лагом.",
+  "naiFinnaKo": "Най Деки врyyк афтоко.",
+  "svar": "Сваркотоба: {{solution}}",
+  "spilWakwu": "Вакву спил на клипбоард.",
+  "hurSpilNamae": "Хур Спил?",
+  "spiltropos": "Да ахман правда ко на {{tries}} свар. Ахман за, варье фу кирайндадо кавари пр махсе хур свар фу ду усо ос правда.",
+  "sentakuGlossa": "Сентаку айн какутро",
+  "pravdaplaasSpiltropos": "Кирейн 'A' ям ине сваркотоба ау ПРАВДА плас.",
+  "usoplaasSpiltropos": "Кирейн 'G' ям ине сваркотоба мен УСО плас.",
+  "naiJamSpiltropos": "Кирейн 'Q' най ям, бака.",
+  "ahmanFjal": "Ахман Фьял",
+  "ataiTumam": "Атаи Тумам",
+  "heelIskatAtai": "Хеел Искат Атаи",
+  "jingatai": "Йингатай",
+  "imaDahmwerm": "Дахмверм Фу Има",
+  "lesteBraaDahmwerm": "Лестебраа Дахмверм",
+  "neokoMade": "Неоко Тула Маде",
+  "share": "Блогета",
+  "jingKaku": [
+    "Маладец!",
+    "Мангебраа!",
+    "Брадаай!",
+    "Мала мала!!",
+    "Ду йинг!!!",
+    "Ой Блин! Маладец~",
+    "Маладец!",
+    "Мангебраа!",
+    "Брадаай!",
+    "Мала мала!!",
+    "Ду йинг!!!",
+    "Ой Блин! Маладец~",
+    "Маладец!",
+    "Мангебраа!",
+    "Брадаай!",
+    "Мала мала!!",
+    "Ду йинг!!!",
+    "Ой Блин! Маладец~",
+    "Маладец!",
+    "Мангебраа!",
+    "Брадаай!",
+    "Мала мала!!",
+    "Ду йинг!!!",
+    "Ой Блин! Маладец~",
+    "Маладец!",
+    "Мангебраа!",
+    "Брадаай!",
+    "Мала мала!!",
+    "Ду йинг!!!",
+    "Ой Блин! Маладец~",
+    "Маладец!",
+    "Мангебраа!",
+    "Брадаай!",
+    "Мала мала!!",
+    "Ду йинг!!!",
+    "Ой Блин! Маладец~",
+    "Бляттттттт -Рей",
+    "Да себя враш.",
+    "Да нам авто."
+  ],
+  "firstExampleWord": [
+    {
+      "letter": "L",
+      "highlight": false
+    },
+    {
+      "letter": "A",
+      "highlight": true
+    },
+    {
+      "letter": "S",
+      "highlight": false
+    },
+    {
+      "letter": "K",
+      "highlight": false
+    },
+    {
+      "letter": "U",
+      "highlight": false
     }
+  ],
+  "secondExampleWord": [
+    {
+      "letter": "D",
+      "highlight": false
+    },
+    {
+      "letter": "J",
+      "highlight": false
+    },
+    {
+      "letter": "O",
+      "highlight": false
+    },
+    {
+      "letter": "N",
+      "highlight": false
+    },
+    {
+      "letter": "G",
+      "highlight": true
+    }
+  ],
+  "thirdExampleWord": [
+    {
+      "letter": "Q",
+      "highlight": false
+    },
+    {
+      "letter": "Q",
+      "highlight": false
+    },
+    {
+      "letter": "Q",
+      "highlight": false
+    },
+    {
+      "letter": "Q",
+      "highlight": false
+    },
+    {
+      "letter": "Q",
+      "highlight": false
+    }
+  ],
+  "LETTER_A": "A",
+  "LETTER_B": "B",
+  "LETTER_C": "C",
+  "LETTER_D": "D",
+  "LETTER_E": "E",
+  "LETTER_F": "F",
+  "LETTER_G": "G",
+  "LETTER_H": "H",
+  "LETTER_I": "I",
+  "LETTER_J": "J",
+  "LETTER_K": "K",
+  "LETTER_L": "L",
+  "LETTER_M": "M",
+  "LETTER_N": "N",
+  "LETTER_O": "O",
+  "LETTER_P": "P",
+  "LETTER_R": "R",
+  "LETTER_S": "S",
+  "LETTER_T": "T",
+  "LETTER_U": "U",
+  "LETTER_V": "V",
+  "LETTER_W": "W",
+  "LETTER_Y": "Y",
+  "LETTER_Z": "Z",
+  "aboutAuthorSentence": "This is an open source word guessing game adapted to {{language}} by me (<3>{{author}}</3>). ",
+  "aboutCodeSentence": "Check out <1>the original code</1> by <3>Hannah Park</3> or have a look at <5>Aidan Pine's fork</5> and customize it for another language! ",
+  "aboutDataSentence": "I also changed improved the game a bit, didn't just adapt it to viossa :p ",
+  "aboutOriginalSentence": "You can also play the original  <1>here</1> ",
+  "languages": {
+    "vi_la": "Латинкакутро",
+    "vi_cy": "Кирилкакутро",
+    "vi_ka": "Катаканакакутро",
+    "vi_kr": "Ханґулкакутро",
+    "vi_wy": "Винтеркакутро",
+    "vi_pa": "Панекукакутро"
+  }
 }

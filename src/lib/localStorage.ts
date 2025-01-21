@@ -1,20 +1,19 @@
-const gameStateKey = 'gameState'
-
 type StoredGameState = {
   guesses: string[][]
   solution: string
 }
 
-export const saveGameStateToLocalStorage = (gameState: StoredGameState) => {
-  localStorage.setItem(gameStateKey, JSON.stringify(gameState))
+export const saveGameStateToLocalStorage = (
+  gameState: StoredGameState,
+  gameMode: string
+) => {
+  localStorage.setItem(gameMode, JSON.stringify(gameState))
 }
 
-export const loadGameStateFromLocalStorage = () => {
-  const state = localStorage.getItem(gameStateKey)
+export const loadGameStateFromLocalStorage = (gameMode: string) => {
+  const state = localStorage.getItem(gameMode)
   return state ? (JSON.parse(state) as StoredGameState) : null
 }
-
-const gameStatKey = 'gameStats'
 
 export type GameStats = {
   jingFjal: number[]
@@ -25,11 +24,14 @@ export type GameStats = {
   jingatai: number
 }
 
-export const saveStatsToLocalStorage = (gameStats: GameStats) => {
-  localStorage.setItem(gameStatKey, JSON.stringify(gameStats))
+export const saveStatsToLocalStorage = (
+  gameStats: GameStats,
+  gameMode: string
+) => {
+  localStorage.setItem(gameMode + '_stats', JSON.stringify(gameStats))
 }
 
-export const loadStatsFromLocalStorage = () => {
-  const stats = localStorage.getItem(gameStatKey)
+export const loadStatsFromLocalStorage = (mode: string) => {
+  const stats = localStorage.getItem(mode)
   return stats ? (JSON.parse(stats) as GameStats) : null
 }

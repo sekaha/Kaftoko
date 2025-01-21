@@ -10,7 +10,8 @@ import { CONFIG } from '../constants/config'
 
 export const addStatsForCompletedGame = (
   gameStats: GameStats,
-  count: number
+  count: number,
+  mode: string
 ) => {
   // Count is number of incorrect guesses before end.
   const stats = { ...gameStats }
@@ -32,7 +33,7 @@ export const addStatsForCompletedGame = (
 
   stats.jingatai = getSuccessRate(stats)
 
-  saveStatsToLocalStorage(stats)
+  saveStatsToLocalStorage(stats, mode)
   return stats
 }
 
@@ -45,8 +46,8 @@ const defaultStats: GameStats = {
   jingatai: 0,
 }
 
-export const loadStats = () => {
-  return loadStatsFromLocalStorage() || defaultStats
+export const loadStats = (mode: string) => {
+  return loadStatsFromLocalStorage(mode) || defaultStats
 }
 
 const getSuccessRate = (gameStats: GameStats) => {

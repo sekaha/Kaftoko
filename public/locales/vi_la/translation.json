@@ -1,166 +1,149 @@
 {
-    "tsui": "Tsui Afto Spil",
-    "spilNamae": "Kaftoko? :3",
-    "ahmanPresmi": "Ahman",
-    "keshitePresmi": "Keshite",
-    "spaceKey": "Ohare",
-    "naiLagomKirain": "Kirain nai lagom.",
-    "naiFinnaKo": "Nai deki bruuk afto kotoba.",
-    "neoUdachiko" : "Neo udachiko tula dan!",
-    "imadahko" : "Imadahko tula dan!",
-    "svar": "Svarkotoba: {{solution}}",
-    "spilWakwu": "Wakwu spil na clipboard.",
-    "hurSpilNamae": "Hur Spil?",
-    "spiltropos": "Da ahman pravda ko na {{tries}} svar. Ahman za, varje fu kiraindado kawari pr mahse hur svar fu du uso os pravda.",
-    "sentakuGlossa": "Sentaku ain kakutro",
-    "pravdaplaasSpiltropos": "Kirain 'A' jam ine svarkotoba au PRAVDA plaas.",
-    "usoplaasSpiltropos": "Kirain 'G' jam ine svarkotoba men USO plaas.",
-    "naiJamSpiltropos": "Kirain 'Q' nai jam, baka.",
-    "ahmanFjal": "Ahman Fjal",
-    "ataiTumam": "Atai Tumam",
-    "heelIskatAtai": "Heel Iskat Atai",
-    "jingatai": "Jingatai",
-    "imaDahmwerm": "Dahmwerm Fu Ima",
-    "lesteBraaDahmwerm": "Lestebraa Dahmwerm",
-    "neokoMade": "Neoko Tula Made",
-    "blogeta": "Blogeta",
-    "jingKaku": [
-        "Maladjets!",
-        "Mangebraa!",
-        "Braadai!",
-        "Mala mala!!",
-        "Du jing!!!",
-        "Oi Blin! Maladjets~",
-        "Maladjets!",
-        "Mangebraa!",
-        "Braadai!",
-        "Mala mala!!",
-        "Du jing!!!",
-        "Oi Blin! Maladjets~",
-        "Maladjets!",
-        "Mangebraa!",
-        "Braadai!",
-        "Mala mala!!",
-        "Du jing!!!",
-        "Oi Blin! Maladjets~",
-        "Maladjets!",
-        "Mangebraa!",
-        "Braadai!",
-        "Mala mala!!",
-        "Du jing!!!",
-        "Oi Blin! Maladjets~",
-        "Maladjets!",
-        "Mangebraa!",
-        "Braadai!",
-        "Mala mala!!",
-        "Du jing!!!",
-        "Oi Blin! Maladjets~",
-        "Maladjets!",
-        "Mangebraa!",
-        "Braadai!",
-        "Mala mala!!",
-        "Du jing!!!",
-        "Oi Blin! Maladjets~",
-        "Blyattttt - Rei",
-        "Slayyy (gag) - Nikomiko",
-        "Da sebja vras.",
-        "Da nam auto."
-    ],
-    "firstExampleWord": [{
-            "letter": "L",
-            "highlight": false
-        },
-        {
-            "letter": "A",
-            "highlight": true
-        },
-        {
-            "letter": "S",
-            "highlight": false
-        },
-        {
-            "letter": "K",
-            "highlight": false
-        },
-        {
-            "letter": "U",
-            "highlight": false
-        }
-    ],
-    "secondExampleWord": [{
-            "letter": "D",
-            "highlight": false
-        },
-        {
-            "letter": "J",
-            "highlight": false
-        },
-        {
-            "letter": "O",
-            "highlight": false
-        },
-        {
-            "letter": "N",
-            "highlight": false
-        },
-        {
-            "letter": "G",
-            "highlight": true
-        }
-    ],
-    "thirdExampleWord": [{
-            "letter": "Q",
-            "highlight": false
-        },
-        {
-            "letter": "Q",
-            "highlight": false
-        },
-        {
-            "letter": "Q",
-            "highlight": false
-        },
-        {
-            "letter": "Q",
-            "highlight": false
-        },
-        {
-            "letter": "Q",
-            "highlight": false
-        }
-    ],
-    "LETTER_A" : "А",
-    "LETTER_B" : "Б",
-    "LETTER_C" : "Ц",
-    "LETTER_D" : "Д",
-    "LETTER_E" : "Е",
-    "LETTER_F" : "Ф",
-    "LETTER_G" : "Г",
-    "LETTER_H" : "Х",
-    "LETTER_I" : "И",
-    "LETTER_J" : "Й",
-    "LETTER_K" : "К",
-    "LETTER_L" : "Л",
-    "LETTER_M" : "М",
-    "LETTER_N" : "Н",
-    "LETTER_O" : "О",
-    "LETTER_P" : "П",
-    "LETTER_R" : "Р",
-    "LETTER_S" : "С",
-    "LETTER_T" : "Т",
-    "LETTER_U" : "У",
-    "LETTER_V" : "В",
-    "LETTER_W" : "Ш",
-    "LETTER_Y" : "Ы",
-    "LETTER_Z" : "З",
-    "aboutAuthorSentence": "This is an open source word guessing game adapted to {{language}} by me (<3>{{author}}</3>). ",
-    "aboutCodeSentence": "Check out <1>the original code</1> by <3>Hannah Park</3> or have a look at <5>Aidan Pine's fork</5> and customize it for another language! ",
-    "aboutDataSentence": "I also changed improved the game a bit, didn't just adapt it to viossa :p ",
-    "aboutOriginalSentence": "You can also play the original  <1>here</1> ",
-    "languages": {
-        "vi_la": "Latinkakutro",
-        "vi_cy": "Kirilkakutro",
-        "vi_ka": "Katakanakakutro",
-        "vi_kr": "Hangulkakutro"
+  "tsui": "Tsui Afto Spil",
+  "spilNamae": "Kaftoko? :3",
+  "ahmanPresmi": "Ahman",
+  "keshitePresmi": "Keshite",
+  "oharePresmi": "Ohare",
+  "udachiTro": "Udachi",
+  "imadahTro": "Imdah",
+  "naiLagomKirain": "Kirain nai lagom.",
+  "naiFinnaKo": "Nai deki bruuk afto kotoba.",
+  "neoUdachiko": "Neo udachiko tula dan!",
+  "imadahko": "Imadahko tula dan!",
+  "svar": "Svarkotoba: {{solution}}",
+  "spilWakwu": "Wakwu spil na clipboard.",
+  "hurSpilNamae": "Hur Spil?",
+  "spiltropos": "Da ahman pravda ko na {{tries}} svar. Ahman za, varje fu kiraindado kawari pr mahse hur svar fu du uso os pravda.",
+  "sentakuGlossa": "Sentaku ain kakutro",
+  "pravdaplaasSpiltropos": "Kirain 'A' jam ine svarkotoba au PRAVDA plaas.",
+  "usoplaasSpiltropos": "Kirain 'G' jam ine svarkotoba men USO plaas.",
+  "naiJamSpiltropos": "Kirain 'Q' nai jam, baka.",
+  "ahmanFjal": "Ahman Fjal",
+  "ataiTumam": "Atai Tumam",
+  "heelIskatAtai": "Heel Iskat Atai",
+  "jingatai": "Jingatai",
+  "imaDahmwerm": "Dahmwerm Fu Ima",
+  "lesteBraaDahmwerm": "Lestebraa Dahmwerm",
+  "neokoMade": "Neoko Tula Made",
+  "blogeta": "Blogeta",
+  "jingKaku": [
+    "Maladjets!",
+    "Mangebraa!",
+    "Braadai!",
+    "Mala mala!!",
+    "Du jing!!!",
+    "Oi Blin! Maladjets~",
+    "Maladjets!",
+    "Mangebraa!",
+    "Braadai!",
+    "Mala mala!!",
+    "Du jing!!!",
+    "Oi Blin! Maladjets~",
+    "Maladjets!",
+    "Mangebraa!",
+    "Braadai!",
+    "Mala mala!!",
+    "Du jing!!!",
+    "Oi Blin! Maladjets~",
+    "Maladjets!",
+    "Mangebraa!",
+    "Braadai!",
+    "Mala mala!!",
+    "Du jing!!!",
+    "Oi Blin! Maladjets~",
+    "Maladjets!",
+    "Mangebraa!",
+    "Braadai!",
+    "Mala mala!!",
+    "Du jing!!!",
+    "Oi Blin! Maladjets~",
+    "Maladjets!",
+    "Mangebraa!",
+    "Braadai!",
+    "Mala mala!!",
+    "Du jing!!!",
+    "Oi Blin! Maladjets~",
+    "Blyattttt - Rei",
+    "Slayyy (gag) - Nikomiko",
+    "Da sebja vras.",
+    "Da nam auto."
+  ],
+  "firstExampleWord": [
+    {
+      "letter": "L",
+      "highlight": false
+    },
+    {
+      "letter": "A",
+      "highlight": true
+    },
+    {
+      "letter": "S",
+      "highlight": false
+    },
+    {
+      "letter": "K",
+      "highlight": false
+    },
+    {
+      "letter": "U",
+      "highlight": false
     }
+  ],
+  "secondExampleWord": [
+    {
+      "letter": "D",
+      "highlight": false
+    },
+    {
+      "letter": "J",
+      "highlight": false
+    },
+    {
+      "letter": "O",
+      "highlight": false
+    },
+    {
+      "letter": "N",
+      "highlight": false
+    },
+    {
+      "letter": "G",
+      "highlight": true
+    }
+  ],
+  "thirdExampleWord": [
+    {
+      "letter": "Q",
+      "highlight": false
+    },
+    {
+      "letter": "Q",
+      "highlight": false
+    },
+    {
+      "letter": "Q",
+      "highlight": false
+    },
+    {
+      "letter": "Q",
+      "highlight": false
+    },
+    {
+      "letter": "Q",
+      "highlight": false
+    }
+  ],
+  "aboutAuthorSentence": "This is an open source word guessing game adapted to {{language}} by me (<3>{{author}}</3>). ",
+  "aboutCodeSentence": "Check out <1>the original code</1> by <3>Hannah Park</3> or have a look at <5>Aidan Pine's fork</5> and customize it for another language! ",
+  "aboutDataSentence": "I also changed improved the game a bit, didn't just adapt it to viossa :p ",
+  "aboutOriginalSentence": "You can also play the original  <1>here</1> ",
+  "languages": {
+    "vi_la": "Latinkakutro",
+    "vi_cy": "Kirilkakutro",
+    "vi_ka": "Katakanakakutro",
+    "vi_kr": "Hangulkakutro",
+    "vi_wy": "Wynterkakutro",
+    "vi_pa": "Panekukakutro"
+  }
 }

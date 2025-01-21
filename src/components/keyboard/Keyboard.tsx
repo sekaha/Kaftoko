@@ -10,11 +10,18 @@ type Props = {
   onDelete: () => void
   onEnter: () => void
   guesses: string[][]
+  solution: string
 }
 
-export const Keyboard = ({ onChar, onDelete, onEnter, guesses }: Props) => {
+export const Keyboard = ({
+  onChar,
+  onDelete,
+  onEnter,
+  guesses,
+  solution,
+}: Props) => {
   const { t } = useTranslation()
-  const charStatuses = getStatuses(guesses)
+  const charStatuses = getStatuses(guesses, solution)
 
   const onClick = (value: KeyValue) => {
     if (value === 'ENTER') {
@@ -35,8 +42,8 @@ export const Keyboard = ({ onChar, onDelete, onEnter, guesses }: Props) => {
       } else {
         const key = e.key.toUpperCase()
 
-        if (key.length === 1 && ((key >= 'A' && key <= 'Z') || key === " ")) {
-          onChar(key !== " " ? key : "_")
+        if (key.length === 1 && ((key >= 'A' && key <= 'Z') || key === ' ')) {
+          onChar(key !== ' ' ? key : '_')
         }
       }
     }
@@ -50,7 +57,8 @@ export const Keyboard = ({ onChar, onDelete, onEnter, guesses }: Props) => {
     <div>
       {/* Top Row */}
       <div className="flex justify-center mb-1">
-        {ORTHOGRAPHY.slice(0, 9).map( // Math.floor(ORTHOGRAPHY.length * 0.4)
+        {ORTHOGRAPHY.slice(0, 9).map(
+          // Math.floor(ORTHOGRAPHY.length * 0.4)
           (char) => (
             <Key
               key={char}
@@ -65,8 +73,8 @@ export const Keyboard = ({ onChar, onDelete, onEnter, guesses }: Props) => {
       {/* Home Row */}
       <div className="flex justify-center mb-1">
         {ORTHOGRAPHY.slice(
-          9,//Math.floor(ORTHOGRAPHY.length * 0.4),
-          18//Math.floor(ORTHOGRAPHY.length * 0.7)
+          9, //Math.floor(ORTHOGRAPHY.length * 0.4),
+          18 //Math.floor(ORTHOGRAPHY.length * 0.7)
         ).map((char) => (
           <Key
             key={char}
@@ -82,10 +90,7 @@ export const Keyboard = ({ onChar, onDelete, onEnter, guesses }: Props) => {
         <Key key="ahmanPresmi" width={62} value="ENTER" onClick={onClick}>
           {t('ahmanPresmi')}
         </Key>
-        {ORTHOGRAPHY.slice(
-          18,
-          ORTHOGRAPHY.length
-        ).map((char) => (
+        {ORTHOGRAPHY.slice(18, ORTHOGRAPHY.length).map((char) => (
           <Key
             key={char}
             value={char}
@@ -100,8 +105,8 @@ export const Keyboard = ({ onChar, onDelete, onEnter, guesses }: Props) => {
 
       {/* Space bar, width={65.4}*/}
       <div className="flex justify-center">
-        <Key key="spaceKey" width={260.5} value="_" onClick={onClick}>
-          {t('spaceKey')}
+        <Key key="oharePresmi" width={260.5} value="_" onClick={onClick}>
+          {t('oharePresmi')}
         </Key>
       </div>
     </div>

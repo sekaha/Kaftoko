@@ -1,164 +1,149 @@
 {
-    "tsui": "ツイアㇷトスピㇽ",
-    "spilNamae": "カㇷトコ？ :3",
-    "ahmanPresmi": "Enter",
-    "keshitePresmi": "Delete",
-    "spaceKey": "Space",
-    "naiLagomKirain": "キライン・ナイラゴㇺ!",
-    "naiFinnaKo": "ナイデキ・ブルーㇰ・アㇷトコ",
-    "svar": "スヴァㇽコ: {{solution}}",
-    "spilWakwu": "ワクウ・スピㇽ・ナクリップボード",
-    "hurSpilNamae": "フㇽスピㇽ？",
-    "spiltropos": "ダアフマン・プラゥ゙ダコナ {{tries}} スヴァㇽ。アフマンザ、ヴァルゲフキラインダド・カワリ・ペㇽマハセ・フㇽ・スヴァㇽフドゥ・ウソ・オス・プラゥ゙ダ。",
-    "sentakuGlossa": "センタク・アインカクトロ",
-    "pravdaplaasSpiltropos": "キライン「A」ヤムイネスヴァㇽコ・アウ・プラゥ゙ダプラース。",
-    "usoplaasSpiltropos": "キライン「G」ヤムイネスヴァㇽコ・メン・ウソプラース。",
-    "naiJamSpiltropos": "キライン「Q」ナイヤム、バカ。",
-    "ahmanFjal": "アフマンフャㇽ",
-    "ataiTumam": "アタイトゥマㇺ",
-    "heelIskatAtai": "ヘールイスカトアタイ",
-    "jingatai": "イングアタイ",
-    "imaDahmwerm": "ダームウェㇽㇺフイマ",
-    "lesteBraaDahmwerm": "レステブラ・ダームウェㇽㇺ",
-    "neokoMade": "ネオコ・トゥラマデ",
-    "blogeta": "ブロゲタ",
-    "jingKaku": [
-        "マラジェツ！",
-        "マンゲブラー！",
-        "ブラーダイ！",
-        "マラマラ！！",
-        "ドゥイング！！！",
-        "オイブリン！ マラジェツ～",
-        "マラジェツ！",
-        "マンゲブラー！",
-        "ブラーダイ！",
-        "マラマラ！！",
-        "ドゥイング！！！",
-        "オイブリン！ マラジェツ～",
-        "マラジェツ！",
-        "マンゲブラー！",
-        "ブラーダイ！",
-        "マラマラ！！",
-        "ドゥイング！！！",
-        "オイブリン！ マラジェツ～",
-        "マラジェツ！",
-        "マンゲブラー！",
-        "ブラーダイ！",
-        "マラマラ！！",
-        "ドゥイング！！！",
-        "オイブリン！ マラジェツ～",
-        "マラジェツ！",
-        "マンゲブラー！",
-        "ブラーダイ！",
-        "マラマラ！！",
-        "ドゥイング！！！",
-        "オイブリン！ マラジェツ～",
-        "マラジェツ！",
-        "マンゲブラー！",
-        "ブラーダイ！",
-        "マラマラ！！",
-        "ドゥイング！！！",
-        "オイブリン！ マラジェツ～",
-        "ブリャーット - レイ",
-        "スレイー（ガグ） - ニコミコ",
-        "ダ・セブヤ・ヴラㇲ。",
-        "ダ・ナム・アウト。"
-    ],
-        "firstExampleWord": [{
-            "letter": "L",
-            "highlight": false
-        },
-        {
-            "letter": "A",
-            "highlight": true
-        },
-        {
-            "letter": "S",
-            "highlight": false
-        },
-        {
-            "letter": "K",
-            "highlight": false
-        },
-        {
-            "letter": "U",
-            "highlight": false
-        }
-    ],
-    "secondExampleWord": [{
-            "letter": "D",
-            "highlight": false
-        },
-        {
-            "letter": "J",
-            "highlight": false
-        },
-        {
-            "letter": "O",
-            "highlight": false
-        },
-        {
-            "letter": "N",
-            "highlight": false
-        },
-        {
-            "letter": "G",
-            "highlight": true
-        }
-    ],
-    "thirdExampleWord": [{
-            "letter": "Q",
-            "highlight": false
-        },
-        {
-            "letter": "Q",
-            "highlight": false
-        },
-        {
-            "letter": "Q",
-            "highlight": false
-        },
-        {
-            "letter": "Q",
-            "highlight": false
-        },
-        {
-            "letter": "Q",
-            "highlight": false
-        }
-    ],
-    "LETTER_A" : "A",
-    "LETTER_B" : "B",
-    "LETTER_C" : "C",
-    "LETTER_D" : "D",
-    "LETTER_E" : "E",
-    "LETTER_F" : "F",
-    "LETTER_G" : "G",
-    "LETTER_H" : "H",
-    "LETTER_I" : "I",
-    "LETTER_J" : "J",
-    "LETTER_K" : "K",
-    "LETTER_L" : "L",
-    "LETTER_M" : "M",
-    "LETTER_N" : "N",
-    "LETTER_O" : "O",
-    "LETTER_P" : "P",
-    "LETTER_R" : "R",
-    "LETTER_S" : "S",
-    "LETTER_T" : "T",
-    "LETTER_U" : "U",
-    "LETTER_V" : "V",
-    "LETTER_W" : "W",
-    "LETTER_Y" : "Y",
-    "LETTER_Z" : "Z",
-    "aboutAuthorSentence": "This is an open source word guessing game adapted to {{language}} by me (<3>{{author}}</3>). ",
-    "aboutCodeSentence": "Check out <1>the original code</1> by <3>Hannah Park</3> or have a look at <5>Aidan Pine's fork</5> and customize it for another language! ",
-    "aboutDataSentence": "I also changed improved the game a bit, didn't just adapt it to viossa :p ",
-    "aboutOriginalSentence": "You can also play the original  <1>here</1> ",
-    "languages": {
-        "vi_la": "ラテンカクトロ",
-        "vi_cy": "キリルカクトロ",
-        "vi_ka": "カタカナカクトロ",
-        "vi_kr": "ハングㇽカクトロ"
+  "tsui": "ツイアㇷトスピㇽ",
+  "spilNamae": "カㇷトコ？ :3",
+  "ahmanPresmi": "アㇷマン",
+  "keshitePresmi": "ケシテ",
+  "oharePresmi": "オハレ",
+  "udachiTro": "ウダチ",
+  "imadahTro": "イマダㇷ",
+  "naiLagomKirain": "キライン・ナイラゴㇺ!",
+  "naiFinnaKo": "ナイデキ・ブルーㇰ・アㇷトコ",
+  "neoUdachiko": "ネオウダチコ・トゥラダン！",
+  "imadahko": "イマダㇷコ・トゥラダン！",
+  "svar": "スヴァㇽコ: {{solution}}",
+  "spilWakwu": "ワクウ・スピㇽ・ナクリップボード",
+  "hurSpilNamae": "フㇽスピㇽ？",
+  "spiltropos": "ダアㇷマン・プラゥ゙ダコナ {{tries}} スヴァㇽ。アフマンザ、ヴァルゲフキラインダド・カワリ・ペㇽマハセ・フㇽ・スヴァㇽフドゥ・ウソ・オス・プラゥ゙ダ。",
+  "sentakuGlossa": "センタク・アインカクトロ",
+  "pravdaplaasSpiltropos": "キライン「A」ヤムイネスヴァㇽコ・アウ・プラゥ゙ダプラース。",
+  "usoplaasSpiltropos": "キライン「G」ヤムイネスヴァㇽコ・メン・ウソプラース。",
+  "naiJamSpiltropos": "キライン「Q」ナイヤム、バカ。",
+  "ahmanFjal": "アㇷマンフャㇽ",
+  "ataiTumam": "アタイトゥマㇺ",
+  "heelIskatAtai": "ヘールイスカトアタイ",
+  "jingatai": "イングアタイ",
+  "imaDahmwerm": "ダームウェㇽㇺフイマ",
+  "lesteBraaDahmwerm": "レステブラー・ダームウェㇽㇺ",
+  "neokoMade": "ネオコ・トゥラマデ",
+  "blogeta": "ブロゲタ",
+  "jingKaku": [
+    "マラジェツ！",
+    "マンゲブラー！",
+    "ブラーダイ！",
+    "マラマラ！！",
+    "ドゥイング！！！",
+    "オイブリン！ マラジェツ～",
+    "マラジェツ！",
+    "マンゲブラー！",
+    "ブラーダイ！",
+    "マラマラ！！",
+    "ドゥイング！！！",
+    "オイブリン！ マラジェツ～",
+    "マラジェツ！",
+    "マンゲブラー！",
+    "ブラーダイ！",
+    "マラマラ！！",
+    "ドゥイング！！！",
+    "オイブリン！ マラジェツ～",
+    "マラジェツ！",
+    "マンゲブラー！",
+    "ブラーダイ！",
+    "マラマラ！！",
+    "ドゥイング！！！",
+    "オイブリン！ マラジェツ～",
+    "マラジェツ！",
+    "マンゲブラー！",
+    "ブラーダイ！",
+    "マラマラ！！",
+    "ドゥイング！！！",
+    "オイブリン！ マラジェツ～",
+    "マラジェツ！",
+    "マンゲブラー！",
+    "ブラーダイ！",
+    "マラマラ！！",
+    "ドゥイング！！！",
+    "オイブリン！ マラジェツ～",
+    "ブリャーット - レイ",
+    "スレイー（ガグ） - ニコミコ",
+    "ダ・セブヤ・ヴラㇲ。",
+    "ダ・ナム・アウト。"
+  ],
+  "firstExampleWord": [
+    {
+      "letter": "L",
+      "highlight": false
+    },
+    {
+      "letter": "A",
+      "highlight": true
+    },
+    {
+      "letter": "S",
+      "highlight": false
+    },
+    {
+      "letter": "K",
+      "highlight": false
+    },
+    {
+      "letter": "U",
+      "highlight": false
     }
+  ],
+  "secondExampleWord": [
+    {
+      "letter": "D",
+      "highlight": false
+    },
+    {
+      "letter": "J",
+      "highlight": false
+    },
+    {
+      "letter": "O",
+      "highlight": false
+    },
+    {
+      "letter": "N",
+      "highlight": false
+    },
+    {
+      "letter": "G",
+      "highlight": true
+    }
+  ],
+  "thirdExampleWord": [
+    {
+      "letter": "Q",
+      "highlight": false
+    },
+    {
+      "letter": "Q",
+      "highlight": false
+    },
+    {
+      "letter": "Q",
+      "highlight": false
+    },
+    {
+      "letter": "Q",
+      "highlight": false
+    },
+    {
+      "letter": "Q",
+      "highlight": false
+    }
+  ],
+  "aboutAuthorSentence": "This is an open source word guessing game adapted to {{language}} by me (<3>{{author}}</3>). ",
+  "aboutCodeSentence": "Check out <1>the original code</1> by <3>Hannah Park</3> or have a look at <5>Aidan Pine's fork</5> and customize it for another language! ",
+  "aboutDataSentence": "I also changed improved the game a bit, didn't just adapt it to viossa :p ",
+  "aboutOriginalSentence": "You can also play the original  <1>here</1> ",
+  "languages": {
+    "vi_la": "ラテンカクトロ",
+    "vi_cy": "キリルカクトロ",
+    "vi_ka": "カタカナカクトロ",
+    "vi_kr": "ハングㇽカクトロ",
+    "vi_pa": "パネクカクトロ",
+    "vi_wy": "ヰ゚ンタㇽカクトロ"
+  }
 }

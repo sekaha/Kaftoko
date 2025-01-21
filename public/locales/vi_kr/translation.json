@@ -1,164 +1,149 @@
 {
-    "tsui": "더이 아브어 스비러",
-    "spilNamae": "가 아브더고? :3",
-    "ahmanPresmi": "Enter",
-    "keshitePresmi": "Delete",
-    "spaceKey": "Space",
-    "naiLagomKirain": "기라인 나이 라곰",
-    "naiFinnaKo": "나이 데기 브럭 아브더고",
-    "svar": "스바르고: {{solution}}",
-    "spilWakwu": "와궈 스비러 나 clipboard",
-    "hurSpilNamae": "헐 스비러",
-    "spiltropos": "다 아하우만 브라버다고 나 {{tries}} 스바르. 아하우만 사, 바례 부 기라인다도 가와리 마하세 훌 스바르 부 두 우소 오스 브라버다고.",
-    "sentakuGlossa": "센다구 가구더러",
-    "pravdaplaasSpiltropos": "기라인 'A' 얌 나 스바르고 아우 브라버다 버라스.",
-    "usoplaasSpiltropos": "기라인 'G' 얌 나 스바르고 멘 우소 버라스.",
-    "naiJamSpiltropos": "기라인 'Q' 나이 얌, 바가.",
-    "ahmanFjal": "아하우만 뱌르",
-    "ataiTumam": "아다이 두맘",
-    "heelIskatAtai": "헬 이스가더 아다이",
-    "jingatai": "잉아다이",
-    "imaDahmwerm": "닥무에르무 부 이마",
-    "lesteBraaDahmwerm": "렛데브라 닥무에르무",
-    "neokoMade": "네오고 두라 마데",
-    "blogeta": "브러게다",
-    "jingKaku": [
-        "마라!",
-        "망브라!",
-        "브라다이!",
-        "마라마라!!",
-        "두 잉!!!",
-        "우 브린! 마리~",
-        "마라!",
-        "망브라!",
-        "브라다이!",
-        "마라마라!!",
-        "두 잉!!!",
-        "우 브린! 마리~",
-        "마라!",
-        "망브라!",
-        "브라다이!",
-        "마라마라!!",
-        "두 잉!!!",
-        "우 브린! 마리~",
-        "마라!",
-        "망브라!",
-        "브라다이!",
-        "마라마라!!",
-        "두 잉!!!",
-        "우 브린! 마리~",
-        "마라!",
-        "망브라!",
-        "브라다이!",
-        "마라마라!!",
-        "두 잉!!!",
-        "우 브린! 마리~",
-        "마라!",
-        "망브라!",
-        "브라다이!",
-        "마라마라!!",
-        "두 잉!!!",
-        "우 브린! 마리~",
-        "Blyattttt - Rei",
-        "Slayyy (gag) - Nikomiko",
-        "Da sebja vras.",
-        "Da nam auto."
-    ],
-    "firstExampleWord": [{
-            "letter": "L",
-            "highlight": false
-        },
-        {
-            "letter": "A",
-            "highlight": true
-        },
-        {
-            "letter": "S",
-            "highlight": false
-        },
-        {
-            "letter": "K",
-            "highlight": false
-        },
-        {
-            "letter": "U",
-            "highlight": false
-        }
-    ],
-    "secondExampleWord": [{
-            "letter": "D",
-            "highlight": false
-        },
-        {
-            "letter": "J",
-            "highlight": false
-        },
-        {
-            "letter": "O",
-            "highlight": false
-        },
-        {
-            "letter": "N",
-            "highlight": false
-        },
-        {
-            "letter": "G",
-            "highlight": true
-        }
-    ],
-    "thirdExampleWord": [{
-            "letter": "Q",
-            "highlight": false
-        },
-        {
-            "letter": "Q",
-            "highlight": false
-        },
-        {
-            "letter": "Q",
-            "highlight": false
-        },
-        {
-            "letter": "Q",
-            "highlight": false
-        },
-        {
-            "letter": "Q",
-            "highlight": false
-        }
-    ],
-    "LETTER_A" : "А",
-    "LETTER_B" : "Б",
-    "LETTER_C" : "Ц",
-    "LETTER_D" : "Д",
-    "LETTER_E" : "Е",
-    "LETTER_F" : "Ф",
-    "LETTER_G" : "Г",
-    "LETTER_H" : "Х",
-    "LETTER_I" : "И",
-    "LETTER_J" : "Й",
-    "LETTER_K" : "К",
-    "LETTER_L" : "Л",
-    "LETTER_M" : "М",
-    "LETTER_N" : "Н",
-    "LETTER_O" : "О",
-    "LETTER_P" : "П",
-    "LETTER_R" : "Р",
-    "LETTER_S" : "С",
-    "LETTER_T" : "Т",
-    "LETTER_U" : "У",
-    "LETTER_V" : "В",
-    "LETTER_W" : "Ш",
-    "LETTER_Y" : "Ы",
-    "LETTER_Z" : "З",
-    "aboutAuthorSentence": "This is an open source word guessing game adapted to {{language}} by me (<3>{{author}}</3>). ",
-    "aboutCodeSentence": "Check out <1>the original code</1> by <3>Hannah Park</3> or have a look at <5>Aidan Pine's fork</5> and customize it for another language! ",
-    "aboutDataSentence": "I also changed improved the game a bit, didn't just adapt it to viossa :p ",
-    "aboutOriginalSentence": "You can also play the original  <1>here</1> ",
-    "languages": {
-        "vi_la": "라딘가구",
-        "vi_cy": "기리르가구",
-        "vi_ka": "가다가나가구",
-        "vi_kr": "하국가구"
+  "tsui": "더이 아브어 스비러",
+  "spilNamae": "가 아브더고? :3",
+  "ahmanPresmi": "아허만",
+  "keshitePresmi": "게시데",
+  "oharePresmi": "오하레",
+  "udachiTro": "우다지",
+  "imadahTro": "이마닥",
+  "naiLagomKirain": "기라인 나이 라곰",
+  "naiFinnaKo": "나이 데기 브럭 아브더고",
+  "neoUdachiko": "네오 우다지고 두라단",
+  "imadahko": "이마닥고 두라단",
+  "svar": "스바르고: {{solution}}",
+  "spilWakwu": "와궈 스비러 나 clipboard",
+  "hurSpilNamae": "헐 스비러",
+  "spiltropos": "다 아하우만 브라버다고 나 {{tries}} 스바르. 아하우만 사, 바례 부 기라인다도 가와리 마하세 훌 스바르 부 두 우소 오스 브라버다고.",
+  "sentakuGlossa": "센다구 가구더러",
+  "pravdaplaasSpiltropos": "기라인 'A' 얌 나 스바르고 아우 브라버다 버라스.",
+  "usoplaasSpiltropos": "기라인 'G' 얌 나 스바르고 멘 우소 버라스.",
+  "naiJamSpiltropos": "기라인 'Q' 나이 얌, 바가.",
+  "ahmanFjal": "아하우만 뱌르",
+  "ataiTumam": "아다이 두맘",
+  "heelIskatAtai": "헬 이스가더 아다이",
+  "jingatai": "잉아다이",
+  "imaDahmwerm": "닥무에르무 부 이마",
+  "lesteBraaDahmwerm": "렛데브라 닥무에르무",
+  "neokoMade": "네오고 두라 마데",
+  "blogeta": "브러게다",
+  "jingKaku": [
+    "마라!",
+    "망브라!",
+    "브라다이!",
+    "마라마라!!",
+    "두 잉!!!",
+    "우 브린! 마리~",
+    "마라!",
+    "망브라!",
+    "브라다이!",
+    "마라마라!!",
+    "두 잉!!!",
+    "우 브린! 마리~",
+    "마라!",
+    "망브라!",
+    "브라다이!",
+    "마라마라!!",
+    "두 잉!!!",
+    "우 브린! 마리~",
+    "마라!",
+    "망브라!",
+    "브라다이!",
+    "마라마라!!",
+    "두 잉!!!",
+    "우 브린! 마리~",
+    "마라!",
+    "망브라!",
+    "브라다이!",
+    "마라마라!!",
+    "두 잉!!!",
+    "우 브린! 마리~",
+    "마라!",
+    "망브라!",
+    "브라다이!",
+    "마라마라!!",
+    "두 잉!!!",
+    "우 브린! 마리~",
+    "Blyattttt - Rei",
+    "Slayyy (gag) - Nikomiko",
+    "Da sebja vras.",
+    "Da nam auto."
+  ],
+  "firstExampleWord": [
+    {
+      "letter": "L",
+      "highlight": false
+    },
+    {
+      "letter": "A",
+      "highlight": true
+    },
+    {
+      "letter": "S",
+      "highlight": false
+    },
+    {
+      "letter": "K",
+      "highlight": false
+    },
+    {
+      "letter": "U",
+      "highlight": false
     }
+  ],
+  "secondExampleWord": [
+    {
+      "letter": "D",
+      "highlight": false
+    },
+    {
+      "letter": "J",
+      "highlight": false
+    },
+    {
+      "letter": "O",
+      "highlight": false
+    },
+    {
+      "letter": "N",
+      "highlight": false
+    },
+    {
+      "letter": "G",
+      "highlight": true
+    }
+  ],
+  "thirdExampleWord": [
+    {
+      "letter": "Q",
+      "highlight": false
+    },
+    {
+      "letter": "Q",
+      "highlight": false
+    },
+    {
+      "letter": "Q",
+      "highlight": false
+    },
+    {
+      "letter": "Q",
+      "highlight": false
+    },
+    {
+      "letter": "Q",
+      "highlight": false
+    }
+  ],
+  "aboutAuthorSentence": "This is an open source word guessing game adapted to {{language}} by me (<3>{{author}}</3>). ",
+  "aboutCodeSentence": "Check out <1>the original code</1> by <3>Hannah Park</3> or have a look at <5>Aidan Pine's fork</5> and customize it for another language! ",
+  "aboutDataSentence": "I also changed improved the game a bit, didn't just adapt it to viossa :p ",
+  "aboutOriginalSentence": "You can also play the original  <1>here</1> ",
+  "languages": {
+    "vi_la": "라딘가구",
+    "vi_cy": "기리르가구",
+    "vi_ka": "가다가나가구",
+    "vi_kr": "하국가구",
+    "vi_wy": "우인데르가구",
+    "vi_pa": "다네구가구"
+  }
 }
