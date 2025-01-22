@@ -33,9 +33,7 @@ export const saveStatsToLocalStorage = (
 }
 
 export const loadStatsFromLocalStorage = (gameMode: string) => {
-  console.log(`loading ${gameMode}_stats`)
   const stats = localStorage.getItem(`${gameMode}_stats`)
   const res = stats ? (JSON.parse(stats) as GameStats) : null
-  console.log(res)
   return res
 }
