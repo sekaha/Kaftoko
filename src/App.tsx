@@ -80,7 +80,7 @@ const App: React.FC<WithTranslation> = ({ t, i18n }) => {
     const loaded = loadGameStateFromLocalStorage(gameMode)
 
     if (loaded) {
-      if (gameMode == 'daily' && loaded.solution != newSolution) {
+      if (gameMode === 'daily' && loaded.solution !== newSolution) {
         // Reset on new day
       } else {
         setGuesses(loaded.guesses)
@@ -147,7 +147,7 @@ const App: React.FC<WithTranslation> = ({ t, i18n }) => {
   // Handlers for game modes
   const onClickUdachi = () => {
     // Blank slate literally everything lmao
-    if (gameMode == 'random') {
+    if (gameMode === 'random') {
       setIsUdachikoAlertOpen(true)
       setIsImadahkoAlertOpen(false)
       setIsRofaiAlertOpen(false)
@@ -225,7 +225,7 @@ const App: React.FC<WithTranslation> = ({ t, i18n }) => {
       }, ALERT_TIME_MS)
     }
 
-    const winningWord = currentGuess.join('') == solution
+    const winningWord = currentGuess.join('') === solution
 
     if (
       currentGuess.length === CONFIG.wordLength &&
@@ -290,7 +290,7 @@ const App: React.FC<WithTranslation> = ({ t, i18n }) => {
         <div className="flex">
           <CalendarIcon
             className={`h-6 w-6 cursor-pointer ${
-              gameMode == 'daily' ? 'text-pravda_500' : 'text-white'
+              gameMode === 'daily' ? 'text-pravda_500' : 'text-white'
             } hover:text-pravda_700 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-pravda_700`}
             onClick={() => {
               setGameMode('daily')
@@ -299,18 +299,18 @@ const App: React.FC<WithTranslation> = ({ t, i18n }) => {
           />
           <GiPerspectiveDiceSixFacesThree
             className={`h-6 w-6 cursor-pointer ${
-              gameMode == 'random' ? 'text-pravda_500' : 'text-white'
+              gameMode === 'random' ? 'text-pravda_500' : 'text-white'
             } hover:text-pravda_700 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-pravda_700`}
             onClick={() => {
               onClickUdachi()
-              if (gameMode != 'random') {
+              if (gameMode !== 'random') {
                 setGameMode('random')
               }
             }}
           />
           {/* <GiDiceFire
             className={`h-6 w-6 cursor-pointer ${
-              gameMode == 'train' ? 'text-uso_500' : 'text-white'
+              gameMode === 'train' ? 'text-uso_500' : 'text-white'
             } hover:text-uso_700 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-uso_700`}
             onClick={() => {
               setGameMode('train')
@@ -393,7 +393,7 @@ const App: React.FC<WithTranslation> = ({ t, i18n }) => {
         variant="info"
       />
 
-      {/* <Alert
+      <Alert
         message={
           <>
             <CalendarIcon className="h-[1em] w-[1em] inline mb-1 mr-1" />
@@ -402,7 +402,7 @@ const App: React.FC<WithTranslation> = ({ t, i18n }) => {
         }
         isOpen={isImadahkoAlertOpen}
         variant="info"
-      />*/}
+      />
 
       <Alert
         message={
