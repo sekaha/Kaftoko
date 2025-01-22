@@ -67,28 +67,21 @@ const App: React.FC<WithTranslation> = ({ t, i18n }) => {
     const loaded = loadGameStateFromLocalStorage(gameMode)
 
     if (loaded) {
-      if (gameMode === 'daily' && loaded.solution !== solution) {
-        // Reset on new day
-      } else {
-        setGuesses(loaded.guesses)
+      setGuesses(loaded.guesses)
 
-        if (seed !== loaded.seed) {
-          //setSeed(loaded.seed)
-        }
+      const gameWasWon = loaded.guesses
+        .map((guess) => guess.join(''))
+        .includes(solution)
 
-        const gameWasWon = loaded.guesses
-          .map((guess) => guess.join(''))
-          .includes(solution)
+      if (gameWasWon) {
+        setIsGameWon(true)
+      }
 
-        if (gameWasWon) {
-          setIsGameWon(true)
-        }
-
-        if (loaded.guesses.length === CONFIG.tries && !gameWasWon) {
-          setIsGameLost(true)
-        }
+      if (loaded.guesses.length === CONFIG.tries && !gameWasWon) {
+        setIsGameLost(true)
       }
     }
+    //}
 
     setStats(loadStats(gameMode))
   }, [gameMode]) // will load initially and then whenever gameMode is updated
