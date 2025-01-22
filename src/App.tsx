@@ -35,7 +35,6 @@ import './i18n'
 import { withTranslation, WithTranslation } from 'react-i18next'
 import { WORDS } from './constants/wordlist'
 import { Die } from './components/Die'
-import Confetti from './components/Confetti'
 
 const ALERT_TIME_MS = 2000 // Time duration for alerts
 
@@ -58,8 +57,44 @@ const App: React.FC<WithTranslation> = ({ t, i18n }) => {
   const [isGameLost, setIsGameLost] = useState(false) // Tracks if the game is lost
   const [successAlert, setSuccessAlert] = useState('') // Displays success messages
   const [isShaking, setIsShaking] = useState(false)
+
+  const confettiConfig = {
+    fps: 120, // Frames per second
+    lifetime: 200, // Time of life
+    angle: 270, // Initial direction of particles in degrees
+    decay: 0.94, // How much the velocity decreases each frame
+    spread: 180, // Spread of particles in degrees
+    startVelocity: 15, // Initial velocity of particles
+    elementCount: 100, // Number of particles
+    elementSize: 8, // Size of particles in px
+    zIndex: 10, // z-index of particles
+    position: 'fixed', // Positioning of particles
+    colors: ['#A45BF1', '#25C6F6', '#72F753', '#F76C88', '#F5F770'], // Colors of particles
+  }
+
+  const emojiConfig = {
+    fps: 120,
+    lifetime: 200,
+    angle: 90,
+    decay: 0.92,
+    spread: 180,
+    rotate: true,
+    startVelocity: 16,
+    elementCount: 25,
+    elementSize: 25,
+    zIndex: 10,
+    position: 'fixed',
+    emoji: ['🍎', '🍏'],
+  }
+
   const { reward: confettiReward, isAnimating: isConfettiAnimating } =
-    useReward('confettiReward', 'confetti')
+    useReward('reward', 'confetti', confettiConfig)
+
+  const { reward: emojiReward, isAnimating: isEmojiAnimating } = useReward(
+    'reward',
+    'emoji',
+    emojiConfig
+  )
 
   // Reload all data when gamemode is changed
   useEffect(() => {
@@ -134,7 +169,6 @@ const App: React.FC<WithTranslation> = ({ t, i18n }) => {
 
     // Blank slate literally everything lmao
     if (gameMode === 'random') {
-      confettiReward()
       setIsUdachikoAlertOpen(true)
       // setIsImadahkoAlertOpen(false)
       setIsRofaiAlertOpen(false)
@@ -191,6 +225,10 @@ const App: React.FC<WithTranslation> = ({ t, i18n }) => {
     ) {
       let newGuess = currentGuess.concat([value])
       setCurrentGuess(newGuess)
+
+      if (newGuess.join('') === 'RINGO') {
+        emojiReward()
+      }
     }
   }
 
@@ -281,7 +319,6 @@ const App: React.FC<WithTranslation> = ({ t, i18n }) => {
 
   return (
     <div className="py-8 max-w-7xl mx-auto sm:px-6 lg:px-8">
-      <Confetti id="tsparticles" />
       <div className="flex w-80 mx-auto items-center mb-8 justify-between">
         <div className="flex">
           <CalendarIcon
@@ -335,7 +372,6 @@ const App: React.FC<WithTranslation> = ({ t, i18n }) => {
         guesses={guesses}
         solution={solution}
       />
-
       <TranslateModal
         isOpen={isI18nModalOpen}
         handleClose={() => setIsI18nModalOpen(false)}
@@ -354,7 +390,6 @@ const App: React.FC<WithTranslation> = ({ t, i18n }) => {
           return setTimeout(() => setSuccessAlert(''), ALERT_TIME_MS)
         }}
       />
-
       <InfoModal
         isOpen={isInfoModalOpen}
         handleClose={() => setIsInfoModalOpen(false)}
@@ -363,7 +398,6 @@ const App: React.FC<WithTranslation> = ({ t, i18n }) => {
         isOpen={isAboutModalOpen}
         handleClose={() => setIsAboutModalOpen(false)}
       />
-
       {/* <button
         type="button"
         className="mx-auto mt-8 flex items-center px-2.5 py-1.5 border border-transparent text-xs font-medium rounded text-white bg-pravda_500 hover:bg-pravda_600 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-pravda_700 select-none"
@@ -371,9 +405,7 @@ const App: React.FC<WithTranslation> = ({ t, i18n }) => {
       >
         {t('tsui')}
       </button> */}
-
       <Alert message={t('naiLagomKirain')} isOpen={isnaiLagomKirain} />
-
       <Alert
         message={
           <>
@@ -384,7 +416,6 @@ const App: React.FC<WithTranslation> = ({ t, i18n }) => {
         isOpen={isUdachikoAlertOpen}
         variant="info"
       />
-
       {/* <Alert
         message={
           <>
@@ -395,7 +426,6 @@ const App: React.FC<WithTranslation> = ({ t, i18n }) => {
         isOpen={isImadahkoAlertOpen}
         variant="info"
       /> */}
-
       <Alert
         message={
           <>
@@ -406,11 +436,20 @@ const App: React.FC<WithTranslation> = ({ t, i18n }) => {
         isOpen={isRofaiAlertOpen}
         variant="special"
       />
-
+      <span
+        id="reward"
+        style={{
+          position: 'fixed',
+          top: '-10%', // Top of the screen
+          left: '50%', // Horizontally center
+          width: '0px', // Small size to make it unobtrusive
+          height: '0px',
+          zIndex: 9999, // Make sure it's above most other elements
+        }}
+      />
       <Alert message={t('naiFinnaKo')} isOpen={isnaiFinnaKoAlertOpen} />
       <Alert message={t('svar', { solution })} isOpen={isGameLost} />
       <Alert
-        id="confettiReward"
         message={successAlert}
         isOpen={successAlert !== ''}
         variant="success"
