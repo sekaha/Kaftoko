@@ -47,9 +47,9 @@ export const Keyboard = ({
         }
       }
     }
-    window.addEventListener('keyup', listener)
+    window.addEventListener('keydown', listener)
     return () => {
-      window.removeEventListener('keyup', listener)
+      window.removeEventListener('keydown', listener)
     }
   }, [onEnter, onDelete, onChar])
 
