@@ -87,10 +87,13 @@ const App: React.FC<WithTranslation> = ({ t, i18n }) => {
     emoji: ['🍎', '🍏'],
   }
 
-  const { reward: confettiReward, isAnimating: isConfettiAnimating } =
-    useReward('reward', 'confetti', confettiConfig)
+  const { reward: confettiReward, isAnimating: _unused1 } = useReward(
+    'reward',
+    'confetti',
+    confettiConfig
+  )
 
-  const { reward: emojiReward, isAnimating: isEmojiAnimating } = useReward(
+  const { reward: emojiReward, isAnimating: _unused2 } = useReward(
     'reward',
     'emoji',
     emojiConfig
