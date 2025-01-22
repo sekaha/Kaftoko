@@ -224,10 +224,6 @@ const App: React.FC<WithTranslation> = ({ t, i18n }) => {
     ) {
       let newGuess = currentGuess.concat([value])
       setCurrentGuess(newGuess)
-
-      if (newGuess.join('') === 'RINGO') {
-        emojiReward()
-      }
     }
   }
 
@@ -247,6 +243,10 @@ const App: React.FC<WithTranslation> = ({ t, i18n }) => {
       return setTimeout(() => {
         setIsnaiLagomKirain(false)
       }, ALERT_TIME_MS)
+    }
+
+    if (currentGuess.join('') === 'RINGO') {
+      emojiReward()
     }
 
     if (!isWordInWordList(currentGuess.join(''))) {
