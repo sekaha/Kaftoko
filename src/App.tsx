@@ -104,7 +104,7 @@ const App: React.FC<WithTranslation> = ({ t, i18n }) => {
 
     setStats(loadStats(gameMode))
     setSolution(newSolution)
-  }, [gameMode]) // will load initially and then whenever gameMode is updated
+  }, [gameMode, seed]) // will load initially and then whenever gameMode is updated
 
   // Load and initialize guesses from localStorage
   const [guesses, setGuesses] = useState<string[][]>(() => {
@@ -142,7 +142,7 @@ const App: React.FC<WithTranslation> = ({ t, i18n }) => {
   // Save game state whenever guesses update
   useEffect(() => {
     saveGameStateToLocalStorage({ guesses, solution, seed }, gameMode)
-  }, [guesses])
+  }, [guesses, seed, solution])
 
   // Handlers for game modes
   const onClickUdachi = () => {
