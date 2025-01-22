@@ -178,15 +178,15 @@ const App: React.FC<WithTranslation> = ({ t, i18n }) => {
     }, ALERT_TIME_MS)
   }
 
-  const onClickRofai = () => {
-    setIsRofaiAlertOpen(true)
-    setIsImadahkoAlertOpen(false)
-    setIsUdachikoAlertOpen(false)
+  // const onClickRofai = () => {
+  //   setIsRofaiAlertOpen(true)
+  //   setIsImadahkoAlertOpen(false)
+  //   setIsUdachikoAlertOpen(false)
 
-    return setTimeout(() => {
-      setIsRofaiAlertOpen(false)
-    }, ALERT_TIME_MS)
-  }
+  //   return setTimeout(() => {
+  //     setIsRofaiAlertOpen(false)
+  //   }, ALERT_TIME_MS)
+  // }
 
   // Handle adding a character to the current guess
   const onChar = (value: string) => {
