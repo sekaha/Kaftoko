@@ -1,6 +1,6 @@
 import { ORTHOGRAPHY } from '../constants/orthography'
 import { ORTHOGRAPHY_PATTERN } from './tokenizer'
-import { getDailyWord } from './words'
+// import { getDailyWord } from './words'
 
 export type CharStatus = 'absent' | 'present' | 'correct'
 
