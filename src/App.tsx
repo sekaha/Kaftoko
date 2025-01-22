@@ -276,7 +276,7 @@ const App: React.FC<WithTranslation> = ({ t, i18n }) => {
           WIN_MESSAGES[Math.floor(Math.random() * WIN_MESSAGES.length)]
         )
 
-        if (guesses.length <= 3) {
+        if (guesses.length <= 2) {
           confettiReward()
         }
 
