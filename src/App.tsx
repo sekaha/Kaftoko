@@ -144,7 +144,7 @@ const App: React.FC<WithTranslation> = ({ t, i18n }) => {
 
     setSolution(getRandomWord(newSeed).solution)
 
-    if (gameMode != 'random') {
+    if (gameMode !== 'random') {
       setGameMode('random')
     } else {
       return setTimeout(() => {
