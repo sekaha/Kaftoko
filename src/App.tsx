@@ -52,7 +52,7 @@ const App: React.FC<WithTranslation> = ({ t, i18n }) => {
   const [isI18nModalOpen, setIsI18nModalOpen] = useState(false) // Translation modal visibility
   const [isnaiFinnaKoAlertOpen, setIsnaiFinnaKoAlertOpen] = useState(false) // Alert for invalid word
   const [isUdachikoAlertOpen, setIsUdachikoAlertOpen] = useState(false) // Alert for game mode switch
-  const [isImadahkoAlertOpen, setIsImadahkoAlertOpen] = useState(false) // Alert for another mode switch
+  // const [isImadahkoAlertOpen, setIsImadahkoAlertOpen] = useState(false) // Alert for another mode switch
   const [isRofaiAlertOpen, setIsRofaiAlertOpen] = useState(false) // Alert for another mode switch
   const [isGameLost, setIsGameLost] = useState(false) // Tracks if the game is lost
   const [successAlert, setSuccessAlert] = useState('') // Displays success messages
@@ -131,7 +131,7 @@ const App: React.FC<WithTranslation> = ({ t, i18n }) => {
     // Blank slate literally everything lmao
     if (gameMode === 'random') {
       setIsUdachikoAlertOpen(true)
-      setIsImadahkoAlertOpen(false)
+      // setIsImadahkoAlertOpen(false)
       setIsRofaiAlertOpen(false)
       newSeed = Math.floor(Math.random() * WORDS.length)
 
@@ -154,15 +154,15 @@ const App: React.FC<WithTranslation> = ({ t, i18n }) => {
   }
 
   const onClickImadah = () => {
-    setIsImadahkoAlertOpen(true)
-    setIsUdachikoAlertOpen(false)
-    setIsRofaiAlertOpen(false)
+    // setIsImadahkoAlertOpen(true)
+    // setIsUdachikoAlertOpen(false)
+    // setIsRofaiAlertOpen(false)
     setSolution(getDailyWord().solution)
     setGameMode('daily')
 
-    return setTimeout(() => {
-      setIsImadahkoAlertOpen(false)
-    }, ALERT_TIME_MS)
+    // return setTimeout(() => {
+    //   setIsImadahkoAlertOpen(false)
+    // }, ALERT_TIME_MS)
   }
 
   // const onClickRofai = () => {
@@ -376,7 +376,7 @@ const App: React.FC<WithTranslation> = ({ t, i18n }) => {
         variant="info"
       />
 
-      <Alert
+      {/* <Alert
         message={
           <>
             <CalendarIcon className="h-[1em] w-[1em] inline mb-1 mr-1" />
@@ -385,7 +385,7 @@ const App: React.FC<WithTranslation> = ({ t, i18n }) => {
         }
         isOpen={isImadahkoAlertOpen}
         variant="info"
-      />
+      /> */}
 
       <Alert
         message={
