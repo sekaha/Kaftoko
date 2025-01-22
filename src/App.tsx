@@ -80,25 +80,25 @@ const App: React.FC<WithTranslation> = ({ t, i18n }) => {
     const loaded = loadGameStateFromLocalStorage(gameMode)
 
     if (loaded) {
-      setGuesses(loaded.guesses)
-      setSeed(loaded.seed)
-
       if (gameMode == 'daily' && loaded.solution != newSolution) {
-        // pass
+        // Reset on new day
       } else {
+        setGuesses(loaded.guesses)
+        setSeed(loaded.seed)
+
         newSolution = loaded.solution
-      }
 
-      const gameWasWon = loaded.guesses
-        .map((guess) => guess.join(''))
-        .includes(newSolution)
+        const gameWasWon = loaded.guesses
+          .map((guess) => guess.join(''))
+          .includes(newSolution)
 
-      if (gameWasWon) {
-        setIsGameWon(true)
-      }
+        if (gameWasWon) {
+          setIsGameWon(true)
+        }
 
-      if (loaded.guesses.length === CONFIG.tries && !gameWasWon) {
-        setIsGameLost(true)
+        if (loaded.guesses.length === CONFIG.tries && !gameWasWon) {
+          setIsGameLost(true)
+        }
       }
     }
 
@@ -163,6 +163,7 @@ const App: React.FC<WithTranslation> = ({ t, i18n }) => {
       setCurrentGuess([])
       setIsGameWon(false)
       setIsGameLost(false)
+      console.log(newSolution)
       // saveGameStateToLocalStorage(
       //   { guesses: [], solution: newSolution, seed: newSeed },
       //   gameMode
@@ -321,7 +322,7 @@ const App: React.FC<WithTranslation> = ({ t, i18n }) => {
               }
             }}
           />
-          <GiDiceFire
+          {/* <GiDiceFire
             className={`h-6 w-6 cursor-pointer ${
               gameMode == 'train' ? 'text-uso_500' : 'text-white'
             } hover:text-uso_700 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-uso_700`}
@@ -329,7 +330,8 @@ const App: React.FC<WithTranslation> = ({ t, i18n }) => {
               setGameMode('train')
               onClickRofai()
             }}
-          />
+          /> */}
+          <span className={'h-6 w-6'} />
         </div>
 
         <h1 className="text-center text-xl text-bold">{t('spilNamae')}</h1>
