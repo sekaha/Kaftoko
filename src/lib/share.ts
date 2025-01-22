@@ -10,7 +10,7 @@ export const shareStatus = (
 ) => {
   let header = '#' + CONFIG.language
 
-  if (gameMode == 'random') {
+  if (gameMode === 'random') {
     header += ' Udachi'
   } else {
     header += ' #' + getDailyWord().solutionIndex
