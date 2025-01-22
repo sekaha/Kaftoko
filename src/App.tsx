@@ -102,10 +102,8 @@ const App: React.FC<WithTranslation> = ({ t, i18n }) => {
       }
     }
 
-    console.log('loading game', stats, gameMode)
     setStats(loadStats(gameMode))
     setSolution(newSolution)
-    console.log(newSolution)
   }, [gameMode]) // will load initially and then whenever gameMode is updated
 
   // Load and initialize guesses from localStorage
@@ -163,11 +161,6 @@ const App: React.FC<WithTranslation> = ({ t, i18n }) => {
       setCurrentGuess([])
       setIsGameWon(false)
       setIsGameLost(false)
-      console.log(newSolution)
-      // saveGameStateToLocalStorage(
-      //   { guesses: [], solution: newSolution, seed: newSeed },
-      //   gameMode
-      // )
     }
 
     return setTimeout(() => {
@@ -243,13 +236,6 @@ const App: React.FC<WithTranslation> = ({ t, i18n }) => {
       setCurrentGuess([])
 
       if (winningWord) {
-        console.log(
-          'winning word',
-          stats,
-          currentGuess,
-          guesses.length,
-          gameMode
-        )
         setStats(addStatsForCompletedGame(stats, guesses.length, gameMode))
 
         // Congratulations, you win! ass shit
