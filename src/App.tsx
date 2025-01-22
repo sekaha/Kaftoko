@@ -275,7 +275,10 @@ const App: React.FC<WithTranslation> = ({ t, i18n }) => {
         setSuccessAlert(
           WIN_MESSAGES[Math.floor(Math.random() * WIN_MESSAGES.length)]
         )
-        confettiReward()
+
+        if (guesses.length <= 3) {
+          confettiReward()
+        }
 
         setTimeout(() => {
           setSuccessAlert('')
