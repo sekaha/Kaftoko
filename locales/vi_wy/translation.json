@@ -1,0 +1,150 @@
+{
+  "tsui": "afto spì para",
+  "spilNamae": "kaftoko? :3c",
+  "ahmanPresmi": "iskat",
+  "keshitePresmi": "kexite",
+  "oharePresmi": "prapa",
+  "udachiTro": "uttaqi",
+  "imadahTro": "iãttap",
+  "naiLagomKirain": "kotoa ãi pùap.",
+  "naiFinnaKo": "ãi rukki afto kotoa.",
+  "svar": "sʋarkotoa: {{solution}}",
+  "neoUdachiko": "ẽo uttaqi kotoa tuà ttã!",
+  "imadahko": "iãttap kotoa tuà ttã!",
+  "spilWakwu": "spìtuʋã hha iã.",
+  "hurSpilNamae": "hur spì?",
+  "spiltropos": "tta ahãŋ pratta kotoa ã {{tries}} sʋar. ahãŋ za, ʋarye fu keraĩkereik kaʋari per ãpàkàar ka keraĩ ã sʋar fu ù uso au pratta.",
+  "sentakuGlossa": "sẽtaku kakutropos",
+  "pravdaplaasSpiltropos": "keraĩ <u> yã ã sʋarkotoa au suʋaru ã pratta pàs.",
+  "usoplaasSpiltropos": "keraĩ <e> yã ã sʋarkotoa ẽŋ suʋaru ã uso pàs.",
+  "naiJamSpiltropos": "keraĩ <q> ãi yã, aka.",
+  "ahmanFjal": "ahãŋ fyà",
+  "ataiTumam": "atai tuʋã",
+  "heelIskatAtai": "hè iskat atai",
+  "jingatai": "yiŋataitè",
+  "imaDahmwerm": "yiŋrofai fu iã",
+  "lesteBraaDahmwerm": "èctestuur yiŋrofai",
+  "neokoMade": "ẽo kotoa tuà ãtte",
+  "blogeta": "òkketa",
+  "jingKaku": [
+    "ãàxxec!",
+    "ãŋeraa!",
+    "raattai!",
+    "ãà ãà!!",
+    "ù yiŋ!!!",
+    "oi ìŋ! ãàxxec~",
+    "ãàxxec!",
+    "ãŋeraa!",
+    "raattai!",
+    "ãà ãà!!",
+    "ù yiŋ!!!",
+    "oi ìŋ! ãàxxec~",
+    "ãàxxec!",
+    "ãŋeraa!",
+    "raattai!",
+    "ãà ãà!!",
+    "ù yiŋ!!!",
+    "oi ìŋ! ãàxxec~",
+    "ãàxxec!",
+    "ãŋeraa!",
+    "raattai!",
+    "ãà ãà!!",
+    "ù yiŋ!!!",
+    "oi ìŋ! ãàxxec~",
+    "ãàxxec!",
+    "ãŋeraa!",
+    "raattai!",
+    "ãà ãà!!",
+    "ù yiŋ!!!",
+    "oi ìŋ! ãàxxec~",
+    "ãàxxec!",
+    "ãŋeraa!",
+    "raattai!",
+    "ãà ãà!!",
+    "ù yiŋ!!!",
+    "oi ìŋ! ãàxxec~",
+    "blyattttt - rei",
+    "slayyy (gag) - nikomiko",
+    "tta seexa ʋras.",
+    "tta auto ãi ŋã.",
+    "eat shekel war for anatomy"
+  ],
+  "firstExampleWord": [
+    {
+      "letter": "k",
+      "highlight": false
+    },
+    {
+      "letter": "u",
+      "highlight": true
+    },
+    {
+      "letter": "a",
+      "highlight": false
+    },
+    {
+      "letter": "i",
+      "highlight": false
+    },
+    {
+      "letter": "s",
+      "highlight": false
+    }
+  ],
+  "secondExampleWord": [
+    {
+      "letter": "s",
+      "highlight": false
+    },
+    {
+      "letter": "p",
+      "highlight": false
+    },
+    {
+      "letter": "o",
+      "highlight": false
+    },
+    {
+      "letter": "r",
+      "highlight": false
+    },
+    {
+      "letter": "e",
+      "highlight": true
+    }
+  ],
+  "thirdExampleWord": [
+    {
+      "letter": "q",
+      "highlight": false
+    },
+    {
+      "letter": "q",
+      "highlight": false
+    },
+    {
+      "letter": "q",
+      "highlight": false
+    },
+    {
+      "letter": "q",
+      "highlight": false
+    },
+    {
+      "letter": "q",
+      "highlight": false
+    }
+  ],
+  "aboutAuthorSentence": "This is an open source word guessing game adapted to {{language}} by me (<3>{{author}}</3>). ",
+  "aboutCodeSentence": "Check out <1>the original code</1> by <3>Hannah Park</3> or have a look at <5>Aidan Pine's fork</5> and customize it for another language! ",
+  "aboutDataSentence": "I also improved the game a bit, didn't just adapt it to viossa :p ",
+  "aboutOriginalSentence": "You can also play the original  <1>here</1> ",
+  "languages": {
+    "vi_la": "latinkakutro",
+    "vi_cy": "kirilkakutro",
+    "vi_ka": "katakanakakutro",
+    "vi_kr": "hangulkakutro",
+    "vi_wy": "wynterkakutro",
+    "vi_pa": "panekukakutro"
+  }
+}
