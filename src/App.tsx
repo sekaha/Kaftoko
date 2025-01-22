@@ -87,17 +87,13 @@ const App: React.FC<WithTranslation> = ({ t, i18n }) => {
     emoji: ['🍎', '🍏'],
   }
 
-  const { reward: confettiReward, isAnimating: _unused1 } = useReward(
+  const { reward: confettiReward } = useReward(
     'reward',
     'confetti',
     confettiConfig
   )
 
-  const { reward: emojiReward, isAnimating: _unused2 } = useReward(
-    'reward',
-    'emoji',
-    emojiConfig
-  )
+  const { reward: emojiReward } = useReward('reward', 'emoji', emojiConfig)
 
   // Reload all data when gamemode is changed
   useEffect(() => {
