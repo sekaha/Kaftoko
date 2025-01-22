@@ -8,11 +8,11 @@ export const saveGameStateToLocalStorage = (
   gameState: StoredGameState,
   gameMode: string
 ) => {
-  localStorage.setItem(gameMode, JSON.stringify(gameState))
+  localStorage.setItem(gameMode + '_game', JSON.stringify(gameState))
 }
 
 export const loadGameStateFromLocalStorage = (gameMode: string) => {
-  const state = localStorage.getItem(gameMode)
+  const state = localStorage.getItem(gameMode + '_game')
   return state ? (JSON.parse(state) as StoredGameState) : null
 }
 
@@ -29,10 +29,13 @@ export const saveStatsToLocalStorage = (
   gameStats: GameStats,
   gameMode: string
 ) => {
-  localStorage.setItem(gameMode + '_stats', JSON.stringify(gameStats))
+  localStorage.setItem(`${gameMode}_stats`, JSON.stringify(gameStats))
 }
 
-export const loadStatsFromLocalStorage = (mode: string) => {
-  const stats = localStorage.getItem(mode)
-  return stats ? (JSON.parse(stats) as GameStats) : null
+export const loadStatsFromLocalStorage = (gameMode: string) => {
+  console.log(`loading ${gameMode}_stats`)
+  const stats = localStorage.getItem(`${gameMode}_stats`)
+  const res = stats ? (JSON.parse(stats) as GameStats) : null
+  console.log(res)
+  return res
 }

@@ -16,7 +16,7 @@ export const Alert = ({ isOpen, message, variant = 'warning' }: Props) => {
       'bg-humba_500': variant === 'warning',
       'bg-jing_500 z-20': variant === 'success',
       'bg-pravda_400 z-40': variant === 'info',
-      'bg-uso_400 z-40': variant === 'special',
+      'bg-uso_400 z-60': variant === 'special',
     }
   )
 

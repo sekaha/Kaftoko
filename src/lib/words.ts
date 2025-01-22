@@ -16,12 +16,11 @@ export const getRandomWord = (seed: number) => {
 }
 
 export const getDailyWord = () => {
-  // January 1, 2025 Game Epoch
-  const epochMs = new Date(CONFIG.startDate).valueOf()
+  const epochMs = new Date(CONFIG.startDate).getTime()
   const now = Date.now()
-  const msInDay = 86400000
+  const msInDay = 60 * 60 * 24 * 1000
   const index = Math.floor((now - epochMs) / msInDay)
-  const nextday = (index + 1) * msInDay + epochMs
+  const nextday = epochMs + (index + 1) * msInDay
 
   return {
     solution: WORDS[index % WORDS.length],

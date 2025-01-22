@@ -17,19 +17,17 @@ export const TranslateModal = ({ isOpen, handleClose }: Props) => {
 
   const createOption = (code: string, text: string) => {
     return (
-      <div key={code}>
-        <label>{text}</label>
-        <input
-          className="m-2"
-          checked={
-            i18n.language !== undefined && code === i18n.language.split('-')[0]
-          }
-          type="radio"
-          value={code}
-          name="lang"
-          onChange={(e) => {}}
-        />
-      </div>
+      <button
+        key={code}
+        type="button"
+        className="mt-2 w-full rounded-md border border-transparent shadow-sm px-4 py-2 bg-pravda_400 text-base font-medium text-white hover:bg-pravda_600 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-pravda_700 sm:text-sm"
+        onClick={() => {
+          // Assuming i18n.changeLanguage or a similar function handles language changes
+          i18n.changeLanguage(code)
+        }}
+      >
+        {text}
+      </button>
     )
   }
 

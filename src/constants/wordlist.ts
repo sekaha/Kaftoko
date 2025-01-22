@@ -229,7 +229,7 @@ export const WORDS = [
   'RYOHO',
   'RUFNE',
   'TRELO',
-  'TINKO',
+  // 'TINKO',
   'SHKOI',
   'OTONA',
   'KJOMI',

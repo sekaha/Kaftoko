@@ -6,6 +6,7 @@ import { CalendarIcon } from '@heroicons/react/outline'
 import { CgDice5 } from 'react-icons/cg'
 import { GiDiceFire } from 'react-icons/gi'
 import { GiPerspectiveDiceSixFacesThree } from 'react-icons/gi'
+// import { ParticleEffects } from './components/ParticleEffects'
 
 // React hooks and component imports
 // <LiaFireAltSolid />
@@ -71,7 +72,6 @@ const App: React.FC<WithTranslation> = ({ t, i18n }) => {
         break
     }
 
-    setSolution(newSolution)
     setGuesses([])
     setCurrentGuess([])
     setIsGameWon(false)
@@ -82,6 +82,12 @@ const App: React.FC<WithTranslation> = ({ t, i18n }) => {
     if (loaded) {
       setGuesses(loaded.guesses)
       setSeed(loaded.seed)
+
+      if (gameMode == 'daily' && loaded.solution != newSolution) {
+        // pass
+      } else {
+        newSolution = loaded.solution
+      }
 
       const gameWasWon = loaded.guesses
         .map((guess) => guess.join(''))
@@ -95,6 +101,11 @@ const App: React.FC<WithTranslation> = ({ t, i18n }) => {
         setIsGameLost(true)
       }
     }
+
+    console.log('loading game', stats, gameMode)
+    setStats(loadStats(gameMode))
+    setSolution(newSolution)
+    console.log(newSolution)
   }, [gameMode]) // will load initially and then whenever gameMode is updated
 
   // Load and initialize guesses from localStorage
@@ -135,27 +146,6 @@ const App: React.FC<WithTranslation> = ({ t, i18n }) => {
     saveGameStateToLocalStorage({ guesses, solution, seed }, gameMode)
   }, [guesses])
 
-  // Handle game end (win or loss)
-  useEffect(() => {
-    if (isGameWon) {
-      const WIN_MESSAGES = t('jingKaku', { returnObjects: true })
-
-      setSuccessAlert(
-        WIN_MESSAGES[Math.floor(Math.random() * WIN_MESSAGES.length)]
-      )
-      setTimeout(() => {
-        setSuccessAlert('')
-        setIsStatsModalOpen(true)
-      }, ALERT_TIME_MS)
-    }
-
-    if (isGameLost) {
-      setTimeout(() => {
-        setIsStatsModalOpen(true)
-      }, ALERT_TIME_MS)
-    }
-  }, [isGameWon, isGameLost])
-
   // Handlers for game modes
   const onClickUdachi = () => {
     // Blank slate literally everything lmao
@@ -165,12 +155,18 @@ const App: React.FC<WithTranslation> = ({ t, i18n }) => {
       setIsRofaiAlertOpen(false)
 
       const newSeed = Math.floor(Math.random() * WORDS.length)
+
+      const newSolution = getRandomWord(newSeed).solution as string
       setSeed(newSeed)
-      setSolution(getRandomWord(newSeed).solution)
+      setSolution(newSolution)
       setGuesses([])
       setCurrentGuess([])
       setIsGameWon(false)
       setIsGameLost(false)
+      // saveGameStateToLocalStorage(
+      //   { guesses: [], solution: newSolution, seed: newSeed },
+      //   gameMode
+      // )
     }
 
     return setTimeout(() => {
@@ -246,12 +242,45 @@ const App: React.FC<WithTranslation> = ({ t, i18n }) => {
       setCurrentGuess([])
 
       if (winningWord) {
+        console.log(
+          'winning word',
+          stats,
+          currentGuess,
+          guesses.length,
+          gameMode
+        )
         setStats(addStatsForCompletedGame(stats, guesses.length, gameMode))
+
+        // Congratulations, you win! ass shit
+        const WIN_MESSAGES = t('jingKaku', { returnObjects: true })
+
+        setSuccessAlert(
+          WIN_MESSAGES[Math.floor(Math.random() * WIN_MESSAGES.length)]
+        )
+
+        setTimeout(() => {
+          setSuccessAlert('')
+          setIsStatsModalOpen(true)
+        }, ALERT_TIME_MS)
+
         return setIsGameWon(true)
       }
 
       if (guesses.length === CONFIG.tries - 1) {
-        setStats(addStatsForCompletedGame(stats, guesses.length + 1, gameMode))
+        console.log('max length', stats, currentGuess, guesses.length, gameMode)
+
+        const newStats = loadStats(gameMode)
+        setStats(
+          addStatsForCompletedGame(newStats, guesses.length + 1, gameMode)
+        )
+
+        // Congratulations, you... lost! Dumbass!
+        if (isGameLost) {
+          setTimeout(() => {
+            setIsStatsModalOpen(true)
+          }, ALERT_TIME_MS)
+        }
+
         setIsGameLost(true)
       }
     }
@@ -317,6 +346,7 @@ const App: React.FC<WithTranslation> = ({ t, i18n }) => {
           />
         </div>
       </div>
+      {/* <ParticleEffects /> */}
       <Grid guesses={guesses} currentGuess={currentGuess} solution={solution} />
       <Keyboard
         onChar={onChar}
@@ -354,13 +384,13 @@ const App: React.FC<WithTranslation> = ({ t, i18n }) => {
         handleClose={() => setIsAboutModalOpen(false)}
       />
 
-      <button
+      {/* <button
         type="button"
         className="mx-auto mt-8 flex items-center px-2.5 py-1.5 border border-transparent text-xs font-medium rounded text-white bg-pravda_500 hover:bg-pravda_600 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-pravda_700 select-none"
         onClick={() => setIsAboutModalOpen(true)}
       >
         {t('tsui')}
-      </button>
+      </button> */}
 
       <Alert message={t('naiLagomKirain')} isOpen={isnaiLagomKirain} />
 
@@ -384,7 +414,7 @@ const App: React.FC<WithTranslation> = ({ t, i18n }) => {
         }
         isOpen={isImadahkoAlertOpen}
         variant="info"
-      />
+      />*/}
 
       <Alert
         message={
@@ -395,7 +425,7 @@ const App: React.FC<WithTranslation> = ({ t, i18n }) => {
         }
         isOpen={isRofaiAlertOpen}
         variant="special"
-      /> */}
+      />
 
       <Alert message={t('naiFinnaKo')} isOpen={isnaiFinnaKoAlertOpen} />
       <Alert message={t('svar', { solution })} isOpen={isGameLost} />
