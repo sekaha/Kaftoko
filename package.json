@@ -8,7 +8,6 @@
         "@headlessui/react": "^1.4.2",
         "@heroicons/react": "^1.0.5",
         "@testing-library/jest-dom": "^5.16.1",
-        "@testing-library/react": "^12.1.2",
         "@testing-library/user-event": "^13.5.0",
         "@tsparticles/engine": "^3.7.1",
         "@tsparticles/react": "^3.0.0",
