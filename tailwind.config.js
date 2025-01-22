@@ -14,6 +14,18 @@ module.exports = {
         uso_600: '#f5ac00',
         uso_700: '#ffc052',
       },
+      animation: {
+        shake: 'shake 0.5s ease',
+      },
+      keyframes: {
+        shake: {
+          '0%': { transform: 'rotate(0) scale(1)' },
+          '25%': { transform: 'rotate(10deg) scale(1.05)' },
+          '50%': { transform: 'rotate(-10deg) scale(1.1)' },
+          '75%': { transform: 'rotate(10deg) scale(1.05)' },
+          '100%': { transform: 'rotate(0) scale(1)' },
+        },
+      },
     },
   },
   plugins: [],

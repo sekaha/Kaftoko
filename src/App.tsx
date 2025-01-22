@@ -5,7 +5,6 @@ import { TranslateIcon } from '@heroicons/react/outline'
 import { CalendarIcon } from '@heroicons/react/outline'
 import { CgDice5 } from 'react-icons/cg'
 import { GiDiceFire } from 'react-icons/gi'
-import { GiPerspectiveDiceSixFacesThree } from 'react-icons/gi'
 // import { ParticleEffects } from './components/ParticleEffects'
 
 // React hooks and component imports
@@ -35,6 +34,7 @@ import '@bcgov/bc-sans/css/BCSans.css'
 import './i18n'
 import { withTranslation, WithTranslation } from 'react-i18next'
 import { WORDS } from './constants/wordlist'
+import { Die } from './components/Die'
 
 const ALERT_TIME_MS = 2000 // Time duration for alerts
 
@@ -56,6 +56,7 @@ const App: React.FC<WithTranslation> = ({ t, i18n }) => {
   const [isRofaiAlertOpen, setIsRofaiAlertOpen] = useState(false) // Alert for another mode switch
   const [isGameLost, setIsGameLost] = useState(false) // Tracks if the game is lost
   const [successAlert, setSuccessAlert] = useState('') // Displays success messages
+  const [isShaking, setIsShaking] = useState(false)
 
   // Reload all data when gamemode is changed
   useEffect(() => {
@@ -140,6 +141,7 @@ const App: React.FC<WithTranslation> = ({ t, i18n }) => {
       setCurrentGuess([])
       setIsGameWon(false)
       setIsGameLost(false)
+      setIsShaking(true)
     }
 
     setSolution(getRandomWord(newSeed).solution)
@@ -147,6 +149,7 @@ const App: React.FC<WithTranslation> = ({ t, i18n }) => {
     if (gameMode !== 'random') {
       setGameMode('random')
     } else {
+      setTimeout(() => setIsShaking(false), 500)
       return setTimeout(() => {
         setIsUdachikoAlertOpen(false)
       }, ALERT_TIME_MS)
@@ -283,13 +286,14 @@ const App: React.FC<WithTranslation> = ({ t, i18n }) => {
               onClickImadah()
             }}
           />
-          <GiPerspectiveDiceSixFacesThree
+          <Die
             className={`h-6 w-6 cursor-pointer ${
               gameMode === 'random' ? 'text-pravda_500' : 'text-white'
             } hover:text-pravda_700 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-pravda_700`}
             onClick={() => {
               onClickUdachi()
             }}
+            isShaking={isShaking}
           />
           {/* <GiDiceFire
             className={`h-6 w-6 cursor-pointer ${
