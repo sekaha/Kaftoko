@@ -71,7 +71,7 @@ const App: React.FC<WithTranslation> = ({ t, i18n }) => {
 
       const gameWasWon = loaded.guesses
         .map((guess) => guess.join(''))
-        .includes(solution)
+        .includes(loaded.solution)
 
       if (gameWasWon) {
         setIsGameWon(true)
