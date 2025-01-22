@@ -5,7 +5,7 @@ import { TranslateIcon } from '@heroicons/react/outline'
 import { CalendarIcon } from '@heroicons/react/outline'
 import { CgDice5 } from 'react-icons/cg'
 import { GiDiceFire } from 'react-icons/gi'
-// import { ParticleEffects } from './components/ParticleEffects'
+import { useReward } from 'react-rewards'
 
 // React hooks and component imports
 // <LiaFireAltSolid />
@@ -35,6 +35,7 @@ import './i18n'
 import { withTranslation, WithTranslation } from 'react-i18next'
 import { WORDS } from './constants/wordlist'
 import { Die } from './components/Die'
+import Confetti from './components/Confetti'
 
 const ALERT_TIME_MS = 2000 // Time duration for alerts
 
@@ -57,6 +58,8 @@ const App: React.FC<WithTranslation> = ({ t, i18n }) => {
   const [isGameLost, setIsGameLost] = useState(false) // Tracks if the game is lost
   const [successAlert, setSuccessAlert] = useState('') // Displays success messages
   const [isShaking, setIsShaking] = useState(false)
+  const { reward: confettiReward, isAnimating: isConfettiAnimating } =
+    useReward('confettiReward', 'confetti')
 
   // Reload all data when gamemode is changed
   useEffect(() => {
@@ -131,6 +134,7 @@ const App: React.FC<WithTranslation> = ({ t, i18n }) => {
 
     // Blank slate literally everything lmao
     if (gameMode === 'random') {
+      confettiReward()
       setIsUdachikoAlertOpen(true)
       // setIsImadahkoAlertOpen(false)
       setIsRofaiAlertOpen(false)
@@ -234,6 +238,7 @@ const App: React.FC<WithTranslation> = ({ t, i18n }) => {
         setSuccessAlert(
           WIN_MESSAGES[Math.floor(Math.random() * WIN_MESSAGES.length)]
         )
+        confettiReward()
 
         setTimeout(() => {
           setSuccessAlert('')
@@ -276,6 +281,7 @@ const App: React.FC<WithTranslation> = ({ t, i18n }) => {
 
   return (
     <div className="py-8 max-w-7xl mx-auto sm:px-6 lg:px-8">
+      <Confetti id="tsparticles" />
       <div className="flex w-80 mx-auto items-center mb-8 justify-between">
         <div className="flex">
           <CalendarIcon
@@ -321,7 +327,6 @@ const App: React.FC<WithTranslation> = ({ t, i18n }) => {
           />
         </div>
       </div>
-      {/* <ParticleEffects /> */}
       <Grid guesses={guesses} currentGuess={currentGuess} solution={solution} />
       <Keyboard
         onChar={onChar}
@@ -405,6 +410,7 @@ const App: React.FC<WithTranslation> = ({ t, i18n }) => {
       <Alert message={t('naiFinnaKo')} isOpen={isnaiFinnaKoAlertOpen} />
       <Alert message={t('svar', { solution })} isOpen={isGameLost} />
       <Alert
+        id="confettiReward"
         message={successAlert}
         isOpen={successAlert !== ''}
         variant="success"

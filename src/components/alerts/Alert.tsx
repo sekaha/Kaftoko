@@ -7,9 +7,15 @@ type Props = {
   isOpen: boolean
   message: string | ReactNode
   variant?: 'success' | 'warning' | 'info' | 'special'
+  id?: string
 }
 
-export const Alert = ({ isOpen, message, variant = 'warning' }: Props) => {
+export const Alert = ({
+  isOpen,
+  message,
+  variant = 'warning',
+  id = '',
+}: Props) => {
   const classes = classNames(
     'fixed font-bold top-20 left-1/2 transform -translate-x-1/2 max-w-sm w-full shadow-lg rounded-lg pointer-events-auto ring-1 ring-black ring-opacity-5 overflow-hidden',
     {
@@ -31,7 +37,7 @@ export const Alert = ({ isOpen, message, variant = 'warning' }: Props) => {
       leaveFrom="opacity-100"
       leaveTo="opacity-0"
     >
-      <div className={classes}>
+      <div id={id} className={classes}>
         <div className="p-4">
           <p className="text-sm text-center font-medium text-gray-100">
             {message}

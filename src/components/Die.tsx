@@ -27,7 +27,7 @@ export const Die = ({ className, onClick, isShaking }: Props) => {
           } while (newFace === prevFace) // Avoid repeating the same face
           return newFace
         })
-      }, 222)
+      }, 150)
 
       // Clear interval when shaking stops
       return () => clearInterval(interval)
@@ -35,7 +35,7 @@ export const Die = ({ className, onClick, isShaking }: Props) => {
   }, [isShaking])
 
   const handleRoll = () => {
-    onClick() // Trigger external onClick handler
+    onClick()
   }
 
   const icons: Record<number, React.ReactNode> = {

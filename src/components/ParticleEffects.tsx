@@ -6,10 +6,7 @@ import {
   MoveDirection,
   OutMode,
 } from '@tsparticles/engine'
-// import { loadAll } from "@tsparticles/all"; // if you are going to use `loadAll`, install the "@tsparticles/all" package too.
-// import { loadFull } from "tsparticles"; // if you are going to use `loadFull`, install the "tsparticles" package too.
 import { loadSlim } from '@tsparticles/slim' // if you are going to use `loadSlim`, install the "@tsparticles/slim" package too.
-// import { loadBasic } from "@tsparticles/basic"; // if you are going to use `loadBasic`, install the "@tsparticles/basic" package too.
 
 export const ParticleEffects = () => {
   const [init, setInit] = useState(false)
@@ -33,46 +30,143 @@ export const ParticleEffects = () => {
     console.log(container)
   }
 
-  const options: ISourceOptions = useMemo(
-    () => ({
-      fpsLimit: 40,
-      particles: {
-        number: {
-          value: 200,
-          density: {
-            enable: true,
+  const lifeDurationNum = 20,
+    lifeDurationFactor = 6,
+    lifeDuration = lifeDurationNum / lifeDurationFactor
+
+  const options: ISourceOptions = {
+    fullScreen: {
+      zIndex: 1,
+    },
+    emitters: [
+      {
+        position: {
+          x: 0,
+          y: 30,
+        },
+        rate: {
+          quantity: 5,
+          delay: 0.15,
+        },
+        particles: {
+          move: {
+            direction: 'top-right',
+            outModes: {
+              top: 'none',
+              left: 'none',
+              default: 'destroy',
+            },
           },
         },
-        color: {
-          value: ['#fdcf58', '#757676', '#f27d0c', '#800909', '#f07f13'],
+      },
+      {
+        position: {
+          x: 100,
+          y: 30,
         },
-        opacity: {
-          value: { min: 0.1, max: 0.5 },
+        rate: {
+          quantity: 5,
+          delay: 0.15,
         },
-        size: {
-          value: { min: 1, max: 3 },
+        particles: {
+          move: {
+            direction: 'top-left',
+            outModes: {
+              top: 'none',
+              right: 'none',
+              default: 'destroy',
+            },
+          },
         },
-        move: {
+      },
+    ],
+    particles: {
+      color: {
+        value: ['#ffffff', '#FF0000'],
+      },
+      move: {
+        decay: 0.05,
+        direction: 'top',
+        enable: true,
+        gravity: {
           enable: true,
-          speed: 6,
-          random: false,
+        },
+        outModes: {
+          top: 'none',
+          default: 'destroy',
+        },
+        speed: {
+          min: 10,
+          max: 50,
         },
       },
-      interactivity: {
-        detectsOn: 'window',
-        events: {
-          onClick: {
-            enable: true,
-            mode: 'push',
-          },
+      number: {
+        value: 0,
+      },
+      opacity: {
+        value: 1,
+      },
+      rotate: {
+        value: {
+          min: 0,
+          max: 360,
+        },
+        direction: 'random',
+        animation: {
+          enable: true,
+          speed: 30,
         },
       },
-      background: {
-        image: 'radial-gradient(rgba(0, 0, 0, 0), rgba(225, 0, 0, 0.11))',
+      tilt: {
+        direction: 'random',
+        enable: true,
+        value: {
+          min: 0,
+          max: 360,
+        },
+        animation: {
+          enable: true,
+          speed: 30,
+        },
       },
-    }),
-    []
-  )
+      size: {
+        value: {
+          min: 0,
+          max: 2,
+        },
+        animation: {
+          enable: true,
+          startValue: 'min',
+          count: 1,
+          speed: 16,
+          sync: true,
+        },
+      },
+      roll: {
+        darken: {
+          enable: true,
+          value: 25,
+        },
+        enable: true,
+        speed: {
+          min: 5,
+          max: 15,
+        },
+      },
+      wobble: {
+        distance: 30,
+        enable: true,
+        speed: {
+          min: -7,
+          max: 7,
+        },
+      },
+      shape: {
+        type: ['circle', 'square'],
+        options: {},
+      },
+    },
+  }
 
   return (
     <>
@@ -81,14 +175,14 @@ export const ParticleEffects = () => {
         particlesLoaded={particlesLoaded}
         options={options}
       />
-      <style>{`
+      {/* <style>{`
         #particles {
           z-index: -1;
           position: absolute;
           width: 100%;
           height: 100%;
         }
-      `}</style>
+      `}</style> */}
     </>
   )
 }
