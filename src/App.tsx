@@ -44,7 +44,7 @@ const App: React.FC<WithTranslation> = ({ t, i18n }) => {
   const [isGameWon, setIsGameWon] = useState(false) // Tracks if the game is won
   const [seed, setSeed] = useState(Math.floor(Math.random() * WORDS.length))
   const [gameMode, setGameMode] = useState('daily') // Daily or random mode
-  const [solution, setSolution] = useState('')
+  const [solution, setSolution] = useState(getDailyWord().solution)
   const [isInfoModalOpen, setIsInfoModalOpen] = useState(false) // Info modal visibility
   const [isAboutModalOpen, setIsAboutModalOpen] = useState(false) // About modal visibility
   const [isnaiLagomKirain, setIsnaiLagomKirain] = useState(false) // Alert for invalid word length
@@ -59,19 +59,6 @@ const App: React.FC<WithTranslation> = ({ t, i18n }) => {
 
   // Reload all data when gamemode is changed
   useEffect(() => {
-    let newSolution = ''
-
-    switch (gameMode) {
-      case 'daily':
-        const { solution: dailySolution } = getDailyWord()
-        newSolution = dailySolution
-        break
-      case 'random':
-        const { solution: randomSolution } = getRandomWord(seed)
-        newSolution = randomSolution
-        break
-    }
-
     setGuesses([])
     setCurrentGuess([])
     setIsGameWon(false)
@@ -80,17 +67,18 @@ const App: React.FC<WithTranslation> = ({ t, i18n }) => {
     const loaded = loadGameStateFromLocalStorage(gameMode)
 
     if (loaded) {
-      if (gameMode === 'daily' && loaded.solution !== newSolution) {
+      if (gameMode === 'daily' && loaded.solution !== solution) {
         // Reset on new day
       } else {
         setGuesses(loaded.guesses)
-        setSeed(loaded.seed)
 
-        newSolution = loaded.solution
+        if (seed !== loaded.seed) {
+          //setSeed(loaded.seed)
+        }
 
         const gameWasWon = loaded.guesses
           .map((guess) => guess.join(''))
-          .includes(newSolution)
+          .includes(solution)
 
         if (gameWasWon) {
           setIsGameWon(true)
@@ -103,8 +91,7 @@ const App: React.FC<WithTranslation> = ({ t, i18n }) => {
     }
 
     setStats(loadStats(gameMode))
-    setSolution(newSolution)
-  }, [gameMode, seed]) // will load initially and then whenever gameMode is updated
+  }, [gameMode]) // will load initially and then whenever gameMode is updated
 
   // Load and initialize guesses from localStorage
   const [guesses, setGuesses] = useState<string[][]>(() => {
@@ -146,32 +133,39 @@ const App: React.FC<WithTranslation> = ({ t, i18n }) => {
 
   // Handlers for game modes
   const onClickUdachi = () => {
+    let newSeed = seed
+
     // Blank slate literally everything lmao
     if (gameMode === 'random') {
       setIsUdachikoAlertOpen(true)
       setIsImadahkoAlertOpen(false)
       setIsRofaiAlertOpen(false)
+      newSeed = Math.floor(Math.random() * WORDS.length)
 
-      const newSeed = Math.floor(Math.random() * WORDS.length)
-
-      const newSolution = getRandomWord(newSeed).solution as string
       setSeed(newSeed)
-      setSolution(newSolution)
       setGuesses([])
       setCurrentGuess([])
       setIsGameWon(false)
       setIsGameLost(false)
     }
 
-    return setTimeout(() => {
-      setIsUdachikoAlertOpen(false)
-    }, ALERT_TIME_MS)
+    setSolution(getRandomWord(newSeed).solution)
+
+    if (gameMode != 'random') {
+      setGameMode('random')
+    } else {
+      return setTimeout(() => {
+        setIsUdachikoAlertOpen(false)
+      }, ALERT_TIME_MS)
+    }
   }
 
   const onClickImadah = () => {
     setIsImadahkoAlertOpen(true)
     setIsUdachikoAlertOpen(false)
     setIsRofaiAlertOpen(false)
+    setSolution(getDailyWord().solution)
+    setGameMode('daily')
 
     return setTimeout(() => {
       setIsImadahkoAlertOpen(false)
@@ -293,7 +287,6 @@ const App: React.FC<WithTranslation> = ({ t, i18n }) => {
               gameMode === 'daily' ? 'text-pravda_500' : 'text-white'
             } hover:text-pravda_700 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-pravda_700`}
             onClick={() => {
-              setGameMode('daily')
               onClickImadah()
             }}
           />
@@ -303,9 +296,6 @@ const App: React.FC<WithTranslation> = ({ t, i18n }) => {
             } hover:text-pravda_700 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-pravda_700`}
             onClick={() => {
               onClickUdachi()
-              if (gameMode !== 'random') {
-                setGameMode('random')
-              }
             }}
           />
           {/* <GiDiceFire
