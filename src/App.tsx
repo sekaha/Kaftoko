@@ -142,7 +142,7 @@ const App: React.FC<WithTranslation> = ({ t, i18n }) => {
   // Save game state whenever guesses update
   useEffect(() => {
     saveGameStateToLocalStorage({ guesses, solution, seed }, gameMode)
-  }, [guesses, seed, solution])
+  }, [guesses, seed, solution, gameMode])
 
   // Handlers for game modes
   const onClickUdachi = () => {
