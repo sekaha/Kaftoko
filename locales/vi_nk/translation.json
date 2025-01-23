@@ -1,0 +1,148 @@
+{
+  "tsui": "ߗߎߌ ߊߎ߫ߕߐ ߛߔߌߟ",
+  "spilNamae": "ε: ߞߊ ߞߐ ߌ߫ߍ؟",
+  "ahmanPresmi": "ߊ߮ߡߊߣ",
+  "keshitePresmi": "ߞߍߛ߱ߌߕߍ",
+  "oharePresmi": "ߐߤ߲ߊߙߍ",
+  "udachiTro": "ߌߘߊߗߌ",
+  "imadahTro": "ߌߡߊߘߊߜ߲",
+  "rofaiTro": "ߕߐߎ߫ߊߌ߫",
+  "naiLagomKirain": "߹ߟߊߜ߲ߐߡߣߊߌ߫ ߞߌߙߊߌߣ",
+  "naiFinnaKo": "߹ߘߍߞߌߣߊߌ߫ ߓߙߎߞ ߕߥߐ ߞߐ.",
+  "neoUdachiko": "ߣߍߐ ߎߘߊߗߌߟߐ ߕߎߟߊߘߊߣ",
+  "rofaiko": "ߘߐߞߌ ߡߊߘߍ ߘߍߞߌ ߥ߲ߐߣߊ؟",
+  "imadahko": "!ߌߡߊߘߊߜ߲ ߞߐ ߕߎߟߊߘߊߣ",
+  "svar": "{{solution}} : ߛߥ߲ߊߙߞߐߕߐߓߊ ",
+  "spilWakwu": "߹ߥߊߞ߰ߌ ߛߔߌߟ ߡߊߘߍ ߥߊߞ߰ߎ ߟߍ߮ߕߌ",
+  "hurSpilNamae": "ߤ߲ߎߥߎߙߓߣߌ ߛߔߍߟ؟",
+  "spiltropos": "ߝߊ ߊߤ߲ߡߊߣ ߔߙߊߥ߲ߘߊ ߞߐ ߎߣߊ {{tries}} ߛߥ߲ߊߙ߹ ߊߤ߲ߡߊߣ ߖ߲ߊ߸ ߥ߲ߊߙߜ߲ߍ ߎ߫ߎ ߞߌߙߊߌߣߘߊߘߐ ߞߊߥߊߙߌ ߔߍߙ ߡߊߤ߲ߊߛߍ ߤ߲ߎߥߎߙ ߛߥ߲ߊߙߎ߫ߑߘ ߎߛߐ ߐߛ ߔߙߊߥ߲ߘߊ",
+  "sentakuGlossa": "ߛߍߣߕߊߞߎ ߞߊߞߎߕߙߐߔߐߛ",
+  "pravdaplaasSpiltropos": "ߞߌߙߊߌߣ <ߥ߲> ߛߐ ߣߊ ߛߥ߲ߊߙߞߐߕߐߓߊ ߊߎ ߣߊ ߔߙߊߥ߲ߘߊ ߔߟߊߛ ߛߐ߹",
+  "usoplaasSpiltropos": "ߞߌߙߊߌߣ <ߘ> ߛߐ ߣߊ ߛߥ߲ߊߙߞߐߕߐߓߊ ߡߍߣ ߣߊߣ ߣߊ ߔߙߊߥ߲ߘߊ ߔߟߊߛ߹",
+  "naiJamSpiltropos": "ߞߌߙߊߌߣ <ߝ> ߣߊߌ߫ ߌ߫ߊߡ߸ ߓߊߞߊ",
+  "ahmanFjal": "ߊߤ߲ߡߊߣ ߎ߫ߴߊߟ",
+  "ataiTumam": "ߊߕߊߌ߫ ߕߎߡߊߡ",
+  "heelIskatAtai": "ߤ߲ߙߟ ߌߛߞߊ ߊߕߊ߲ߌ",
+  "jingatai": "ߌ߫ߌߣ߱ߊߕߊ߲ߌ߫",
+  "imaDahmwerm": "ߘߊߤ߲ߡߥߍߙߡ ߎ߫ߴߌߡߊ",
+  "lesteBraaDahmwerm": "ߟߙߛߗߍߓߙߊ ߘߊߡ߰ߍߙߣ",
+  "neokoMade": "ߣߍߐߞߐ ߡߊߘߍ ߕߎߟߊ",
+  "blogeta": "ߓߟߐߜ߲ߍߕߊ",
+  "jingKaku": [
+    "ߡߊߟߊߘ߱ߍ߲ߛ!",
+    "ߡߊߣ߱ߍߓߙߊ!",
+    "ߓߕߊߘߊߌ߫!",
+    "ߡߊߟߊߡߊߟߊ!!",
+    "ߘߎ ߌ߫ߌߣߜ߲ߘߊߣ!!!",
+    "ߐߌ߫ ߓߟߌߣ! ߡߊߟߊߘ߱ߍ߲ߛ~",
+    "ߡߊߟߊߘ߱ߍ߲ߛ!",
+    "ߡߊߣ߱ߍߓߙߊ!",
+    "ߓߙߊߘߊߌ߫!",
+    "ߡߊߟߊߡߊߟߊ!!",
+    "ߘߎ ߌ߫ߌߣߜ߲ߘߊߣ!!!",
+    "ߐߌ߫ ߓߟߌߣ! ߡߊߟߊߘ߱ߍ߲ߛ~",
+    "ߡߊߟߊߘ߱ߍ߲ߛ!",
+    "ߡߊߣ߱ߍߓߙߊ!",
+    "ߓߙߊߘߊߌ߫!",
+    "ߡߊߟߊߡߊߟߊ!!",
+    "ߘߎ ߌ߫ߌߣߜ߲ߘߊߣ!!!",
+    "ߐߌ߫ ߓߟߌߣ! ߡߊߟߊߘ߱ߍ߲ߛ~",
+    "ߡߊߟߊߘ߱ߍ߲ߛ!",
+    "ߡߊߣ߱ߍߓߙߊ!",
+    "ߓߙߊߘߊߌ߫!",
+    "ߡߊߟߊߡߊߟߊ!!",
+    "ߘߎ ߌ߫ߌߣ߱ߘߊߣ!!!",
+    "ߐߌ߫ ߓߟߌߣ! ߡߊߟߊߘ߱ߍ߲ߛ~",
+    "ߡߊߟߊߘ߱ߍ߲ߛ!",
+    "ߡߊߣ߱ߍߓߙߊ!",
+    "ߓߙߊߘߊߌ߫!",
+    "ߡߊߟߊߡߊߟߊ!!",
+    "ߘߎ ߌ߫ߌߣ߱ߘߊߡ!!!",
+    "ߐߌ߫ ߓߟߌߣ! ߡߊߟߊߘ߱ߍ߲ߛ~",
+    "ߡߊߟߊߘ߱ߍ߲ߛ!",
+    "ߡߊߣ߱ߍߓߙߊ!",
+    "ߓߙߊߘߊߌ߫!",
+    "ߡߟߊߡߊߟߊ!!",
+    "ߘߎ ߌ߫ߌߣ߱ߘߊߡ!!!",
+    "ߐߌ߫ ߓߟߌߣ! ߡߊߟߊߘ߱ߍ߲ߛ~",
+    "Blyattttt - Rei",
+    "Slayyy (gag) - Nikomiko",
+    "ߥ߲ߙߊߛߘߊ ߛߍߓߌ߫ߊ߹",
+    "ߣߊߡߘߊ ߊߎߕߐ߹"
+  ],
+  "firstExampleWord": [
+    {
+      "letter": "ߊ",
+      "highlight": false
+    },
+    {
+      "letter": "ߥ߲",
+      "highlight": true
+    },
+    {
+      "letter": "ߐ",
+      "highlight": false
+    },
+    {
+      "letter": "ߜ߲",
+      "highlight": false
+    },
+    {
+      "letter": "ߊ",
+      "highlight": false
+    }
+  ],
+  "secondExampleWord": [
+    {
+      "letter": "ߘ",
+      "highlight": true
+    },
+    {
+      "letter": "ߎ",
+      "highlight": false
+    },
+    {
+      "letter": "ߥ",
+      "highlight": false
+    },
+    {
+      "letter": "ߎ",
+      "highlight": false
+    },
+    {
+      "letter": "ߙ",
+      "highlight": false
+    }
+  ],
+  "thirdExampleWord": [
+    {
+      "letter": "ߝ",
+      "highlight": false
+    },
+    {
+      "letter": "ߝ",
+      "highlight": false
+    },
+    {
+      "letter": "ߝ",
+      "highlight": false
+    },
+    {
+      "letter": "ߝ",
+      "highlight": false
+    },
+    {
+      "letter": "ߝ",
+      "highlight": false
+    }
+  ],
+  "languages": {
+    "vi_la": "Latina",
+    "vi_cy": "Цирилика",
+    "vi_ka": "カタカナ",
+    "vi_kr": "한글",
+    "vi_wy": "Wynterkakutro",
+    "vi_pa": "xpaẽkukakutro",
+    "vi_nk": "ߛ߯ߐ߮ߘߞߊߞߎߕߙߐ"
+  }
+}
