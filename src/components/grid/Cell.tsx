@@ -16,6 +16,7 @@ export const Cell = ({ value, status }: Props) => {
       'bg-pravda_500 border-pravda_500': status === 'correct',
       'bg-uso_500 border-uso_500': status === 'present',
       'cell-animation': !!value,
+      // 'animate-flip-horizontal-bottom': !!value && !!status,
     }
   )
 

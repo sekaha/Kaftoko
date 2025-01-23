@@ -20,7 +20,7 @@ export const TranslateModal = ({ isOpen, handleClose }: Props) => {
       <button
         key={code}
         type="button"
-        className="mt-2 w-full rounded-md border border-transparent shadow-sm px-4 py-2 bg-pravda_400 text-base font-medium text-white hover:bg-pravda_600 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-pravda_700 sm:text-sm"
+        className="mt-2 w-full rounded-md border border-transparent shadow-sm px-4 py-2 bg-pravda_600 text-base font-medium text-white hover:bg-pravda_400 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-pravda_300 sm:text-sm"
         onClick={() => {
           // Assuming i18n.changeLanguage or a similar function handles language changes
           i18n.changeLanguage(code)

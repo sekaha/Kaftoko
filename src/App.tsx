@@ -60,7 +60,7 @@ const App: React.FC<WithTranslation> = ({ t, i18n }) => {
 
   const confettiConfig = {
     fps: 120, // Frames per second
-    lifetime: 200, // Time of life
+    lifetime: 300, // Time of life
     angle: 270, // Initial direction of particles in degrees
     decay: 0.94, // How much the velocity decreases each frame
     spread: 180, // Spread of particles in degrees
@@ -74,7 +74,7 @@ const App: React.FC<WithTranslation> = ({ t, i18n }) => {
 
   const emojiConfig = {
     fps: 120,
-    lifetime: 200,
+    lifetime: 300,
     angle: 90,
     decay: 0.92,
     spread: 180,
@@ -84,7 +84,7 @@ const App: React.FC<WithTranslation> = ({ t, i18n }) => {
     elementSize: 25,
     zIndex: 10,
     position: 'fixed',
-    emoji: ['🍎', '🍏'],
+    emoji: ['🍎', '🍏', '🍎'],
   }
 
   const { reward: confettiReward } = useReward(
@@ -313,7 +313,7 @@ const App: React.FC<WithTranslation> = ({ t, i18n }) => {
   if (CONFIG.availableLangs.length > 1) {
     translateElement = (
       <TranslateIcon
-        className="h-6 w-6 cursor-pointer hover:text-pravda_700 text-white focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-pravda_700"
+        className="h-6 w-6 cursor-pointer hover:text-pravda_300 text-white focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-pravda_300"
         onClick={() => setIsI18nModalOpen(true)}
       />
     )
@@ -326,7 +326,7 @@ const App: React.FC<WithTranslation> = ({ t, i18n }) => {
           <CalendarIcon
             className={`h-6 w-6 cursor-pointer ${
               gameMode === 'daily' ? 'text-pravda_500' : 'text-white'
-            } hover:text-pravda_700 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-pravda_700`}
+            } hover:text-pravda_300 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-pravda_300`}
             onClick={() => {
               onClickImadah()
             }}
@@ -334,7 +334,7 @@ const App: React.FC<WithTranslation> = ({ t, i18n }) => {
           <Die
             className={`h-6 w-6 cursor-pointer ${
               gameMode === 'random' ? 'text-pravda_500' : 'text-white'
-            } hover:text-pravda_700 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-pravda_700`}
+            } hover:text-pravda_300 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-pravda_300`}
             onClick={() => {
               onClickUdachi()
             }}
@@ -343,7 +343,7 @@ const App: React.FC<WithTranslation> = ({ t, i18n }) => {
           {/* <GiDiceFire
             className={`h-6 w-6 cursor-pointer ${
               gameMode === 'train' ? 'text-uso_500' : 'text-white'
-            } hover:text-uso_700 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-uso_700`}
+            } hover:text-uso_300 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-uso_300`}
             onClick={() => {
               setGameMode('train')
               onClickRofai()
@@ -357,11 +357,11 @@ const App: React.FC<WithTranslation> = ({ t, i18n }) => {
         <div className="flex items-center">
           {translateElement}
           <ChartBarIcon
-            className="h-6 w-6 cursor-pointer text-white hover:text-pravda_700 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-pravda_700"
+            className="h-6 w-6 cursor-pointer text-white hover:text-pravda_300 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-pravda_300"
             onClick={() => setIsStatsModalOpen(true)}
           />
           <InformationCircleIcon
-            className="h-6 w-6 cursor-pointer text-white hover:text-pravda_700 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-pravda_700"
+            className="h-6 w-6 cursor-pointer text-white hover:text-pravda_300 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-pravda_300"
             onClick={() => setIsInfoModalOpen(true)}
           />
         </div>
@@ -402,7 +402,7 @@ const App: React.FC<WithTranslation> = ({ t, i18n }) => {
       />
       {/* <button
         type="button"
-        className="mx-auto mt-8 flex items-center px-2.5 py-1.5 border border-transparent text-xs font-medium rounded text-white bg-pravda_500 hover:bg-pravda_600 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-pravda_700 select-none"
+        className="mx-auto mt-8 flex items-center px-2.5 py-1.5 border border-transparent text-xs font-medium rounded text-white bg-pravda_500 hover:bg-pravda_400 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-pravda_300 select-none"
         onClick={() => setIsAboutModalOpen(true)}
       >
         {t('tsui')}
