@@ -14,6 +14,14 @@ export const CONFIG = {
   normalization: 'NFC', // whether to apply Unicode normalization to words and orthography - options: 'NFC', 'NFD', 'NKFC', 'NKFD', false
   startDate: '2025-01-17T00:00:00-06:00', // what date, time, and time zone to start your game from
   defaultLang: 'vi_la', // the default interface language
-  availableLangs: ['vi_la', 'vi_cy', 'vi_ka', 'vi_kr', 'vi_wy', 'vi_pa'], // the options available to the user for translation languages
+  availableLangs: [
+    'vi_la',
+    'vi_cy',
+    'vi_ka',
+    'vi_kr',
+    'vi_wy',
+    'vi_pa',
+    'vi_nk',
+  ], // the options available to the user for translation languages
   escapeSpecialCharacters: true, // whether to escape all characters in the orthography.
 }
