@@ -88,9 +88,7 @@ export const Keyboard = ({
 
       {/* Bottom Row */}
       <div className="flex justify-center mb-1">
-        <Key key="ahmanPresmi" width={62} value="ENTER" onClick={onClick}>
-          {t('ahmanPresmi')}
-        </Key>
+        <span className="w-[62px]" />
         {ORTHOGRAPHY.slice(18, ORTHOGRAPHY.length).map((char) => (
           <Key
             key={char}
@@ -106,8 +104,12 @@ export const Keyboard = ({
 
       {/* Space bar, width={65.4}*/}
       <div className="flex justify-center">
+        <span className="w-[62px]" />
         <Key key="oharePresmi" width={260.5} value="_" onClick={onClick}>
           {t('oharePresmi')}
+        </Key>
+        <Key key="ahmanPresmi" width={62} value="ENTER" onClick={onClick}>
+          {t('ahmanPresmi')}
         </Key>
       </div>
     </div>

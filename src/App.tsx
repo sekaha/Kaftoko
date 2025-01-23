@@ -104,7 +104,10 @@ const App: React.FC<WithTranslation> = ({ t, i18n }) => {
 
     const loaded = loadGameStateFromLocalStorage(gameMode)
 
-    if (loaded) {
+    if (
+      loaded &&
+      !(gameMode === 'daily' && loaded.solution != getDailyWord().solution)
+    ) {
       setGuesses(loaded.guesses)
 
       const gameWasWon = loaded.guesses
