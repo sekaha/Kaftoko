@@ -106,7 +106,7 @@ const App: React.FC<WithTranslation> = ({ t, i18n }) => {
 
     if (
       loaded &&
-      !(gameMode === 'daily' && loaded.solution != getDailyWord().solution)
+      !(gameMode === 'daily' && loaded.solution !== getDailyWord().solution)
     ) {
       setGuesses(loaded.guesses)
 
