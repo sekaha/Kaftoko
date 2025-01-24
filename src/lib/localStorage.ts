@@ -19,8 +19,8 @@ export const loadGameStateFromLocalStorage = (gameMode: string) => {
 export type GameStats = {
   jingFjal: number[]
   humbaSpilAtai: number
-  imaDahmwerm: number
-  lesteBraaDahmwerm: number
+  imaDahrofai: number
+  lesteBraaDahrofai: number
   heelSpilAtai: number
   jingatai: number
 }

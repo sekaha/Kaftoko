@@ -26,8 +26,11 @@ export const StatBar = ({ gameStats }: Props) => {
     <div className="flex justify-center my-2">
       <StatItem label={t('heelIskatAtai')} value={gameStats.heelSpilAtai} />
       <StatItem label={t('jingatai')} value={`${gameStats.jingatai}%`} />
-      <StatItem label={t('imaDahmwerm')} value={gameStats.imaDahmwerm} />
-      <StatItem label={t('lesteBraaDahmwerm')} value={gameStats.lesteBraaDahmwerm} />
+      <StatItem label={t('imaDahrofai')} value={gameStats.imaDahrofai} />
+      <StatItem
+        label={t('lesteBraaDahrofai')}
+        value={gameStats.lesteBraaDahrofai}
+      />
     </div>
   )
 }

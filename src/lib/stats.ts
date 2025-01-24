@@ -20,14 +20,14 @@ export const addStatsForCompletedGame = (
 
   if (count > CONFIG.tries - 1) {
     // A fail situation
-    stats.imaDahmwerm = 0
+    stats.imaDahrofai = 0
     stats.humbaSpilAtai += 1
   } else {
     stats.jingFjal[count] += 1
-    stats.imaDahmwerm += 1
+    stats.imaDahrofai += 1
 
-    if (stats.lesteBraaDahmwerm < stats.imaDahmwerm) {
-      stats.lesteBraaDahmwerm = stats.imaDahmwerm
+    if (stats.lesteBraaDahrofai < stats.imaDahrofai) {
+      stats.lesteBraaDahrofai = stats.imaDahrofai
     }
   }
 
@@ -42,8 +42,8 @@ export const loadStats = (gameMode: string) => {
     loadStatsFromLocalStorage(gameMode) || {
       jingFjal: [0, 0, 0, 0, 0, 0],
       humbaSpilAtai: 0,
-      imaDahmwerm: 0,
-      lesteBraaDahmwerm: 0,
+      imaDahrofai: 0,
+      lesteBraaDahrofai: 0,
       heelSpilAtai: 0,
       jingatai: 0,
     }
