@@ -41,7 +41,7 @@ const uwakiConfig = {
   elementSize: 25,
   zIndex: 10,
   position: 'fixed',
-  emoji: ['💔', '💔', '💔', '❌', '💔', '❌', '💔', '❌', '🚫', '🙅‍♀️'],
+  emoji: ['💔', '💔', '💔', '❌', '💔', '❌', '💔', '❌', '🙅‍♀️'],
 }
 
 const viossaConfettiConfig = {
