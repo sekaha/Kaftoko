@@ -5,7 +5,13 @@ import { TranslateIcon } from '@heroicons/react/outline'
 import { CalendarIcon } from '@heroicons/react/outline'
 import { CgDice5 } from 'react-icons/cg'
 import { GiDiceFire } from 'react-icons/gi'
-import { useReward } from 'react-rewards'
+import {
+  useConfettiReward,
+  useRingoAward,
+  useUwakiAward,
+  useViossaConfettiAward,
+  useViossaEmojiAward,
+} from './Particles'
 
 // React hooks and component imports
 // <LiaFireAltSolid />
@@ -58,42 +64,11 @@ const App: React.FC<WithTranslation> = ({ t, i18n }) => {
   const [successAlert, setSuccessAlert] = useState('') // Displays success messages
   const [isShaking, setIsShaking] = useState(false)
 
-  const confettiConfig = {
-    fps: 120, // Frames per second
-    lifetime: 300, // Time of life
-    angle: 270, // Initial direction of particles in degrees
-    decay: 0.94, // How much the velocity decreases each frame
-    spread: 180, // Spread of particles in degrees
-    startVelocity: 15, // Initial velocity of particles
-    elementCount: 100, // Number of particles
-    elementSize: 8, // Size of particles in px
-    zIndex: 10, // z-index of particles
-    position: 'fixed', // Positioning of particles
-    colors: ['#A45BF1', '#25C6F6', '#72F753', '#F76C88', '#F5F770'], // Colors of particles
-  }
-
-  const emojiConfig = {
-    fps: 120,
-    lifetime: 300,
-    angle: 90,
-    decay: 0.92,
-    spread: 180,
-    rotate: true,
-    startVelocity: 16,
-    elementCount: 25,
-    elementSize: 25,
-    zIndex: 10,
-    position: 'fixed',
-    emoji: ['🍎', '🍏', '🍎'],
-  }
-
-  const { reward: confettiReward } = useReward(
-    'reward',
-    'confetti',
-    confettiConfig
-  )
-
-  const { reward: emojiReward } = useReward('reward', 'emoji', emojiConfig)
+  const { reward: triggerConfetti } = useConfettiReward()
+  const { reward: triggerRingo } = useRingoAward()
+  const { reward: triggerUwaki } = useUwakiAward()
+  const { reward: triggerViossaConfetti } = useViossaConfettiAward()
+  const { reward: triggerViossaEmoji } = useViossaEmojiAward()
 
   // Reload all data when gamemode is changed
   useEffect(() => {
@@ -248,8 +223,18 @@ const App: React.FC<WithTranslation> = ({ t, i18n }) => {
       }, ALERT_TIME_MS)
     }
 
+    // Emoji easter eggs
     if (currentGuess.join('') === 'RINGO') {
-      emojiReward()
+      triggerRingo()
+    }
+
+    if (currentGuess.join('') === 'UWAKI') {
+      triggerUwaki()
+    }
+
+    if (currentGuess.join('') === 'VIOSA') {
+      triggerViossaConfetti()
+      triggerViossaEmoji()
     }
 
     if (!isWordInWordList(currentGuess.join(''))) {
@@ -280,7 +265,7 @@ const App: React.FC<WithTranslation> = ({ t, i18n }) => {
         )
 
         if (guesses.length <= 2) {
-          confettiReward()
+          triggerConfetti()
         }
 
         setTimeout(() => {
