@@ -289,7 +289,8 @@ export const WORDS = [
   'USTAZ',
   'OGRAD',
   'VOLNA',
-  // 'MISKA',
+  'MISKA',
+  'ZARPA',
 ]
 
 if (CONFIG.normalization) {

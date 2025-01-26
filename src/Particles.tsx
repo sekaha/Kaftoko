@@ -73,6 +73,33 @@ const viossaEmojiConfig = {
   emoji: ['🩵'],
 }
 
+const blyatConfig = {
+  fps: 120,
+  lifetime: 600,
+  angle: 90,
+  decay: 0.92,
+  spread: 0,
+  rotate: true,
+  startVelocity: 50,
+  elementCount: 1,
+  elementSize: 300,
+  zIndex: 10,
+  position: 'fixed',
+  emoji: [
+    '🫃',
+    '🫃🏿',
+    '🫃🏾',
+    '🫃🏻',
+    // 'блядь',
+    // 'блядь',
+    // 'б',
+    // 'л',
+    // 'я',
+    // 'д',
+    // 'ь',
+  ],
+}
+
 export const useConfettiReward = () =>
   useReward('reward', 'confetti', confettiConfig)
 export const useRingoAward = () => useReward('reward', 'emoji', ringoConfig)
@@ -81,3 +108,4 @@ export const useViossaConfettiAward = () =>
   useReward('reward', 'confetti', viossaConfettiConfig)
 export const useViossaEmojiAward = () =>
   useReward('reward', 'emoji', viossaEmojiConfig)
+export const useBlyatAward = () => useReward('reward', 'emoji', blyatConfig)

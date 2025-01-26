@@ -11,6 +11,7 @@ import {
   useUwakiAward,
   useViossaConfettiAward,
   useViossaEmojiAward,
+  useBlyatAward,
 } from './Particles'
 
 // React hooks and component imports
@@ -64,11 +65,13 @@ const App: React.FC<WithTranslation> = ({ t, i18n }) => {
   const [successAlert, setSuccessAlert] = useState('') // Displays success messages
   const [isShaking, setIsShaking] = useState(false)
 
+  // Reward init
   const { reward: triggerConfetti } = useConfettiReward()
   const { reward: triggerRingo } = useRingoAward()
   const { reward: triggerUwaki } = useUwakiAward()
   const { reward: triggerViossaConfetti } = useViossaConfettiAward()
   const { reward: triggerViossaEmoji } = useViossaEmojiAward()
+  const { reward: triggerBlyat } = useBlyatAward()
 
   // Reload all data when gamemode is changed
   useEffect(() => {
@@ -235,6 +238,10 @@ const App: React.FC<WithTranslation> = ({ t, i18n }) => {
     if (currentGuess.join('') === 'VIOSA') {
       triggerViossaConfetti()
       triggerViossaEmoji()
+    }
+
+    if (currentGuess.join('') === 'BLYAT') {
+      triggerBlyat()
     }
 
     if (!isWordInWordList(currentGuess.join(''))) {
