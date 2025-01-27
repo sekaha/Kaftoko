@@ -13,6 +13,7 @@ import {
   useViossaEmojiAward,
   useBlyatAward,
 } from './Particles'
+import StarryBackground from './StarryBackground'
 
 // React hooks and component imports
 // <LiaFireAltSolid />
@@ -64,6 +65,7 @@ const App: React.FC<WithTranslation> = ({ t, i18n }) => {
   const [isGameLost, setIsGameLost] = useState(false) // Tracks if the game is lost
   const [successAlert, setSuccessAlert] = useState('') // Displays success messages
   const [isShaking, setIsShaking] = useState(false)
+  const [isSpaceMode, setIsSpaceMode] = useState(false)
 
   // Reward init
   const { reward: triggerConfetti } = useConfettiReward()
@@ -242,6 +244,15 @@ const App: React.FC<WithTranslation> = ({ t, i18n }) => {
 
     if (currentGuess.join('') === 'BLYAT') {
       triggerBlyat()
+    }
+
+    if (currentGuess.join('') === 'AVARA') {
+      setIsSpaceMode(true)
+      document.body.classList.add('bg-black')
+    }
+
+    if (['A', 'E', 'I', 'O', 'U'].every((c) => currentGuess.includes(c))) {
+      console.log("that's not a word")
     }
 
     if (!isWordInWordList(currentGuess.join(''))) {
@@ -451,6 +462,7 @@ const App: React.FC<WithTranslation> = ({ t, i18n }) => {
         isOpen={successAlert !== ''}
         variant="success"
       />
+      <StarryBackground active={isSpaceMode} />
     </div>
   )
 }

@@ -73,6 +73,7 @@ const viossaEmojiConfig = {
   emoji: ['🩵'],
 }
 
+// Suggestion by rei
 const blyatConfig = {
   fps: 120,
   lifetime: 600,

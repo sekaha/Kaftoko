@@ -6,12 +6,26 @@ div {
 }
 
 body {
-  @apply bg-gray-900 text-white;
+  @apply bg-gray-900 text-white transition-colors duration-500;
 }
 
 .cell-animation {
   animation: revealCharCell linear;
-  animation-duration: 0.15s;
+  animation-duration: 0.2s;
+}
+
+.back-animation {
+  animation: deleteCharCell linear;
+  animation-duration: 0.2s;
+}
+
+.canvas {
+  opacity: 0;
+  transition: opacity 1s ease-in-out;
+}
+
+.canvas.fade-in {
+  opacity: 1;
 }
 
 @keyframes revealCharCell {
@@ -20,6 +34,18 @@ body {
   }
   50% {
     transform: scale(1.1);
+  }
+  100% {
+    transform: scale(1);
+  }
+}
+
+@keyframes deleteCharCell {
+  0% {
+    transform: scale(1);
+  }
+  50% {
+    transform: scale(0.9);
   }
   100% {
     transform: scale(1);
