@@ -1,12 +1,19 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
 div {
   font-family: 'BCSans', 'Noto Sans', sans-serif;
 }
 
 body {
-  @apply bg-gray-900 text-white transition-colors duration-500;
+  color: white;
+  background-color: #111827; /* Tailwind's bg-gray-900 equivalent */
+}
+
+body.bg-black {
+  background-color: #000000; /* Tailwind's bg-black equivalent */
+  transition: background-color 1s linear;
 }
 
 .cell-animation {
