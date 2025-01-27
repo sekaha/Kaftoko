@@ -1,4 +1,4 @@
-import { useEffect, useRef } from 'react'
+import { useEffect, useRef, useState } from 'react'
 import { okhslToSrgb, rgbToHex } from './lib/colorConversion'
 
 type StarryBackgroundProps = {
@@ -7,13 +7,25 @@ type StarryBackgroundProps = {
 
 function StarryBackground({ active = false }: StarryBackgroundProps) {
   const canvasRef = useRef<HTMLCanvasElement>(null)
-  const startCount = 100
-  const width = window.innerWidth
-  const height = window.innerHeight
+  const [dimensions, setDimensions] = useState({
+    width: window.innerWidth,
+    height: window.innerHeight,
+  })
 
   useEffect(() => {
-    // Ensure canvas is rendered before accessing the context
+    const handleResize = () => {
+      setDimensions({ width: window.innerWidth, height: window.innerHeight })
+    }
+
+    window.addEventListener('resize', handleResize)
+    return () => {
+      window.removeEventListener('resize', handleResize)
+    }
+  }, [])
+
+  useEffect(() => {
     const canvas = canvasRef.current
+    const startCount = 100
 
     if (!canvas) return
 
@@ -21,9 +33,11 @@ function StarryBackground({ active = false }: StarryBackgroundProps) {
 
     const drawStars = () => {
       if (ctx) {
+        const { width, height } = dimensions
+
         ctx.canvas.width = width
         ctx.canvas.height = height
-        ctx?.clearRect(0, 0, width, height)
+        ctx.clearRect(0, 0, width, height)
 
         for (let i = 0; i < startCount; i++) {
           const x = Math.random() * width
@@ -42,7 +56,7 @@ function StarryBackground({ active = false }: StarryBackgroundProps) {
     }
 
     drawStars()
-  }, [width, height])
+  }, [dimensions]) // Trigger the effect whenever dimensions change
 
   return (
     <canvas
