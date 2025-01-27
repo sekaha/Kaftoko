@@ -42,7 +42,7 @@ function StarryBackground({ active = false }: StarryBackgroundProps) {
     }
 
     drawStars()
-  }, [])
+  }, [width, height])
 
   return (
     <canvas
