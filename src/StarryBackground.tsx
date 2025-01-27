@@ -44,7 +44,11 @@ function StarryBackground({ active = false }: StarryBackgroundProps) {
           const y = Math.random() * height
           const radius = Math.random() * 2
           const col = rgbToHex(
-            ...okhslToSrgb(Math.random(), 0.7, 0.94 + radius * 0.02)
+            ...okhslToSrgb(
+              Math.random(),
+              0.7,
+              0.935 + radius * 0.02 + Math.random() * 0.02
+            )
           )
 
           ctx.beginPath()
