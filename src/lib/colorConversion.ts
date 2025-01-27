@@ -65,7 +65,11 @@ export function hslToRgb(
   return [r * 255, g * 255, b * 255]
 }
 
-function rgbToHsv(r: number, g: number, b: number): [number, number, number] {
+export function rgbToHsv(
+  r: number,
+  g: number,
+  b: number
+): [number, number, number] {
   r /= 255
   g /= 255
   b /= 255
@@ -344,7 +348,7 @@ export function getSTMax(
   return [C / L, C / (1 - L)]
 }
 
-function getSTMid(a_: number, b_: number): [number, number] {
+export function getSTMid(a_: number, b_: number): [number, number] {
   const S =
     0.11516993 +
     1 /

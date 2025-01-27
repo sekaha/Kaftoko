@@ -281,7 +281,7 @@ export const WORDS = [
   'URURA',
   'KANAK',
   'INURI',
-  // 'FERMI',
+  'FERMI',
   'VEMIE',
   'DRUUG', // Fuck anyone who gets this, loser x2
   'ROFAI',
