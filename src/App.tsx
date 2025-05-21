@@ -5,6 +5,8 @@ import { TranslateIcon } from '@heroicons/react/outline'
 import { CalendarIcon } from '@heroicons/react/outline'
 import { CgDice5 } from 'react-icons/cg'
 import { GiDiceFire } from 'react-icons/gi'
+import gnarp from './gnarp.png'
+import { ScrollingImage } from './components/ScrollingImage'
 import {
   useConfettiReward,
   useRingoAward,
@@ -55,17 +57,18 @@ const App: React.FC<WithTranslation> = ({ t, i18n }) => {
   const [solution, setSolution] = useState(getDailyWord().solution)
   const [isInfoModalOpen, setIsInfoModalOpen] = useState(false) // Info modal visibility
   const [isAboutModalOpen, setIsAboutModalOpen] = useState(false) // About modal visibility
-  const [isnaiLagomKirain, setIsnaiLagomKirain] = useState(false) // Alert for invalid word length
+  const [isnaiLagomKirain, setIsnaiLagomKirain] = useState(false)
   const [isStatsModalOpen, setIsStatsModalOpen] = useState(false) // Stats modal visibility
   const [isI18nModalOpen, setIsI18nModalOpen] = useState(false) // Translation modal visibility
-  const [isnaiFinnaKoAlertOpen, setIsnaiFinnaKoAlertOpen] = useState(false) // Alert for invalid word
-  const [isUdachikoAlertOpen, setIsUdachikoAlertOpen] = useState(false) // Alert for game mode switch
+  const [isnaiFinnaKoAlertOpen, setIsnaiFinnaKoAlertOpen] = useState(false)
+  const [isUdachikoAlertOpen, setIsUdachikoAlertOpen] = useState(false)
   // const [isImadahkoAlertOpen, setIsImadahkoAlertOpen] = useState(false) // Alert for another mode switch
   const [isRofaiAlertOpen, setIsRofaiAlertOpen] = useState(false) // Alert for another mode switch
   const [isGameLost, setIsGameLost] = useState(false) // Tracks if the game is lost
   const [successAlert, setSuccessAlert] = useState('') // Displays success messages
   const [isShaking, setIsShaking] = useState(false)
   const [isSpaceMode, setIsSpaceMode] = useState(false)
+  const [isGnarpMode, setIsGnarpMode] = useState(false)
 
   // Reward init
   const { reward: triggerConfetti } = useConfettiReward()
@@ -249,6 +252,10 @@ const App: React.FC<WithTranslation> = ({ t, i18n }) => {
     if (currentGuess.join('') === 'AVARA') {
       setIsSpaceMode(true)
       document.body.classList.add('bg-black')
+    }
+
+    if (currentGuess.join('') === 'GNARP') {
+      setIsGnarpMode(true)
     }
 
     if (['A', 'E', 'I', 'O', 'U'].every((c) => currentGuess.includes(c))) {
@@ -463,6 +470,9 @@ const App: React.FC<WithTranslation> = ({ t, i18n }) => {
         variant="success"
       />
       <StarryBackground active={isSpaceMode} />
+      {isGnarpMode && (
+        <ScrollingImage src={gnarp} y={Math.random() * 500} speed={20} />
+      )}
     </div>
   )
 }
