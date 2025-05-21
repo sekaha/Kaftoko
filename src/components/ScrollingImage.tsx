@@ -1,5 +1,3 @@
-import { useState, useEffect } from 'react'
-
 type Props = {
   src: string
   y: number
@@ -30,7 +28,11 @@ export const ScrollingImage = ({
         className="animate-scroll"
         style={{ animationDuration: `${speed}s` }}
       >
-        <img src={src} style={{ imageRendering: 'crisp-edges' }} />
+        <img
+          src={src}
+          alt="scrolly boy!"
+          style={{ imageRendering: 'crisp-edges' }}
+        />
       </div>
     </div>
   )
