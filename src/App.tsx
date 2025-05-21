@@ -473,6 +473,9 @@ const App: React.FC<WithTranslation> = ({ t, i18n }) => {
       {isGnarpMode && (
         <ScrollingImage src={gnarp} y={Math.random() * 500} speed={20} />
       )}
+      {isGnarpMode && (
+        <ScrollingImage src={gnarp} y={Math.random() * 500} speed={20} />
+      )}
     </div>
   )
 }
