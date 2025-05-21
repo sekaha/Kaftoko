@@ -62,7 +62,7 @@ See if you can find this little guy!
 Viossa is a living, evolving language, and Kaftoko can evolve with it!
 If you have a 5-letter Viossa word (or a specific spelling of a word) that you think would be a great addition to the game, please feel free to suggest it! I try to include words that are considered broadly representative of our community, so I may bias away from spellings or words that are too ideosyncratic.
 
-Also if you wanna create a translation/transcription for your kakutro/script, see the 
+Also if you wanna create a translation/transcription for your kakutro/script, see the templates in [main/public/locales](https://github.com/sekaha/Kaftoko/tree/main/public/locales)
 
 You can do this by:
 *   Opening an Issue on this GitHub repository (preferred).
