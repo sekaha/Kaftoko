@@ -31,7 +31,7 @@ export const ScrollingImage = ({
         <img
           src={src}
           alt="scrolly boy!"
-          style={{ imageRendering: 'crisp-edges' }}
+          style={{ imageRendering: 'pixelated' }}
         />
       </div>
     </div>
