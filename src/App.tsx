@@ -10,6 +10,7 @@ import { ScrollingImage } from './components/ScrollingImage'
 import {
   useConfettiReward,
   useRingoAward,
+  useLaskuAward,
   useUwakiAward,
   useViossaConfettiAward,
   useViossaEmojiAward,
@@ -73,6 +74,7 @@ const App: React.FC<WithTranslation> = ({ t, i18n }) => {
   // Reward init
   const { reward: triggerConfetti } = useConfettiReward()
   const { reward: triggerRingo } = useRingoAward()
+  const { reward: triggerLasku } = useLaskuAward()
   const { reward: triggerUwaki } = useUwakiAward()
   const { reward: triggerViossaConfetti } = useViossaConfettiAward()
   const { reward: triggerViossaEmoji } = useViossaEmojiAward()
@@ -234,6 +236,10 @@ const App: React.FC<WithTranslation> = ({ t, i18n }) => {
     // Emoji easter eggs
     if (currentGuess.join('') === 'RINGO') {
       triggerRingo()
+    }
+
+    if (currentGuess.join('') === 'LASKU') {
+      triggerLasku()
     }
 
     if (currentGuess.join('') === 'UWAKI') {

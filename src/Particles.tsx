@@ -29,6 +29,26 @@ const ringoConfig = {
   emoji: ['🍎', '🍏', '🍎'],
 }
 
+const laskuConfig = {
+  fps: 120,
+  lifetime: 300,
+  angle: 90,
+  decay: 0.92,
+  spread: 180,
+  rotate: true,
+  startVelocity: 16,
+  elementCount: 25,
+  elementSize: 25,
+  zIndex: 10,
+  position: 'fixed',
+  emoji: [
+  '0️⃣', '1️⃣', '2️⃣', '3️⃣', '4️⃣', '5️⃣', '6️⃣', '7️⃣', '8️⃣', '9️⃣', '🔟', '🔢',
+  '➕', '➖', '✖️', '➗', '♾️', '🧮',
+  '🧠', '📏', '📐', '📊', '📈', '📉',
+  '☝️🤓', '🚬🤓'
+  ]
+}
+
 const uwakiConfig = {
   fps: 120,
   lifetime: 300,
@@ -104,6 +124,7 @@ const blyatConfig = {
 export const useConfettiReward = () =>
   useReward('reward', 'confetti', confettiConfig)
 export const useRingoAward = () => useReward('reward', 'emoji', ringoConfig)
+export const useLaskuAward = () => useReward('reward', 'emoji', laskuConfig)
 export const useUwakiAward = () => useReward('reward', 'emoji', uwakiConfig)
 export const useViossaConfettiAward = () =>
   useReward('reward', 'confetti', viossaConfettiConfig)
