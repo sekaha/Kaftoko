@@ -22,6 +22,7 @@ export const CONFIG = {
     'vi_wy',
     'vi_pa',
     'vi_nk',
+    'vi_en',
   ], // the options available to the user for translation languages
   escapeSpecialCharacters: true, // whether to escape all characters in the orthography.
 }
