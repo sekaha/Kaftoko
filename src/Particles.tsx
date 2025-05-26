@@ -124,7 +124,7 @@ const blyatConfig = {
 export const useConfettiReward = () =>
   useReward('reward', 'confetti', confettiConfig)
 export const useRingoAward = () => useReward('reward', 'emoji', ringoConfig)
-export const useLaskuAward = () => useReward('reward', 'emoji', laskuConfig)
+export const useLaksuAward = () => useReward('reward', 'emoji', laskuConfig)
 export const useUwakiAward = () => useReward('reward', 'emoji', uwakiConfig)
 export const useViossaConfettiAward = () =>
   useReward('reward', 'confetti', viossaConfettiConfig)

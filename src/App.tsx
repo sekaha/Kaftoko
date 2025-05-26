@@ -10,7 +10,7 @@ import { ScrollingImage } from './components/ScrollingImage'
 import {
   useConfettiReward,
   useRingoAward,
-  useLaskuAward,
+  useLaksuAward,
   useUwakiAward,
   useViossaConfettiAward,
   useViossaEmojiAward,
@@ -74,7 +74,7 @@ const App: React.FC<WithTranslation> = ({ t, i18n }) => {
   // Reward init
   const { reward: triggerConfetti } = useConfettiReward()
   const { reward: triggerRingo } = useRingoAward()
-  const { reward: triggerLasku } = useLaskuAward()
+  const { reward: triggerLaksu } = useLaksuAward()
   const { reward: triggerUwaki } = useUwakiAward()
   const { reward: triggerViossaConfetti } = useViossaConfettiAward()
   const { reward: triggerViossaEmoji } = useViossaEmojiAward()
@@ -238,8 +238,8 @@ const App: React.FC<WithTranslation> = ({ t, i18n }) => {
       triggerRingo()
     }
 
-    if (currentGuess.join('') === 'LASKU') {
-      triggerLasku()
+    if (currentGuess.join('') === 'LAKSU') {
+      triggerLaksu()
     }
 
     if (currentGuess.join('') === 'UWAKI') {
