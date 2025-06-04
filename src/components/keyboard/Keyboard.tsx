@@ -11,6 +11,7 @@ type Props = {
   onEnter: () => void
   guesses: string[][]
   solution: string
+  faeri: boolean
 }
 
 export const Keyboard = ({
@@ -19,6 +20,7 @@ export const Keyboard = ({
   onEnter,
   guesses,
   solution,
+  faeri,
 }: Props) => {
   const { t } = useTranslation()
   const charStatuses = getStatuses(guesses, solution)
@@ -66,6 +68,7 @@ export const Keyboard = ({
               value={char}
               onClick={onClick}
               status={charStatuses[char]}
+              faeri
             />
           )
         )}
@@ -82,6 +85,7 @@ export const Keyboard = ({
             value={char}
             onClick={onClick}
             status={charStatuses[char]}
+            faeri
           />
         ))}
       </div>
@@ -98,6 +102,7 @@ export const Keyboard = ({
             value={char}
             onClick={onClick}
             status={charStatuses[char]}
+            faeri
           />
         ))}
         <Key key="keshitePresmi" width={62} value="DELETE" onClick={onClick}>

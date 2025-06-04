@@ -10,6 +10,7 @@ type Props = {
   status?: CharStatus
   onClick: (value: KeyValue) => void
   alert?: boolean
+  faeri?: boolean
 }
 
 export const Key = ({
@@ -19,6 +20,7 @@ export const Key = ({
   value,
   onClick,
   alert = false,
+  faeri,
 }: Props) => {
   const [clicked, setClicked] = useState(alert)
 
@@ -31,7 +33,9 @@ export const Key = ({
       'bg-pravda_600 hover:bg-pravda_400 active:bg-pravda_300 text-white':
         status === 'correct',
       'bg-uso_600 hover:bg-uso_400 active:bg-uso_300 text-white':
-        status === 'present',
+        status === 'present' && !faeri,
+      'bg-trans_600 hover:bg-trans_400 active:bg-trans_300 text-white':
+        status === 'present' && faeri,
       'cell-animation': clicked,
     }
   )

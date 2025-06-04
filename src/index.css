@@ -14,7 +14,7 @@ body {
 
 body.avara-style {
   background-color: #000000;
-  text-shadow: 0 0 5px currentColor;
+  text-shadow: 0 0 3px currentColor;
   transition: background-color 1s linear, text-shadow 0.5s linear;
 }
 

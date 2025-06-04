@@ -409,6 +409,7 @@ const App: React.FC<WithTranslation> = ({ t, i18n }) => {
         onEnter={onEnter}
         guesses={guesses}
         solution={solution}
+        faeri={isFaeriMode}
       />
       <TranslateModal
         isOpen={isI18nModalOpen}
@@ -430,6 +431,7 @@ const App: React.FC<WithTranslation> = ({ t, i18n }) => {
       />
       <InfoModal
         isOpen={isInfoModalOpen}
+        faeri={isFaeriMode}
         handleClose={() => setIsInfoModalOpen(false)}
       />
       <AboutModal

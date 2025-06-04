@@ -27,7 +27,7 @@ export const CompletedRow = ({ guess, solution, index, faeri }: Props) => {
   return (
     <div className="flex justify-center mb-1">
       {guess.map((letter, i) => (
-        <Cell key={i} value={letter} status={statuses[i]} />
+        <Cell key={i} value={letter} status={statuses[i]} faeri />
       ))}
     </div>
   )

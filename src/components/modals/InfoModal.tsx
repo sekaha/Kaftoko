@@ -6,6 +6,7 @@ import 'i18next'
 
 type Props = {
   isOpen: boolean
+  faeri: boolean
   handleClose: () => void
 }
 
@@ -14,7 +15,7 @@ interface Letter {
   highlight: boolean
 }
 
-export const InfoModal = ({ isOpen, handleClose }: Props) => {
+export const InfoModal = ({ isOpen, faeri, handleClose }: Props) => {
   const { t } = useTranslation()
   const firstExampleWord: Letter[] = t('firstExampleWord', {
     returnObjects: true,
@@ -26,7 +27,11 @@ export const InfoModal = ({ isOpen, handleClose }: Props) => {
     returnObjects: true,
   })
   return (
-    <BaseModal title={t('hurSpilNamae')} isOpen={isOpen} handleClose={handleClose}>
+    <BaseModal
+      title={t('hurSpilNamae')}
+      isOpen={isOpen}
+      handleClose={handleClose}
+    >
       <p className="text-sm text-white">
         {t('spiltropos', { tries: CONFIG.tries })}
       </p>
@@ -35,9 +40,16 @@ export const InfoModal = ({ isOpen, handleClose }: Props) => {
         {Array.isArray(firstExampleWord) &&
           firstExampleWord.map((el: Letter) => {
             if (el.highlight) {
-              return <Cell key={el.letter} value={el.letter} status="correct" />
+              return (
+                <Cell
+                  key={el.letter}
+                  value={el.letter}
+                  status="correct"
+                  faeri
+                />
+              )
             } else {
-              return <Cell key={el.letter} value={el.letter} />
+              return <Cell key={el.letter} value={el.letter} faeri />
             }
           })}
       </div>
@@ -46,9 +58,16 @@ export const InfoModal = ({ isOpen, handleClose }: Props) => {
         {Array.isArray(secondExampleWord) &&
           secondExampleWord.map((el) => {
             if (el.highlight) {
-              return <Cell key={el.letter} value={el.letter} status="present" />
+              return (
+                <Cell
+                  key={el.letter}
+                  value={el.letter}
+                  status="present"
+                  faeri
+                />
+              )
             } else {
-              return <Cell key={el.letter} value={el.letter} />
+              return <Cell key={el.letter} value={el.letter} faeri />
             }
           })}
       </div>
@@ -58,9 +77,11 @@ export const InfoModal = ({ isOpen, handleClose }: Props) => {
         {Array.isArray(thirdExampleWord) &&
           thirdExampleWord.map((el) => {
             if (el.highlight) {
-              return <Cell key={el.letter} value={el.letter} status="absent" />
+              return (
+                <Cell key={el.letter} value={el.letter} status="absent" faeri />
+              )
             } else {
-              return <Cell key={el.letter} value={el.letter} />
+              return <Cell key={el.letter} value={el.letter} faeri />
             }
           })}
       </div>

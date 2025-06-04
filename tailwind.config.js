@@ -17,6 +17,10 @@ module.exports = {
         uso_500: '#e19e00',
         uso_400: '#f5ac00',
         uso_300: '#ffc052',
+        trans_600: '#de6f93',
+        trans_500: '#fa7ea6',
+        trans_400: '#fd99b7',
+        trans_300: '#feb3c8',
       },
       animation: {
         shake: 'shake 0.5s ease',
