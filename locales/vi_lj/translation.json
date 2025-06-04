@@ -1,0 +1,150 @@
+{
+  "tsui": "Aftospil tsui",
+  "spilNamae": "Kaftoko? :3",
+  "ahmanPresmi": "Ahman",
+  "keshitePresmi": "Kexte",
+  "oharePresmi": "Ohare",
+  "udachiTro": "Uðaqi",
+  "imadahTro": "Ĩãðaħ",
+  "rofaiTro": "Rofai",
+  "naiLagomKirain": "Ãilaħom kirainara",
+  "naiFinnaKo": "Rukkiãi aftokotoa",
+  "neoUdachiko": "Neo uðaqiko finaðã!",
+  "rofaiko": "Ðoko ʋonaki maðe?",
+  "imadahko": "Ĩãðaħko finaðã!",
+  "svar": "Sʋarko: {{solution}}",
+  "spilWakwu": "Ʋakʋuspil clipboard na.",
+  "hurSpilNamae": "Hur Spil?",
+  "spiltropos": "Ða ahman praʋ ko {{tries}} na sʋar per. Za ahman, ʋarje kirainðaðo per kaʋarimir mahase li sʋarðui uso praʋ os.",
+  "sentakuGlossa": "Sẽtaku eĩ kakutro",
+  "pravdaplaasSpiltropos": "Kirain 'A' jam sʋarko na PRAƲplas au.",
+  "usoplaasSpiltropos": "Kirain 'G' jam sʋarko na USOplas ẽŋ.",
+  "naiJamSpiltropos": "Kirain 'Q' ãijam, koqka jo.",
+  "ahmanFjal": "Ahman Fjal",
+  "ataiTumam": "Ataitumam",
+  "heelIskatAtai": "Heliskat Atai",
+  "jingatai": "Jiŋatai",
+  "imaDahrofai": "Ĩãðahrofai Ĩãfui",
+  "lesteBraaDahrofai": "Lesteraa Ðahrofai",
+  "neokoMade": "Neoko Tullaðã",
+  "blogeta": "Loħeta",
+  "jingKaku": [
+    "Malaxxets!",
+    "Ãŋeraa joo!",
+    "Raaðai!",
+    "Mala mala!!",
+    "Ðujiŋ!!!",
+    "Oi Ʋlin! Malaxxets~",
+    "Malaxxets!",
+    "Ãŋeraa joo!",
+    "Raaðai!",
+    "Mala mala!!",
+    "Ðujiŋ!!!",
+    "Oi Ʋlin! Malaxxets~",
+    "Malaxxets!",
+    "Ãŋeraa joo!",
+    "Raaðai!",
+    "Mala mala!!",
+    "Ðujiŋ!!!",
+    "Oi Ʋlin! Malaxxets~",
+    "Malaxxets!",
+    "Ãŋeraa joo!",
+    "Raaðai!",
+    "Mala mala!!",
+    "Ðujiŋ!!!",
+    "Oi Ʋlin! Malaxxets~",
+    "Malaxxets!",
+    "Ãŋeraa joo!",
+    "Raaðai!",
+    "Mala mala!!",
+    "Ðujiŋ!!!",
+    "Oi Ʋlin! Malaxxets~",
+    "Malaxxets!",
+    "Ãŋeraa joo!",
+    "Raaðai!",
+    "Mala mala!!",
+    "Ðujiŋ!!!",
+    "Oi Ʋlin! Malaxxets~",
+    "Blyattttt - Rei",
+    "Slayyy (gag) - Nikomiko",
+    "Ða seja ʋras.",
+    "Ða nam auto."
+  ],
+  "firstExampleWord": [
+    {
+      "letter": "L",
+      "highlight": false
+    },
+    {
+      "letter": "A",
+      "highlight": true
+    },
+    {
+      "letter": "S",
+      "highlight": false
+    },
+    {
+      "letter": "K",
+      "highlight": false
+    },
+    {
+      "letter": "U",
+      "highlight": false
+    }
+  ],
+  "secondExampleWord": [
+    {
+      "letter": "D",
+      "highlight": false
+    },
+    {
+      "letter": "J",
+      "highlight": false
+    },
+    {
+      "letter": "O",
+      "highlight": false
+    },
+    {
+      "letter": "N",
+      "highlight": false
+    },
+    {
+      "letter": "G",
+      "highlight": true
+    }
+  ],
+  "thirdExampleWord": [
+    {
+      "letter": "Q",
+      "highlight": false
+    },
+    {
+      "letter": "Q",
+      "highlight": false
+    },
+    {
+      "letter": "Q",
+      "highlight": false
+    },
+    {
+      "letter": "Q",
+      "highlight": false
+    },
+    {
+      "letter": "Q",
+      "highlight": false
+    }
+  ],
+  "languages": {
+    "vi_la": "Latinkakutro",
+    "vi_cy": "Kirilkakutro",
+    "vi_ka": "Katakanakakutro",
+    "vi_kr": "Hangulkakutro",
+    "vi_wy": "Wynterkakutro",
+    "vi_pa": "Panekukakutro",
+    "vi_nk": "Nkokakutro",
+    "vi_he": "Ivritossakakutro",
+    "vi_lj": "Lajnakakutro"
+  }
+}
