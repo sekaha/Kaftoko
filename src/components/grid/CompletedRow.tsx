@@ -1,7 +1,7 @@
 import { getGuessStatuses } from '../../lib/statuses'
 import { Cell } from './Cell'
-import { CONFIG } from '../../constants/config'
-import { oklchToSrgb, rgbToHex } from '../../lib/colorConversion'
+// import { CONFIG } from '../../constants/config'
+// import { oklchToSrgb, rgbToHex } from '../../lib/colorConversion'
 
 type Props = {
   guess: string[]
