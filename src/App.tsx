@@ -257,7 +257,12 @@ const App: React.FC<WithTranslation> = ({ t, i18n }) => {
 
     if (currentGuess.join('') === 'AVARA') {
       setIsSpaceMode(true)
-      document.body.classList.add('bg-black')
+      document.body.classList.add('avara-style')
+    }
+
+    if (currentGuess.join('') === 'AVARA') {
+      setIsSpaceMode(true)
+      document.body.classList.add('avara-style')
     }
 
     if (currentGuess.join('') === 'GNARP') {
