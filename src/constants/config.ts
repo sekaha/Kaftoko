@@ -21,6 +21,7 @@ export const CONFIG = {
     'vi_kr',
     'vi_wy',
     'vi_pa',
+    'vi_lj',
     'vi_nk',
     'vi_en',
   ], // the options available to the user for translation languages

@@ -1,0 +1,148 @@
+{
+  "tsui": "צױ אפתא שפיל",
+  "spilNamae": "כה אפתא כתבה? :3",
+  "ahmanPresmi": "אהמן",
+  "keshitePresmi": "קשיתע",
+  "oharePresmi": "אוהרה",
+  "udachiTro": "אודטשי",
+  "imadahTro": "אמאדג",
+  "rofaiTro": "רופײ",
+  "naiLagomKirain": "קריין ניי לגום",
+  "naiFinnaKo": "נײ דכי ברוך אפתא כתבה",
+  "neoUdachiko": "נייה אודטשי כתבה תולה דן",
+  "rofaiko": "דכה מדה דכי בונה?",
+  "imadahko": "אמאדג כתבה תולה דן!",
+  "svar": "שבר־כתבה: {{solution}}",
+  "spilWakwu": "װאקבו שפיל נקליפבורד",
+  "hurSpilNamae": "הור שפיל?",
+  "spiltropos": "דא אהמן פרבדה כתבה נא {{tries}} שבר. אהמן זא, ברייה פקריין כברי פר מאשה הור שבר פדו אוסה אס פרבדה.",
+  "sentakuGlossa": "שנתכו אין קקו־תרפס",
+  "pravdaplaasSpiltropos": "קריין 'A' ים אנא שבר־כתבה או פרבדה פלאס.",
+  "usoplaasSpiltropos": "קריין 'G' ים אנא שבר־כתבה מן אוסה פלאס.",
+  "naiJamSpiltropos": "קריין 'Q' ניי ים, בכה.",
+  "ahmanFjal": "אהמן פייל",
+  "ataiTumam": "אתיי תומם",
+  "heelIskatAtai": "הל אישכת אתיי",
+  "jingatai": "דזשינג־אתיי",
+  "imaDahmwerm": "אמאדג־מערם פאמא",
+  "lesteBraaDahmwerm": "לצתה־ברא דג־מערם",
+  "neokoMade": "נייה כתבה תולה מדה",
+  "blogeta": "הלוגתה",
+  "jingKaku": [
+    "מלדץ!",
+    "מנגה ברא!",
+    "בראדי!",
+    "מלה, מלה!",
+    "דזשינג נדו!",
+    "אוי בלין! מלדץ~",
+    "מלדץ!",
+    "מנגה ברא!",
+    "בראדי!",
+    "מלה, מלה!",
+    "דזשינג נדו!",
+    "אוי בלין! מלדץ~",
+    "מלדץ!",
+    "מנגה ברא!",
+    "בראדי!",
+    "מלה, מלה!",
+    "דזשינג נדו!",
+    "אוי בלין! מלדץ~",
+    "מלדץ!",
+    "מנגה ברא!",
+    "בראדי!",
+    "מלה, מלה!",
+    "דזשינג נדו!",
+    "אוי בלין! מלדץ~",
+    "מלדץ!",
+    "מנגה ברא!",
+    "בראדי!",
+    "מלה, מלה!",
+    "דזשינג נדו!",
+    "אוי בלין! מלדץ~",
+    "מלדץ!",
+    "מנגה ברא!",
+    "בראדי!",
+    "מלה, מלה!",
+    "דזשינג נדו!",
+    "אוי בלין! מלדץ~",
+    "דכי נדו לייסה אפתא? :)",
+    "סליי! - ניקומיקו הנו דן",
+    "דה סביה ברס",
+    "דה נם אוטה."
+  ],
+  "firstExampleWord": [
+    {
+      "letter": "L",
+      "highlight": false
+    },
+    {
+      "letter": "A",
+      "highlight": true
+    },
+    {
+      "letter": "S",
+      "highlight": false
+    },
+    {
+      "letter": "K",
+      "highlight": false
+    },
+    {
+      "letter": "U",
+      "highlight": false
+    }
+  ],
+  "secondExampleWord": [
+    {
+      "letter": "D",
+      "highlight": false
+    },
+    {
+      "letter": "J",
+      "highlight": false
+    },
+    {
+      "letter": "O",
+      "highlight": false
+    },
+    {
+      "letter": "N",
+      "highlight": false
+    },
+    {
+      "letter": "G",
+      "highlight": true
+    }
+  ],
+  "thirdExampleWord": [
+    {
+      "letter": "Q",
+      "highlight": false
+    },
+    {
+      "letter": "Q",
+      "highlight": false
+    },
+    {
+      "letter": "Q",
+      "highlight": false
+    },
+    {
+      "letter": "Q",
+      "highlight": false
+    },
+    {
+      "letter": "Q",
+      "highlight": false
+    }
+  ],
+  "languages": {
+    "vi_la": "לתן־קקו־תרפס",
+    "vi_cy": "כרל־קקו־תרפס",
+    "vi_ka": "כתכנה־קקו־תרפס",
+    "vi_kr": "הנגל־קקו־תרפס",
+    "vi_wy": "ווינתר־קקו־תרפס",
+    "vi_pa": "פנכו־קקו־תרפס",
+    "vi_he": "עברית־קקו־תרפס"
+  }
+}
