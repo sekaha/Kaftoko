@@ -1,5 +1,5 @@
 import { useEffect, useRef, useState } from 'react'
-import { okhslToSrgb, oklchToSrgb, rgbToHex } from './lib/colorConversion'
+import { oklchToSrgb, rgbToHex } from './lib/colorConversion'
 
 type StarryBackgroundProps = {
   active: boolean

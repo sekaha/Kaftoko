@@ -2,6 +2,9 @@ module.exports = {
   content: ['./src/**/*.{js,jsx,ts,tsx}'],
   theme: {
     extend: {
+      boxShadow: {
+        'text-glow': '0 0 6px currentColor',
+      },
       colors: {
         humba_500: '#ff5264',
         jing_500: '#00b762',

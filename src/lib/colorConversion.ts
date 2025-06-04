@@ -632,10 +632,11 @@ export function oklchToSrgb(
 ): [number, number, number] {
   const [L, a, b] = oklchToOklab(l, c, h)
   const [rLin, gLin, bLin] = oklabToLinearSrgb(L, a, b)
+
   return [
-    255 * srgbTransferFunction(rLin),
-    255 * srgbTransferFunction(gLin),
-    255 * srgbTransferFunction(bLin),
+    Math.max(0, Math.min(255, 255 * srgbTransferFunction(rLin))),
+    Math.max(0, Math.min(255, 255 * srgbTransferFunction(gLin))),
+    Math.max(0, Math.min(255, 255 * srgbTransferFunction(bLin))),
   ]
 }
 

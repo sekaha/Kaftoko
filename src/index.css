@@ -14,8 +14,8 @@ body {
 
 body.avara-style {
   background-color: #000000;
-  text-shadow: 0 0 5px white;
-  transition: background-color 1s linear, text-shadow 0.5s ease-in-out;
+  text-shadow: 0 0 5px currentColor;
+  transition: background-color 1s linear, text-shadow 0.5s linear;
 }
 
 .cell-animation {

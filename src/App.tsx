@@ -68,6 +68,7 @@ const App: React.FC<WithTranslation> = ({ t, i18n }) => {
   const [isGameLost, setIsGameLost] = useState(false) // Tracks if the game is lost
   const [successAlert, setSuccessAlert] = useState('') // Displays success messages
   const [isShaking, setIsShaking] = useState(false)
+  const [isFaeriMode, setIsFaeriMode] = useState(true)
   const [isSpaceMode, setIsSpaceMode] = useState(false)
   const [isGnarpMode, setIsGnarpMode] = useState(false)
 
@@ -269,6 +270,12 @@ const App: React.FC<WithTranslation> = ({ t, i18n }) => {
       setIsGnarpMode(true)
     }
 
+    const month = new Date().toLocaleString('default', { month: 'long' })
+
+    if (currentGuess.join('') === 'FAERI' || month === 'June') {
+      setIsFaeriMode(true)
+    }
+
     if (['A', 'E', 'I', 'O', 'U'].every((c) => currentGuess.includes(c))) {
       console.log("that's not a word")
     }
@@ -390,7 +397,12 @@ const App: React.FC<WithTranslation> = ({ t, i18n }) => {
           />
         </div>
       </div>
-      <Grid guesses={guesses} currentGuess={currentGuess} solution={solution} />
+      <Grid
+        guesses={guesses}
+        currentGuess={currentGuess}
+        solution={solution}
+        faeri={isFaeriMode}
+      />
       <Keyboard
         onChar={onChar}
         onDelete={onDelete}
