@@ -13,16 +13,16 @@ type Props = {
 export const CompletedRow = ({ guess, solution, index, faeri }: Props) => {
   const statuses = getGuessStatuses(guess, solution)
 
-  let bgHex = ''
-  let textHex = ''
+  // let bgHex = ''
+  // let textHex = ''
 
-  if (faeri) {
-    const shiftSize = 1 / CONFIG.tries
+  // if (faeri) {
+  //   const shiftSize = 1 / CONFIG.tries
 
-    textHex = rgbToHex(
-      ...oklchToSrgb(0.903, 0.1259, (index * shiftSize * 360 + 30) % 360)
-    )
-  }
+  //   textHex = rgbToHex(
+  //     ...oklchToSrgb(0.903, 0.1259, (index * shiftSize * 360 + 30) % 360)
+  //   )
+  // }
 
   return (
     <div className="flex justify-center mb-1">
