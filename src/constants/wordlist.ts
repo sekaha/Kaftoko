@@ -199,6 +199,7 @@ export const WORDS = [
   'SODZI',
   'SVINR',
   'FARZA',
+  'FAERI',
   'LIKKO',
   'SPOOR',
   'TASTA',
