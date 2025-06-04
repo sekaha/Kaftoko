@@ -1,5 +1,5 @@
 import { useEffect, useRef, useState } from 'react'
-import { okhslToSrgb, rgbToHex } from './lib/colorConversion'
+import { okhslToSrgb, oklchToSrgb, rgbToHex } from './lib/colorConversion'
 
 type StarryBackgroundProps = {
   active: boolean
@@ -44,10 +44,10 @@ function StarryBackground({ active = false }: StarryBackgroundProps) {
           const y = Math.random() * height
           const radius = Math.random() * 2
           const col = rgbToHex(
-            ...okhslToSrgb(
-              Math.random(),
-              0.7,
-              0.935 + radius * 0.02 + Math.random() * 0.02
+            ...oklchToSrgb(
+              0.935 + radius * 0.02 + Math.random() * 0.02,
+              0.03,
+              Math.random() * 360
             )
           )
 

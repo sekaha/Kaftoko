@@ -602,6 +602,43 @@ export function srgbToOkhsv(r: number, g: number, b: number): number[] {
   return [h, s, v]
 }
 
+export function oklchToOklab(
+  l: number,
+  c: number,
+  h: number
+): [number, number, number] {
+  const a = isNaN(h) ? 0 : c * Math.cos((h * Math.PI) / 180)
+  const b = isNaN(h) ? 0 : c * Math.sin((h * Math.PI) / 180)
+  return [l, a, b]
+}
+
+export function oklabToOklch(
+  l: number,
+  a: number,
+  b: number
+): [number, number, number] {
+  const c = Math.sqrt(a ** 2 + b ** 2)
+  const h =
+    Math.abs(a) < 0.0002 && Math.abs(b) < 0.0002
+      ? NaN
+      : ((Math.atan2(b, a) * 180) / Math.PI + 360) % 360
+  return [l, c, h]
+}
+
+export function oklchToSrgb(
+  l: number,
+  c: number,
+  h: number
+): [number, number, number] {
+  const [L, a, b] = oklchToOklab(l, c, h)
+  const [rLin, gLin, bLin] = oklabToLinearSrgb(L, a, b)
+  return [
+    255 * srgbTransferFunction(rLin),
+    255 * srgbTransferFunction(gLin),
+    255 * srgbTransferFunction(bLin),
+  ]
+}
+
 export function hexToRgb(hex: string): number[] | null {
   if (hex.substr(0, 1) === '#') hex = hex.substr(1)
 
