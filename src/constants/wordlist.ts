@@ -1,6 +1,7 @@
 import { CONFIG } from './config'
 
 export const WORDS = [
+  'AKERO',
   'MINUS',
   'HOBIT',
   'BAKSU',
