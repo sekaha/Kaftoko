@@ -64,7 +64,7 @@ const App: React.FC<WithTranslation> = ({ t, i18n }) => {
   const [isnaiFinnaKoAlertOpen, setIsnaiFinnaKoAlertOpen] = useState(false)
   const [isUdachikoAlertOpen, setIsUdachikoAlertOpen] = useState(false)
   // const [isImadahkoAlertOpen, setIsImadahkoAlertOpen] = useState(false) // Alert for another mode switch
-  const [isRofaiAlertOpen, setIsRofaiAlertOpen] = useState(false) // Alert for another mode switch
+  // const [isRofaiAlertOpen, setIsRofaiAlertOpen] = useState(false) // Alert for another mode switch
   const [isGameLost, setIsGameLost] = useState(false) // Tracks if the game is lost
   const [successAlert, setSuccessAlert] = useState('') // Displays success messages
   const [isShaking, setIsShaking] = useState(false)
