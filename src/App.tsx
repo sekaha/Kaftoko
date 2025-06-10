@@ -5,7 +5,7 @@ import { TranslateIcon } from '@heroicons/react/outline'
 import { CalendarIcon } from '@heroicons/react/outline'
 import { CgDice5 } from 'react-icons/cg'
 import { GiDiceFire } from 'react-icons/gi'
-import gnarp from './gnarp.png'
+import gnarp from './assets/gnarp.png'
 import { ScrollingImage } from './components/ScrollingImage'
 import {
   useConfettiReward,
@@ -68,7 +68,8 @@ const App: React.FC<WithTranslation> = ({ t, i18n }) => {
   const [isGameLost, setIsGameLost] = useState(false) // Tracks if the game is lost
   const [successAlert, setSuccessAlert] = useState('') // Displays success messages
   const [isShaking, setIsShaking] = useState(false)
-  const [isFaeriMode, setIsFaeriMode] = useState(true)
+  const [isFaeriMode, setIsFaeriMode] = useState(false)
+  const [isDjezaMode, setIsDjezaMode] = useState(false)
   const [isSpaceMode, setIsSpaceMode] = useState(false)
   const [isGnarpMode, setIsGnarpMode] = useState(false)
 
@@ -83,8 +84,8 @@ const App: React.FC<WithTranslation> = ({ t, i18n }) => {
 
   // Reload all data when gamemode is changed
   useEffect(() => {
-    setGuesses([])
-    setCurrentGuess([])
+    // setGuesses([])
+    // setCurrentGuess([])
     setIsGameWon(false)
     setIsGameLost(false)
 
@@ -159,7 +160,8 @@ const App: React.FC<WithTranslation> = ({ t, i18n }) => {
     if (gameMode === 'random') {
       setIsUdachikoAlertOpen(true)
       // setIsImadahkoAlertOpen(false)
-      setIsRofaiAlertOpen(false)
+      // setIsRofaiAlertOpen(false)
+
       newSeed = Math.floor(Math.random() * WORDS.length)
 
       setSeed(newSeed)
@@ -261,11 +263,6 @@ const App: React.FC<WithTranslation> = ({ t, i18n }) => {
       document.body.classList.add('avara-style')
     }
 
-    if (currentGuess.join('') === 'AVARA') {
-      setIsSpaceMode(true)
-      document.body.classList.add('avara-style')
-    }
-
     if (currentGuess.join('') === 'GNARP') {
       setIsGnarpMode(true)
     }
@@ -274,6 +271,11 @@ const App: React.FC<WithTranslation> = ({ t, i18n }) => {
 
     if (currentGuess.join('') === 'FAERI' || month === 'June') {
       setIsFaeriMode(true)
+    }
+
+    if (currentGuess.join('') === 'DJEZA') {
+      setIsDjezaMode(true)
+      document.body.classList.add('djeza-style')
     }
 
     if (['A', 'E', 'I', 'O', 'U'].every((c) => currentGuess.includes(c))) {
@@ -397,11 +399,13 @@ const App: React.FC<WithTranslation> = ({ t, i18n }) => {
           />
         </div>
       </div>
+
       <Grid
         guesses={guesses}
         currentGuess={currentGuess}
         solution={solution}
         faeri={isFaeriMode}
+        djeza={isDjezaMode}
       />
       <Keyboard
         onChar={onChar}

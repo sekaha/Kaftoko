@@ -6,9 +6,10 @@ import { useEffect, useState } from 'react'
 type Props = {
   index: number
   faeri: boolean
+  djeza: boolean
 }
 
-export const EmptyRow = ({ index, faeri }: Props) => {
+export const EmptyRow = ({ index, faeri, djeza }: Props) => {
   const emptyCells = Array.from(Array(CONFIG.wordLength))
 
   const [hueOff, setHueOff] = useState(30)
@@ -20,27 +21,32 @@ export const EmptyRow = ({ index, faeri }: Props) => {
     return (speed * milliseconds) / 1000
   }
 
-  useEffect(() => {
-    const interval = setInterval(() => {
-      setHueOff(calculateHue())
-    }, 1000 / speed)
+  // useEffect(() => {
+  //   const interval = setInterval(() => {
+  //     setHueOff(calculateHue())
+  //   }, 1000 / speed)
 
-    return () => clearInterval(interval)
-    // eslint-disable-next-line react-hooks/exhaustive-deps
-  }, [])
+  //   return () => clearInterval(interval)
+  //   // eslint-disable-next-line react-hooks/exhaustive-deps
+  // }, [])
 
   let bgHex = ''
   let textHex = ''
   let borderHex = ''
+  let baseHue = 0
 
   if (faeri) {
     const shiftSize = 1 / CONFIG.tries
-    const baseHue = (index * shiftSize * 360 + hueOff) % 360
-
+    baseHue = (index * shiftSize * 360 + hueOff) % 360
     bgHex = rgbToHex(...oklchToSrgb(0.15, 0.025, baseHue))
-
     textHex = rgbToHex(...oklchToSrgb(0.9, 0.048, baseHue))
+    borderHex = rgbToHex(...oklchToSrgb(0.3717, 0.0392, baseHue))
+  }
 
+  if (djeza) {
+    baseHue = 138.26
+    bgHex = rgbToHex(...oklchToSrgb(0.15, 0.025, baseHue))
+    textHex = rgbToHex(...oklchToSrgb(0.8984, 0.2256, baseHue))
     borderHex = rgbToHex(...oklchToSrgb(0.3717, 0.0392, baseHue))
   }
 
@@ -53,6 +59,7 @@ export const EmptyRow = ({ index, faeri }: Props) => {
           textHex={textHex}
           borderHex={borderHex}
           faeri
+          djeza
         />
       ))}
     </div>

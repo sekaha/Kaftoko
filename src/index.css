@@ -18,6 +18,12 @@ body.avara-style {
   transition: background-color 1s linear, text-shadow 0.5s linear;
 }
 
+body.djeza-style {
+  background-color: #071b12;
+  transition: background-color 1s linear;
+  font-family: 'LucidaConsole', monospace;
+}
+
 .cell-animation {
   animation: revealCharCell linear;
   animation-duration: 0.2s;

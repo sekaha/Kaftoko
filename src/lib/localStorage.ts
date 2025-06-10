@@ -1,19 +1,21 @@
-type StoredGameState = {
+type GameState = {
   guesses: string[][]
   solution: string
   seed: number
 }
 
 export const saveGameStateToLocalStorage = (
-  gameState: StoredGameState,
+  state: GameState,
   gameMode: string
 ) => {
-  localStorage.setItem(gameMode + '_game', JSON.stringify(gameState))
+  localStorage.setItem(gameMode + '_game', JSON.stringify(state))
 }
 
-export const loadGameStateFromLocalStorage = (gameMode: string) => {
+export const loadGameStateFromLocalStorage = (
+  gameMode: string
+): GameState | undefined => {
   const state = localStorage.getItem(gameMode + '_game')
-  return state ? (JSON.parse(state) as StoredGameState) : null
+  return state ? (JSON.parse(state) as GameState) : undefined
 }
 
 export type GameStats = {
@@ -32,8 +34,10 @@ export const saveStatsToLocalStorage = (
   localStorage.setItem(`${gameMode}_stats`, JSON.stringify(gameStats))
 }
 
-export const loadStatsFromLocalStorage = (gameMode: string) => {
+export const loadStatsFromLocalStorage = (
+  gameMode: string
+): GameStats | undefined => {
   const stats = localStorage.getItem(`${gameMode}_stats`)
-  const res = stats ? (JSON.parse(stats) as GameStats) : null
+  const res = stats ? (JSON.parse(stats) as GameStats) : undefined
   return res
 }

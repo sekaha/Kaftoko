@@ -5,6 +5,9 @@ module.exports = {
       boxShadow: {
         'text-glow': '0 0 6px currentColor',
       },
+      fontFamily: {
+        lucida: ['LucidaConsole', 'monospace'], // add fallback just in case
+      },
       colors: {
         humba_500: '#ff5264',
         jing_500: '#00b762',
