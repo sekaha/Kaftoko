@@ -1,20 +1,21 @@
 {
   "files": {
-    "main.css": "/Kaftoko/static/css/main.804b575d.css",
-    "main.js": "/Kaftoko/static/js/main.74c8c60d.js",
+    "main.css": "/Kaftoko/static/css/main.93de58ab.css",
+    "main.js": "/Kaftoko/static/js/main.6a2f9f1b.js",
     "static/js/453.a4a1f07e.chunk.js": "/Kaftoko/static/js/453.a4a1f07e.chunk.js",
     "static/media/BCSans-Bold.woff": "/Kaftoko/static/media/BCSans-Bold.252ecf87ea37c93b293c.woff",
     "static/media/BCSans-BoldItalic.woff": "/Kaftoko/static/media/BCSans-BoldItalic.73ed5137b2c4a42b754f.woff",
     "static/media/BCSans-Italic.woff": "/Kaftoko/static/media/BCSans-Italic.9c3be03a06d30a6ecff0.woff",
     "static/media/BCSans-Regular.woff": "/Kaftoko/static/media/BCSans-Regular.0079ea8e42d4e81a13d2.woff",
+    "static/media/lucon.ttf": "/Kaftoko/static/media/lucon.c52c29b676f1503e7cec.ttf",
     "index.html": "/Kaftoko/index.html",
     "static/media/getFetch.cjs": "/Kaftoko/static/media/getFetch.40f37ddea2378391108f.cjs",
-    "main.804b575d.css.map": "/Kaftoko/static/css/main.804b575d.css.map",
-    "main.74c8c60d.js.map": "/Kaftoko/static/js/main.74c8c60d.js.map",
+    "main.93de58ab.css.map": "/Kaftoko/static/css/main.93de58ab.css.map",
+    "main.6a2f9f1b.js.map": "/Kaftoko/static/js/main.6a2f9f1b.js.map",
     "453.a4a1f07e.chunk.js.map": "/Kaftoko/static/js/453.a4a1f07e.chunk.js.map"
   },
   "entrypoints": [
-    "static/css/main.804b575d.css",
-    "static/js/main.74c8c60d.js"
+    "static/css/main.93de58ab.css",
+    "static/js/main.6a2f9f1b.js"
   ]
 }
