@@ -21,14 +21,14 @@ export const EmptyRow = ({ index, faeri, djeza }: Props) => {
     return (speed * milliseconds) / 1000
   }
 
-  // useEffect(() => {
-  //   const interval = setInterval(() => {
-  //     setHueOff(calculateHue())
-  //   }, 1000 / speed)
+  useEffect(() => {
+    const interval = setInterval(() => {
+      setHueOff(calculateHue())
+    }, 1000 / speed)
 
-  //   return () => clearInterval(interval)
-  //   // eslint-disable-next-line react-hooks/exhaustive-deps
-  // }, [])
+    return () => clearInterval(interval)
+    // eslint-disable-next-line react-hooks/exhaustive-deps
+  }, [])
 
   let bgHex = ''
   let textHex = ''

@@ -18,15 +18,15 @@ export const CurrentRow = ({ guess, index, faeri, djeza }: Props) => {
 
   const speed = 10
 
-  // useEffect(() => {
-  //   const interval = setInterval(() => {
-  //     const now = new Date()
-  //     const milliseconds = now.getSeconds() * 1000 + now.getMilliseconds()
-  //     setHueOff((speed * milliseconds) / 1000)
-  //   }, 1000 / speed)
-  //
-  //   return () => clearInterval(interval)
-  // }, [hueOff])
+  useEffect(() => {
+    const interval = setInterval(() => {
+      const now = new Date()
+      const milliseconds = now.getSeconds() * 1000 + now.getMilliseconds()
+      setHueOff((speed * milliseconds) / 1000)
+    }, 1000 / speed)
+
+    return () => clearInterval(interval)
+  }, [hueOff])
 
   let bgHex = ''
   let textHex = ''
