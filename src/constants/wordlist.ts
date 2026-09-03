@@ -295,6 +295,9 @@ export const WORDS = [
   'ZARPA',
   'DUFEL',
   'TONOS',
+  'GDENT',
+  'NIPAN',
+  'USLOV',
 ]
 
 if (CONFIG.normalization) {
